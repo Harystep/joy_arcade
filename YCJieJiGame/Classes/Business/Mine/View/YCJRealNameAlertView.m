@@ -50,8 +50,7 @@
     [self.contentLB mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(20);
         make.right.mas_equalTo(-20);
-        make.top.equalTo(self.titleLB.mas_bottom).offset(5);
-        make.height.mas_equalTo(60);
+        make.top.equalTo(self.titleLB.mas_bottom).offset(5);        
     }];
     
     [self.contentView addSubview:self.nameLB];
@@ -132,15 +131,15 @@
 
 - (void)sureBtnAction {
     if (self.nameTF.text.length <=0) {
-        [MBProgressHUD showError:@"请输入姓名"];
+        [MBProgressHUD showError:ZCLocalizedString(@"请输入姓名", nil)];
         return;
     }
     if (self.idCardTF.text.length <=0) {
-        [MBProgressHUD showError:@"请输入实名身份证号码"];
+        [MBProgressHUD showError:ZCLocalizedString(@"请输入实名身份证号码", nil)];
         return;
     }
     if (![NSString accurateIDCardWithFifteenOrEighteen:self.idCardTF.text]) {
-        [MBProgressHUD showError:@"请输入正确实名身份证号码"];
+        [MBProgressHUD showError:ZCLocalizedString(@"请输入正确实名身份证号码", nil)];
         return;
     }
     [JKNetWorkManager postRequestWithUrlPath:JKAccountAuthUrlKey parameters:@{@"name": self.nameTF.text, @"card": self.idCardTF.text} finished:^(JKNetWorkResult * _Nonnull result) {
@@ -172,7 +171,7 @@
 - (UILabel *)titleLB {
     if (!_titleLB) {
         _titleLB = [[UILabel alloc] init];
-        _titleLB.text = @"实名认证";
+        _titleLB.text = ZCLocalizedString(@"实名认证", nil);
         _titleLB.textAlignment = NSTextAlignmentCenter;
         _titleLB.font = kPingFangSemiboldFont(15);
         _titleLB.textColor = kCommonBlackColor;
@@ -183,7 +182,7 @@
 - (UILabel *)contentLB {
     if (!_contentLB) {
         _contentLB = [[UILabel alloc] init];
-        _contentLB.text = @"根据国家相关规定，严禁未成年人进入，请填写您的身份信息进行认证。未实名认证的用户不能体验任何内容，请尽快完成实名认证。";
+        _contentLB.text = ZCLocalizedString(@"auth_desc_title", nil);
         _contentLB.textAlignment = NSTextAlignmentLeft;
         _contentLB.font = kPingFangLightFont(12);
         _contentLB.numberOfLines = 0;
@@ -195,7 +194,7 @@
 - (UILabel *)nameLB {
     if (!_nameLB) {
         _nameLB = [[UILabel alloc] init];
-        _nameLB.text = @"姓名";
+        _nameLB.text = ZCLocalizedString(@"姓名", nil);
         _nameLB.textAlignment = NSTextAlignmentLeft;
         _nameLB.font = kPingFangMediumFont(14);
         _nameLB.textColor = kCommonBlackColor;
@@ -205,7 +204,7 @@
 
 - (UITextField *)nameTF {
     if (!_nameTF) {
-        _nameTF = [YCJInputItemView createTextFieldWithPlaceHolder:@"请填写真实姓名"];
+        _nameTF = [YCJInputItemView createTextFieldWithPlaceHolder:ZCLocalizedString(@"请填写真实姓名", nil)];
         _nameTF.cornerRadius = kSize(8);
         _nameTF.backgroundColor = kColorHex(0xECECEC);
         _nameTF.keyboardType = UIKeyboardTypeDefault;
@@ -220,7 +219,7 @@
 - (UILabel *)idCardLB {
     if (!_idCardLB) {
         _idCardLB = [[UILabel alloc] init];
-        _idCardLB.text = @"身份证号码";
+        _idCardLB.text = ZCLocalizedString(@"身份证号码", nil);
         _idCardLB.textAlignment = NSTextAlignmentLeft;
         _idCardLB.font = kPingFangMediumFont(14);
         _idCardLB.textColor = kCommonBlackColor;
@@ -230,7 +229,7 @@
 
 - (UITextField *)idCardTF {
     if (!_idCardTF) {
-        _idCardTF = [YCJInputItemView createTextFieldWithPlaceHolder:@"请填写真实有效的身份证号码"];
+        _idCardTF = [YCJInputItemView createTextFieldWithPlaceHolder:ZCLocalizedString(@"请填写真实有效的身份证号码", nil)];
         _idCardTF.cornerRadius = kSize(8);
         _idCardTF.keyboardType = UIKeyboardTypeDefault;
         _idCardTF.backgroundColor = kColorHex(0xECECEC);
@@ -245,7 +244,7 @@
 - (UIButton *)cancelBtn {
     if (!_cancelBtn) {
         _cancelBtn = [[UIButton alloc] init];
-        [_cancelBtn setTitle:@"返回游戏" forState:UIControlStateNormal];
+        [_cancelBtn setTitle:ZCLocalizedString(@"返回游戏", nil) forState:UIControlStateNormal];
         [_cancelBtn setTitleColor:kColorHex(0x46599C) forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = kPingFangRegularFont(14);
         _cancelBtn.backgroundColor = kColorHex(0xEEF2FF);
@@ -258,7 +257,7 @@
 - (UIButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[UIButton alloc] init];
-        [_sureBtn setTitle:@"确认" forState:UIControlStateNormal];
+        [_sureBtn setTitle:ZCLocalizedString(@"确认", nil) forState:UIControlStateNormal];
         [_sureBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _sureBtn.titleLabel.font = kPingFangRegularFont(14);
         _sureBtn.backgroundColor = kColorHex(0x6984EA);

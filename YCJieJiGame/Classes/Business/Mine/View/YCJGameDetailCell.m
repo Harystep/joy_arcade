@@ -150,7 +150,7 @@
 - (UIButton *)shensuBtn {
     if (!_shensuBtn) {
         _shensuBtn = [[UIButton alloc] init];
-        [_shensuBtn setTitle:@"结算申诉" forState:UIControlStateNormal];
+        [_shensuBtn setTitle:ZCLocalizedString(@"结算申诉", nil) forState:UIControlStateNormal];
         [_shensuBtn setBackgroundColor:kColorHex(0x6984EA)];
         _shensuBtn.cornerRadius = kSize(15);
         _shensuBtn.titleLabel.font = kPingFangRegularFont(14);

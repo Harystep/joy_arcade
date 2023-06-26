@@ -98,7 +98,7 @@
 - (GradientButton *)jinbiBtn {
     if (!_jinbiBtn) {
         _jinbiBtn = [[GradientButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth * 0.5, 40)];
-        [_jinbiBtn setTitle:@"  金币" forState:UIControlStateNormal];
+        [_jinbiBtn setTitle:[NSString stringWithFormat:@"  %@", ZCLocalizedString(@"金币", nil)] forState:UIControlStateNormal];
         [_jinbiBtn setTitleColor:kColorHex(0x364780) forState:UIControlStateNormal];
         [_jinbiBtn setTitleColor:kColorHex(0x4F3E0B) forState:UIControlStateSelected];
         _jinbiBtn.titleLabel.font = kPingFangMediumFont(18);
@@ -115,7 +115,7 @@
 - (GradientButton *)zuansBtn {
     if (!_zuansBtn) {
         _zuansBtn = [[GradientButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth * 0.5, 40)];
-        [_zuansBtn setTitle:@"  钻石" forState:UIControlStateNormal];
+        [_zuansBtn setTitle:[NSString stringWithFormat:@"  %@", ZCLocalizedString(@"钻石", nil)] forState:UIControlStateNormal];
         [_zuansBtn setNormalBgColorWithColor:kColorHex(0xB4C1EC)];
         [_zuansBtn setTitleColor:kColorHex(0x364780) forState:UIControlStateNormal];
         [_zuansBtn setTitleColor:kColorHex(0x4F3E0B) forState:UIControlStateSelected];

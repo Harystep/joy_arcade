@@ -30,7 +30,7 @@ UITableViewDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"游戏记录";
+    self.navigationItem.title = ZCLocalizedString(@"游戏记录", nil);
     self.page = 1;
     [self bgImageWhite];
     [self configUI];
@@ -86,7 +86,7 @@ UITableViewDelegate>
 }
 
 - (void)showError:(NSError *)error {
-    NSString *errorText = error.localizedDescription ?: @"暂无数据";
+    NSString *errorText = error.localizedDescription ?: ZCLocalizedString(@"暂无数据", nil);
     WeakSelf
     if (error) {
         [self setupEmptyViewWithText:errorText isEmpty:!error action:^{

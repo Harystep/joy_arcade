@@ -51,7 +51,8 @@
         make.centerX.equalTo(self.view);
         make.top.equalTo(self.processV.mas_bottom).offset(20);
     }];
-    
+    NSString *content = [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"zh-Hant"ofType:@"lproj"]] localizedStringForKey:@"确认" value:@""table:nil];
+    NSLog(@"content:%@", content);
     [NSTimer scheduledTimerWithTimeInterval:0.045
                                          target:self
                                        selector:@selector(progressChanged:)

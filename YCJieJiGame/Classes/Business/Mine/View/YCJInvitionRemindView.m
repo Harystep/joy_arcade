@@ -30,9 +30,9 @@
 }
 
 - (void)setInviteModel:(YCJInviteCodeModel *)inviteModel {
-    NSString *content = [NSString stringWithFormat:@"每邀请一位好友加入并输入您的邀请码，您和被邀请人都将获得%@钻石奖励，每个用户最高可获得%@钻石", inviteModel.rewards, inviteModel.max_rewards];
-    NSString *rewards = [NSString stringWithFormat:@"%@钻石奖励", inviteModel.rewards];
-    NSString *max_rewards = [NSString stringWithFormat:@"最高可获得%@钻石", inviteModel.max_rewards];
+    NSString *content = [NSString stringWithFormat:@"%@%@%@，%@%@%@", ZCLocalizedString(@"每邀请一位好友加入并输入您的邀请码，您和被邀请人都将获得", nil), inviteModel.rewards, ZCLocalizedString(@"钻石奖励", nil), ZCLocalizedString(@"每个用户最高可获得", nil), inviteModel.max_rewards, ZCLocalizedString(@"钻石", nil)];
+    NSString *rewards = [NSString stringWithFormat:@"%@%@", inviteModel.rewards, ZCLocalizedString(@"钻石奖励", nil)];
+    NSString *max_rewards = [NSString stringWithFormat:@"%@%@%@", ZCLocalizedString(@"最高可获得", nil), inviteModel.max_rewards, ZCLocalizedString(@"钻石", nil)];
     self.contentLB.attributedText = [content highlights:@[rewards, max_rewards] highlightColor:kColorHex(0x333333)];
 }
 
@@ -104,7 +104,7 @@
 - (UILabel *)titleLB {
     if (!_titleLB) {
         _titleLB = [[UILabel alloc] init];
-        _titleLB.text = @"邀请奖励";
+        _titleLB.text = ZCLocalizedString(@"邀请奖励", nil);
         _titleLB.textColor = kColorHex(0xB89E81);
         _titleLB.font = kPingFangRegularFont(14);
     }

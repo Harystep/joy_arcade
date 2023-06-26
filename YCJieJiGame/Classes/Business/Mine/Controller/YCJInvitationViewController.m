@@ -35,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"邀请好友";
+    self.navigationItem.title = ZCLocalizedString(@"邀请好友", nil);
     [self bgImageName:@"icon_mine_invitation_bg"];
     [self configUI];
     [self requestInviteData];
@@ -98,21 +98,25 @@
         make.height.mas_equalTo(150);
     }];
     
-    [self.contentBgView addSubview:self.invitionBtn];
-    [self.invitionBtn addSubview:self.arrowBgView];
-    [self.invitionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.contentBgView);
-        make.height.mas_equalTo(70);
-    }];
-    [self.arrowBgView addSubview:self.arrowImg];
+    [self.contentBgView addSubview:self.arrowBgView];
     [self.arrowBgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.invitionBtn);
-        make.size.mas_equalTo(20);
-        make.left.equalTo(self.invitionBtn.mas_centerX).offset(65);
+        make.leading.trailing.bottom.equalTo(self.contentBgView);
+        make.height.mas_equalTo(70);
+        make.top.mas_equalTo(self.remindView.mas_bottom).offset(15);
     }];
+    
+    [self.arrowBgView addSubview:self.invitionBtn];
+    [self.invitionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.equalTo(self.arrowBgView);
+        make.centerX.mas_equalTo(self.arrowBgView);
+    }];
+    
+    [self.arrowBgView addSubview:self.arrowImg];
     [self.arrowImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.mas_equalTo(4);
-        make.right.bottom.mas_equalTo(-4);
+        make.centerY.mas_equalTo(self.invitionBtn.mas_centerY);
+        make.leading.mas_equalTo(self.invitionBtn.mas_trailing).offset(8);
+        make.width.mas_equalTo(16);
+        make.height.mas_equalTo(16);
     }];
     
     [self.scrollView addSubview:self.inviteCodeBgView];
@@ -168,7 +172,7 @@
 - (void)submitInviteCode {
     
     if (self.inputCodeTF.text.length <= 0) {
-        [MBProgressHUD showError:@"请输入邀请码"];
+        [MBProgressHUD showError:ZCLocalizedString(@"请输入邀请码", nil)];
         return;
     }
     [JKNetWorkManager postRequestWithUrlPath:JKInputInviteCodeUrlKey parameters:@{@"code": self.inputCodeTF.text} finished:^(JKNetWorkResult * _Nonnull result) {
@@ -197,6 +201,7 @@
         _contentBgView = [UIImageView new];
         _contentBgView.contentMode = UIViewContentModeScaleToFill;
         _contentBgView.image = [UIImage imageNamed:@"icon_mine_invitation_content"];
+        _contentBgView.userInteractionEnabled = YES;
     }
     return _contentBgView;
 }
@@ -233,7 +238,7 @@
 - (UILabel *)codeLB {
     if (!_codeLB) {
         _codeLB = [[UILabel alloc] init];
-        _codeLB.text = @"您的专属邀请码";
+        _codeLB.text = ZCLocalizedString(@"您的专属邀请码", nil);
         _codeLB.textAlignment = NSTextAlignmentCenter;
         _codeLB.font = kPingFangSemiboldFont(16);
         _codeLB.textColor = kColorHex(0x222222);
@@ -251,7 +256,7 @@
 - (UILabel *)invitionLB {
     if (!_invitionLB) {
         _invitionLB = [[UILabel alloc] init];
-        _invitionLB.text = @"填写好友邀请码";
+        _invitionLB.text = ZCLocalizedString(@"填写好友邀请码", nil);
         _invitionLB.textAlignment = NSTextAlignmentCenter;
         _invitionLB.font = kPingFangSemiboldFont(16);
         _invitionLB.textColor = kColorHex(0x222222);
@@ -262,7 +267,7 @@
 
 - (UITextField *)inputCodeTF {
     if (!_inputCodeTF) {
-        _inputCodeTF = [YCJInputItemView createTextFieldWithPlaceHolder:@"请输入"];
+        _inputCodeTF = [YCJInputItemView createTextFieldWithPlaceHolder:ZCLocalizedString(@"请输入", nil)];
         _inputCodeTF.cornerRadius = 25;
         _inputCodeTF.borderColor = kColorHex(0xF8F6E9);
         _inputCodeTF.borderWidth = 1.5;
@@ -278,7 +283,7 @@
 - (UIButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 130, 40)];
-        [_sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+        [_sureBtn setTitle:ZCLocalizedString(@"确定", nil) forState:UIControlStateNormal];
         [_sureBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _sureBtn.titleLabel.font = kPingFangMediumFont(16);
         _sureBtn.backgroundColor = kColorHex(0xE58D24);
@@ -298,10 +303,10 @@
 - (UIButton *)invitionBtn {
     if (!_invitionBtn) {
         _invitionBtn = [[UIButton alloc] init];
-        [_invitionBtn setTitle:@"邀请微信好友" forState:UIControlStateNormal];
+        [_invitionBtn setTitle:ZCLocalizedString(@"邀请微信好友", nil) forState:UIControlStateNormal];
         [_invitionBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _invitionBtn.titleLabel.font = kPingFangRegularFont(16);
-        [_invitionBtn addTarget:self action:@selector(invitionAction) forControlEvents:UIControlEventTouchUpInside];
+        _invitionBtn.userInteractionEnabled = NO;
     }
     return _invitionBtn;
 }
@@ -310,8 +315,10 @@
 - (UIView *)arrowBgView {
     if (!_arrowBgView) {
         _arrowBgView = [UIView new];
-        _arrowBgView.backgroundColor = kCommonWhiteColor;
+        _arrowBgView.backgroundColor = kColorHex(0xE58D24);
         _arrowBgView.cornerRadius = 10;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(invitionAction)];
+        [_arrowBgView addGestureRecognizer:tap];
     }
     return _arrowBgView;
 }
@@ -319,8 +326,10 @@
 - (UIImageView *)arrowImg {
     if (!_arrowImg) {
         _arrowImg = [[UIImageView alloc] init];
-        _arrowImg.contentMode = UIViewContentModeScaleAspectFit;
+        _arrowImg.contentMode = UIViewContentModeCenter;
         _arrowImg.image = [UIImage imageWithImageName:@"icon_mine_arrowR" imageColor:kColorHex(0xE58D24)];
+        _arrowImg.cornerRadius = 8;
+        _arrowImg.backgroundColor = kCommonWhiteColor;
     }
     return _arrowImg;
 }

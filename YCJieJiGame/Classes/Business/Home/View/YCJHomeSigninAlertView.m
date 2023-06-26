@@ -47,12 +47,12 @@
     [self.contentView addSubview:big];
     
     if ([listModel.status isEqualToString:@"1"]) {
-        [self.sureBtn setTitle:@"立即签到" forState:UIControlStateNormal];
+        [self.sureBtn setTitle:ZCLocalizedString(@"立即签到", nil) forState:UIControlStateNormal];
         [self.sureBtn setTitleColor:kColorHex(0x4F3E0B) forState:UIControlStateNormal];
         [self.sureBtn setGradientBgColor];
     } else {
         [self.sureBtn setNormalBgColorWithColor:kColorHex(0xEDEDED)];
-        [self.sureBtn setTitle:@"已签到" forState:UIControlStateNormal];
+        [self.sureBtn setTitle:ZCLocalizedString(@"已签到", nil) forState:UIControlStateNormal];
         [self.sureBtn setTitleColor:kColorHex(0x999999) forState:UIControlStateNormal];
     }
 }
@@ -62,7 +62,7 @@
         [self dismiss];
         if(!result.error && [result.resultData isKindOfClass:[NSDictionary class]]) {
             [MBProgressHUD hideHUD];
-            [MBProgressHUD showSuccess:@"签到成功"];
+            [MBProgressHUD showSuccess:ZCLocalizedString(@"签到成功", nil)];
             [[YCJUserInfoManager sharedInstance] reloadUserInfo];
         } else {
             [MBProgressHUD showSuccess:result.resultObject[@"errMsg"]];
@@ -158,7 +158,7 @@
 - (GradientButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[GradientButton alloc] initWithFrame:CGRectMake(0, 0, 180, 50)];
-        [_sureBtn setTitle:@"立即签到" forState:UIControlStateNormal];
+        [_sureBtn setTitle:ZCLocalizedString(@"立即签到", nil) forState:UIControlStateNormal];
         [_sureBtn setTitleColor:kColorHex(0x4F3E0B) forState:UIControlStateNormal];
         _sureBtn.titleLabel.font = kPingFangMediumFont(18);
         _sureBtn.cornerRadius = 25;

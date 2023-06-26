@@ -71,7 +71,7 @@ import StoreKit
         self.productType = type
         if SKPaymentQueue.canMakePayments() {
             DispatchQueue.main.async {
-                UIApplication.shared.keyWindow?.showAppStoreHUD(title: "正在连接App Store")
+                UIApplication.shared.keyWindow?.showAppStoreHUD(title: "Connecting App Store")
             }
             getOrderNumber()
         } else {
@@ -86,7 +86,7 @@ import StoreKit
             "productId" : "\(self.productType):\(goodid)"
         ]
         DispatchQueue.main.async {
-            UIApplication.shared.keyWindow?.showAppStoreHUD(title: "正在连接App Store")
+            UIApplication.shared.keyWindow?.showAppStoreHUD(title: "Connecting App Store")
         }
         JKNetWorkManager.postRequest(withUrlPath: JKIOSChongZhiDingDanUrlKey, parameters: parameters) { [weak self] res in
             guard let `self` = self else {return}
@@ -170,7 +170,7 @@ import StoreKit
                 "receipt" : receipt,
             ]
             DispatchQueue.main.async {
-                UIApplication.shared.keyWindow?.showAppStoreHUD(title: "正在连接App Store")
+                UIApplication.shared.keyWindow?.showAppStoreHUD(title: "Connecting App Store")
             }
             JKNetWorkManager.postRequest(withUrlPath: JKIOSChongZhiUrlKey, parameters: parameters) { [weak self] res in
                 guard let `self` = self else {return}

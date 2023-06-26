@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)convertLanguageContent:(NSString *)content;
 
++ (NSInteger)getCurrentLanguage;
+
 @end
 
 NS_ASSUME_NONNULL_END

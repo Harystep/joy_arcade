@@ -33,7 +33,7 @@ UITableViewDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"游戏记录详情";
+    self.navigationItem.title = ZCLocalizedString(@"游戏记录详情", nil);
     [self bgImageWhite];
     [self configUI];
     [self requestGameDetail];
@@ -85,7 +85,7 @@ UITableViewDelegate>
         [alertSheet addAction:action];
     }
     
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:ZCLocalizedString(@"取消", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"点击了取消");
     }];
     //3.添加动作
@@ -202,7 +202,7 @@ UITableViewDelegate>
         _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 80)];
         _footerView.hidden = YES;
         UIButton *footB = [[UIButton alloc] init];
-        [footB setTitle:@"结算申诉" forState:UIControlStateNormal];
+        [footB setTitle:ZCLocalizedString(@"结算申诉", nil) forState:UIControlStateNormal];
         [footB setBackgroundColor:kColorHex(0x6984EA)];
         footB.cornerRadius = kSize(8);
         [footB addTarget:self action:@selector(complaintAction) forControlEvents:UIControlEventTouchUpInside];
@@ -222,7 +222,7 @@ UITableViewDelegate>
         _topLabel = [[UILabel alloc] init];
         _topLabel.font = kPingFangSemiboldFont(14);
         _topLabel.textColor = kCommonBlackColor;
-        _topLabel.text = @"结算记录";
+        _topLabel.text = ZCLocalizedString(@"结算记录", nil);
         _topLabel.textAlignment = NSTextAlignmentLeft;
     }
     return _topLabel;

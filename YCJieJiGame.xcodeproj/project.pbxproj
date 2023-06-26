@@ -186,6 +186,7 @@
 		4C30F1C72A48154A00F71B45 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		4C30F1C82A48154A00F71B45 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4C30F1C92A48154A00F71B45 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4C55D5BD2A4974320026F725 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		521E618F2A15C3EF00311CED /* JKUrlConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKUrlConst.h; sourceTree = "<group>"; };
 		521E61902A15C3EF00311CED /* JKUrlConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKUrlConst.m; sourceTree = "<group>"; };
 		52336B802A14BE2100E4BA7C /* YCJieJiGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YCJieJiGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1496,6 +1497,7 @@
 				52336B922A14BE2400E4BA7C /* Base */,
 				4C30F1C52A48152200F71B45 /* zh-Hans */,
 				4C30F1C82A48154A00F71B45 /* zh-Hant */,
+				4C55D5BD2A4974320026F725 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

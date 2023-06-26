@@ -102,7 +102,7 @@ UITableViewDelegate>
     if (net) {
         [self removeEmptyView];
     } else {
-        [self showError:@"网络异常，请稍后重试"];
+        [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
     }
 }
 
@@ -127,7 +127,7 @@ UITableViewDelegate>
         [weakSelf.tableView.mj_header endRefreshing];
         [weakSelf.tableView.mj_footer endRefreshing];
         if (result.error) {
-            [self showError:@"网络异常，请稍后重试"];
+            [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
         }else {
             if(self.page == 1) { [self.rankList removeAllObjects]; }
             NSArray *list = [YCJRankListModel mj_objectArrayWithKeyValuesArray:result.resultData[@"list"]];

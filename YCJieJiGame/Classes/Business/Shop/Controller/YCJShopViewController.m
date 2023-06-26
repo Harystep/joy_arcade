@@ -76,7 +76,7 @@ UICollectionViewDelegateFlowLayout>
     if (net) {
         [self removeEmptyView];
     } else {
-        [self showError:@"网络异常，请稍后重试"];
+        [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
     }
 }
 
@@ -84,7 +84,7 @@ UICollectionViewDelegateFlowLayout>
     /// type: int类型 1：钻石 2：金币
     [JKNetWorkManager getRequestWithUrlPath:JKChargeListUrlKey parameters:@{@"type": @2} finished:^(JKNetWorkResult * _Nonnull result) {
         if (result.error) {
-            [self showError:@"网络异常，请稍后重试"];
+            [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
         }else {
             [self removeEmptyView];
             YCJShopModel *shopModel = [YCJShopModel mj_objectWithKeyValues:result.resultData];
@@ -98,7 +98,7 @@ UICollectionViewDelegateFlowLayout>
     /// type: int类型 1：钻石 2：金币
     [JKNetWorkManager getRequestWithUrlPath:JKChargeListUrlKey parameters:@{@"type": @1} finished:^(JKNetWorkResult * _Nonnull result) {
         if (result.error) {
-            [self showError:@"网络异常，请稍后重试"];
+            [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
         }else {
             [self removeEmptyView];
             YCJShopModel *shopModel = [YCJShopModel mj_objectWithKeyValues:result.resultData];
@@ -178,7 +178,7 @@ UICollectionViewDelegateFlowLayout>
         NSLog(@"errMsg:%@", errMsg);
         kRunAfter(0.3, ^{
             if (errMsg.length <= 0) {
-                [MBProgressHUD showError:@"取消购买"];
+                [MBProgressHUD showError:ZCLocalizedString(@"取消购买", nil)];
             } else {
                 [MBProgressHUD showError:errMsg];
             }
@@ -187,7 +187,7 @@ UICollectionViewDelegateFlowLayout>
     [IAPHelper shared].paymentSuccessfulCallBack = ^{
         NSLog(@"产品购买成功咯");
         kRunAfter(0.3, ^{
-            [MBProgressHUD showError:@"购买成功"];
+            [MBProgressHUD showError:ZCLocalizedString(@"购买成功", nil)];
         });
         /// 购买成功，刷新用户信息
         [[YCJUserInfoManager sharedInstance] reloadUserInfo];

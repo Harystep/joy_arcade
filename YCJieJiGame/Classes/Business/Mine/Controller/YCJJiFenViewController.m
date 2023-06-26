@@ -90,7 +90,7 @@ UITableViewDelegate>
 }
 
 - (void)showError:(NSError *)error {
-    NSString *errorText = error.localizedDescription ?: @"暂无数据";
+    NSString *errorText = error.localizedDescription ?: ZCLocalizedString(@"暂无数据", nil);
     WeakSelf
     if (error) {
         [self setupEmptyViewWithText:errorText isEmpty:!error action:^{

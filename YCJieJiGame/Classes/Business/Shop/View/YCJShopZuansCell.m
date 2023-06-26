@@ -188,7 +188,7 @@
 - (UIButton *)buyBtn {
     if (!_buyBtn) {
         _buyBtn = [[UIButton alloc] init];
-        [_buyBtn setTitle:@"购买" forState:UIControlStateNormal];
+        [_buyBtn setTitle:ZCLocalizedString(@"购买", nil) forState:UIControlStateNormal];
         [_buyBtn setTitleColor:kColorHex(0x173166) forState:UIControlStateNormal];
         _buyBtn.titleLabel.font = kPingFangSemiboldFont(16);
         _buyBtn.userInteractionEnabled = NO;

@@ -34,7 +34,7 @@
 
 - (void)setupSubviews {
     
-    NSArray *titles = @[@"爆机奖励领取", @"操作按键失灵", @"结算失败"];
+    NSArray *titles = @[ZCLocalizedString(@"爆机奖励领取", nil), ZCLocalizedString(@"操作按键失灵", nil), ZCLocalizedString(@"结算失败", nil)];
     [self.reasonList addObjectsFromArray:titles];
     [self addSubview:self.contentView];
     float frow = titles.count / 2.0;
@@ -186,7 +186,7 @@
 - (UILabel *)titleLB {
     if (!_titleLB) {
         _titleLB = [[UILabel alloc] init];
-        _titleLB.text = @"选择申诉原因";
+        _titleLB.text = ZCLocalizedString(@"选择申诉原因", nil);
         _titleLB.textAlignment = NSTextAlignmentCenter;
         _titleLB.font = kPingFangSemiboldFont(15);
         _titleLB.textColor = kCommonBlackColor;
@@ -197,7 +197,7 @@
 - (UIButton *)cancelBtn {
     if (!_cancelBtn) {
         _cancelBtn = [[UIButton alloc] init];
-        [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+        [_cancelBtn setTitle:ZCLocalizedString(@"取消", nil) forState:UIControlStateNormal];
         [_cancelBtn setTitleColor:kColorHex(0x46599C) forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = kPingFangRegularFont(14);
         _cancelBtn.backgroundColor = kColorHex(0xEEF2FF);
@@ -210,7 +210,7 @@
 - (UIButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[UIButton alloc] init];
-        [_sureBtn setTitle:@"确认" forState:UIControlStateNormal];
+        [_sureBtn setTitle:ZCLocalizedString(@"确认", nil) forState:UIControlStateNormal];
         [_sureBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _sureBtn.titleLabel.font = kPingFangRegularFont(14);
         _sureBtn.backgroundColor = kColorHex(0x6984EA);

@@ -198,7 +198,7 @@
 - (UILabel *)ljdzLB {
     if (!_ljdzLB) {
         _ljdzLB = [[UILabel alloc] init];
-        _ljdzLB.text = @"立即到账";
+        _ljdzLB.text = ZCLocalizedString(@"立即到账", nil);
         _ljdzLB.textAlignment = NSTextAlignmentLeft;
         _ljdzLB.font = kPingFangMediumFont(12);
         _ljdzLB.textColor = kColorHex(0x4B0A0A);
@@ -263,7 +263,7 @@
 - (UIButton *)buyBtn {
     if (!_buyBtn) {
         _buyBtn = [[UIButton alloc] init];
-        [_buyBtn setTitle:@"购买" forState:UIControlStateNormal];
+        [_buyBtn setTitle:ZCLocalizedString(@"购买", nil) forState:UIControlStateNormal];
         [_buyBtn setTitleColor:kColorHex(0x173166) forState:UIControlStateNormal];
         _buyBtn.titleLabel.font = kPingFangSemiboldFont(16);
         _buyBtn.userInteractionEnabled = NO;

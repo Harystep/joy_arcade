@@ -76,7 +76,7 @@
     if (!_zhichuBtn) {
         _zhichuBtn = [[UIButton alloc] init];
         [_zhichuBtn setBackgroundColor:kColorHex(0x6984EA)];
-        [_zhichuBtn setTitle:@"支出" forState:UIControlStateNormal];
+        [_zhichuBtn setTitle:ZCLocalizedString(@"支出", nil) forState:UIControlStateNormal];
         [_zhichuBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _zhichuBtn.titleLabel.font = kPingFangRegularFont(14);
         [_zhichuBtn addTarget:self action:@selector(consumeTypeAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -90,7 +90,7 @@
     if (!_shouruBtn) {
         _shouruBtn = [[UIButton alloc] init];
         [_shouruBtn setBackgroundColor:kCommonWhiteColor];
-        [_shouruBtn setTitle:@"收入" forState:UIControlStateNormal];
+        [_shouruBtn setTitle:ZCLocalizedString(@"收入", nil) forState:UIControlStateNormal];
         [_shouruBtn setTitleColor:kColorHex(0x666666) forState:UIControlStateNormal];
         _shouruBtn.titleLabel.font = kPingFangRegularFont(14);
         [_shouruBtn addTarget:self action:@selector(consumeTypeAction:) forControlEvents:UIControlEventTouchUpInside];

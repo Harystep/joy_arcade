@@ -209,7 +209,7 @@
     if (replaceStr == nil ||
         replaceStr == Nil ||
         replaceStr.length == 0) {
-        replaceStr = @"暂无数据";
+        replaceStr = ZCLocalizedString(@"暂无数据", nil);
     }
     if (nullableStr == nil ||
         nullableStr == NULL ||

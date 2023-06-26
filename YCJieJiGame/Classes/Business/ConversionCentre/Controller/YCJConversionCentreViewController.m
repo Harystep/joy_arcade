@@ -49,14 +49,14 @@ UICollectionViewDelegateFlowLayout>
     if (net) {
         [self removeEmptyView];
     } else {
-        [self showError:@"网络异常，请稍后重试"];
+        [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
     }
 }
 
 - (void)requestExchangeList {
     [JKNetWorkManager getRequestWithUrlPath:JKJifen2JBListUrlKey parameters:@{} finished:^(JKNetWorkResult * _Nonnull result) {
         if (result.error) {
-            [self showError:@"网络异常，请稍后重试"];
+            [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
         }else {
             [self removeEmptyView];
             self.exchangeList = [YCJExchangeModel mj_objectArrayWithKeyValuesArray:result.resultData[@"list"]];
@@ -121,7 +121,7 @@ UICollectionViewDelegateFlowLayout>
     if ([[YCJUserInfoManager sharedInstance] isLogin:self]) {
         [self.view endEditing:YES];
         if (self.exchangeTF.text.length <= 0) {
-            [MBProgressHUD showError:@"请输入钻石数量"];
+            [MBProgressHUD showError:ZCLocalizedString(@"请输入钻石数量", nil)];
             return;
         }
         YCJExchangeCoinsAlertView *alert = [[YCJExchangeCoinsAlertView alloc] init];
@@ -232,7 +232,7 @@ UICollectionViewDelegateFlowLayout>
         }];
         
         UILabel *remindLb = [[UILabel alloc] init];
-        remindLb.text = @"1钻石可兑换10金币";
+        remindLb.text = ZCLocalizedString(@"1钻石可兑换10金币", nil);
         remindLb.textAlignment = NSTextAlignmentCenter;
         remindLb.textColor = kColorHex(0x4E5B83);
         remindLb.font = kPingFangRegularFont(14);
@@ -248,13 +248,14 @@ UICollectionViewDelegateFlowLayout>
 
 - (UITextField *)exchangeTF {
     if (!_exchangeTF) {
-        _exchangeTF = [YCJInputItemView createTextFieldWithPlaceHolder:@"请输入"];
+        _exchangeTF = [YCJInputItemView createTextFieldWithPlaceHolder:ZCLocalizedString(@"请输入", nil)];
         _exchangeTF.cornerRadius = 25;
         _exchangeTF.borderColor = kCommonWhiteColor;
-        _exchangeTF.borderWidth = 1.5;
+        _exchangeTF.borderWidth = 1.5;        
         UIView *left = [[UIView alloc] init];
         left.frame = CGRectMake(0, 0, 18, 1);
         _exchangeTF.leftView = left;
+        _exchangeTF.keyboardType = UIKeyboardTypePhonePad;
         _exchangeTF.leftViewMode = UITextFieldViewModeAlways;
     }
     return _exchangeTF;
@@ -263,7 +264,7 @@ UICollectionViewDelegateFlowLayout>
 - (GradientButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[GradientButton alloc] initWithFrame:CGRectMake(0, 0, 130, 40)];
-        [_sureBtn setTitle:@"确认兑换" forState:UIControlStateNormal];
+        [_sureBtn setTitle:ZCLocalizedString(@"确认兑换", nil) forState:UIControlStateNormal];
         [_sureBtn setTitleColor:kColorHex(0x4F3E0B) forState:UIControlStateNormal];
         _sureBtn.titleLabel.font = kPingFangMediumFont(16);
         _sureBtn.cornerRadius = 19;

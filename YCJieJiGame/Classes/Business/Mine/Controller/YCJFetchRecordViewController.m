@@ -28,7 +28,7 @@ UITableViewDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"抓取记录";
+    self.navigationItem.title = ZCLocalizedString(@"抓取记录", nil);
     [self bgImageWhite];;
     [self configUI];
     [self requestFetchList];
@@ -81,7 +81,7 @@ UITableViewDelegate>
 }
 
 - (void)showError:(NSError *)error {
-    NSString *errorText = error.localizedDescription ?: @"暂无数据";
+    NSString *errorText = error.localizedDescription ?: ZCLocalizedString(@"暂无数据", nil);
     WeakSelf
     if (error) {
         [self setupEmptyViewWithText:errorText isEmpty:!error action:^{

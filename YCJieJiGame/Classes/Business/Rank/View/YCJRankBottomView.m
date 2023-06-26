@@ -46,10 +46,10 @@
         if (myRank.hasRank == 1) {
             self.rankLB.text = myRank.rank;
         } else {
-            self.rankLB.text = @"未上榜";
+            self.rankLB.text = ZCLocalizedString(@"未上榜", nil);
         }
     } else {
-        self.nameLB.text = @"去登录";
+        self.nameLB.text = ZCLocalizedString(@"去登录", nil);
         self.headImgView.image = [UIImage imageNamed:@"icon_user_default"];
         self.jifenLB.text = @"0";
     }
@@ -127,8 +127,9 @@
 
 - (UILabel *)rankLB {
     if (!_rankLB) {
+        
         _rankLB = [[UILabel alloc] init];
-        _rankLB.text = @"未上榜";
+        _rankLB.text = ZCLocalizedString(@"未上榜", nil);
         _rankLB.textAlignment = NSTextAlignmentLeft;
         _rankLB.font = kPingFangRegularFont(14);
         _rankLB.textColor = kCommonWhiteColor;

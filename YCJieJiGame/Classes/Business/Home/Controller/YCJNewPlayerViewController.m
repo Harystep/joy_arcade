@@ -29,7 +29,7 @@ UITableViewDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"新手指导";
+    self.title = ZCLocalizedString(@"新手指导", nil);
     [self bgImageName:@"icon_mine_bg"];
     [self configUI];
     [self requestPlayList];

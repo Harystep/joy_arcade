@@ -29,14 +29,14 @@
 
 - (void)setType:(YCJAccountType)type {
     if (type == YCJAccountTypeLogout) {
-        self.titleLB.text = @"确定要退出登录吗？";
+        self.titleLB.text = ZCLocalizedString(@"确定要退出登录吗？", nil);
         self.contentLB.text = @"";
-        [self.sureBtn setTitle:@"确认" forState:UIControlStateNormal];
+        [self.sureBtn setTitle:ZCLocalizedString(@"确认", nil) forState:UIControlStateNormal];
         topOffset = 35;
     } else {
-        self.titleLB.text = @"确定注销账号";
-        self.contentLB.text = @"账户注销后，所有虚拟资产、所获得的奖品、账户余额、个人信息等该账户所有留存信息将被清空，无法恢复";
-        [self.sureBtn setTitle:@"确认注销" forState:UIControlStateNormal];
+        self.titleLB.text = ZCLocalizedString(@"确定注销账号", nil);
+        self.contentLB.text = ZCLocalizedString(@"account_logout_title", nil);
+        [self.sureBtn setTitle:ZCLocalizedString(@"确认注销", nil) forState:UIControlStateNormal];
         topOffset = 20;
     }
 }
@@ -150,7 +150,7 @@
 - (UIButton *)cancelBtn {
     if (!_cancelBtn) {
         _cancelBtn = [[UIButton alloc] init];
-        [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+        [_cancelBtn setTitle:ZCLocalizedString(@"取消", nil) forState:UIControlStateNormal];
         [_cancelBtn setTitleColor:kColorHex(0x46599C) forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = kPingFangRegularFont(14);
         _cancelBtn.backgroundColor = kColorHex(0xEEF2FF);
@@ -163,7 +163,7 @@
 - (UIButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[UIButton alloc] init];
-        [_sureBtn setTitle:@"确认" forState:UIControlStateNormal];
+        [_sureBtn setTitle:ZCLocalizedString(@"确认", nil) forState:UIControlStateNormal];
         [_sureBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _sureBtn.titleLabel.font = kPingFangRegularFont(14);
         _sureBtn.backgroundColor = kColorHex(0x6984EA);

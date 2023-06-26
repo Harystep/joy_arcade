@@ -48,7 +48,6 @@
         make.left.mas_equalTo(20);
         make.right.mas_equalTo(-20);
         make.centerY.equalTo(self.contentLBbgView);
-        make.height.mas_equalTo(30);
     }];
     
     
@@ -72,14 +71,26 @@
 
 - (void)setExchangeModel:(YCJExchangeModel *)exchangeModel {
     _exchangeModel = exchangeModel;
-    NSString *content = [NSString stringWithFormat:@"确认%@积分兑换%@金币", exchangeModel.points, exchangeModel.goldCoin];
-    NSAttributedString *contentAttri = [content highlights:@[[NSString stringWithFormat:@"%@积分", exchangeModel.points], [NSString stringWithFormat:@"%@金币", exchangeModel.goldCoin]] highlightColor:kColorHex(0xCF2F2A)];
+    self.titleLB.text = ZCLocalizedString(@"积分兑换金币", nil);
+    NSString *content;
+    if([SJLocalTool getCurrentLanguage] == 3) {
+        content = [NSString stringWithFormat:@"%@%@%@\n%@%@", ZCLocalizedString(@"确认", nil), exchangeModel.points, ZCLocalizedString(@"积分兑换", nil), exchangeModel.goldCoin, ZCLocalizedString(@"金币_alert", nil)];
+    } else {
+        content = [NSString stringWithFormat:@"%@%@%@%@%@", ZCLocalizedString(@"确认", nil), exchangeModel.points, ZCLocalizedString(@"积分兑换", nil), exchangeModel.goldCoin, ZCLocalizedString(@"金币_alert", nil)];
+    }
+    NSAttributedString *contentAttri = [content highlights:@[[NSString stringWithFormat:@"%@%@", exchangeModel.points, ZCLocalizedString(@"积分", nil)], [NSString stringWithFormat:@"%@%@", exchangeModel.goldCoin, ZCLocalizedString(@"金币_alert", nil)]] highlightColor:kColorHex(0xCF2F2A)];
     self.contentLB.attributedText = contentAttri;
 }
 
 - (void)setZuanshi:(NSString *)zuanshi {
-    NSString *content = [NSString stringWithFormat:@"确认%@钻石兑换%d金币", zuanshi, ([zuanshi intValue] * 10)];
-    NSAttributedString *contentAttri = [content highlights:@[[NSString stringWithFormat:@"%@钻石", zuanshi], [NSString stringWithFormat:@"%d金币",  ([zuanshi intValue] * 10)]] highlightColor:kColorHex(0xCF2F2A)];
+    NSString *content;
+    self.titleLB.text = ZCLocalizedString(@"钻石兑换金币", nil);
+    if([SJLocalTool getCurrentLanguage] == 3) {
+        content = [NSString stringWithFormat:@"%@%@%@\n%d%@", ZCLocalizedString(@"确认", nil), zuanshi, ZCLocalizedString(@"钻石兑换", nil), ([zuanshi intValue] * 10), ZCLocalizedString(@"金币_alert", nil)];
+    } else {
+        content = [NSString stringWithFormat:@"%@%@%@%d%@", ZCLocalizedString(@"确认", nil), zuanshi, ZCLocalizedString(@"钻石兑换", nil), ([zuanshi intValue] * 10), ZCLocalizedString(@"金币_alert", nil)];
+    }
+    NSAttributedString *contentAttri = [content highlights:@[[NSString stringWithFormat:@"%@%@", zuanshi, ZCLocalizedString(@"钻石", nil)], [NSString stringWithFormat:@"%d%@",  ([zuanshi intValue] * 10), ZCLocalizedString(@"金币_alert", nil)]] highlightColor:kColorHex(0xCF2F2A)];
     self.contentLB.attributedText = contentAttri;
 }
 
@@ -131,7 +142,7 @@
 - (UILabel *)titleLB {
     if (!_titleLB) {
         _titleLB = [[UILabel alloc] init];
-        _titleLB.text = @"积分兑换金币";
+        _titleLB.text = ZCLocalizedString(@"积分兑换金币", nil);
         _titleLB.textAlignment = NSTextAlignmentCenter;
         _titleLB.font = kPingFangSemiboldFont(15);
         _titleLB.textColor = kCommonBlackColor;
@@ -154,6 +165,8 @@
         _contentLB.textAlignment = NSTextAlignmentCenter;
         _contentLB.font = kPingFangMediumFont(16);
         _contentLB.textColor = kCommonBlackColor;
+        _contentLB.numberOfLines = 0;
+        _contentLB.lineBreakMode = NSLineBreakByCharWrapping;
     }
     return _contentLB;
 }
@@ -162,7 +175,7 @@
 - (UIButton *)cancelBtn {
     if (!_cancelBtn) {
         _cancelBtn = [[UIButton alloc] init];
-        [_cancelBtn setTitle:@"返回游戏" forState:UIControlStateNormal];
+        [_cancelBtn setTitle:ZCLocalizedString(@"返回游戏", nil) forState:UIControlStateNormal];
         [_cancelBtn setTitleColor:kColorHex(0x46599C) forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = kPingFangRegularFont(14);
         _cancelBtn.backgroundColor = kColorHex(0xEEF2FF);
@@ -175,7 +188,7 @@
 - (UIButton *)sureBtn {
     if (!_sureBtn) {
         _sureBtn = [[UIButton alloc] init];
-        [_sureBtn setTitle:@"确认" forState:UIControlStateNormal];
+        [_sureBtn setTitle:ZCLocalizedString(@"确认", nil) forState:UIControlStateNormal];
         [_sureBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _sureBtn.titleLabel.font = kPingFangRegularFont(14);
         _sureBtn.backgroundColor = kColorHex(0x6984EA);

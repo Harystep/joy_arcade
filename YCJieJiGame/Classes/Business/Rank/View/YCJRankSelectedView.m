@@ -34,19 +34,22 @@
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-    
+    CGFloat width = 70.0;
+    if([SJLocalTool getCurrentLanguage] == 3) {
+        width = 100.0;
+    }
     [self.contentView addSubview:self.zhichuBtn];
     [self.contentView addSubview:self.shouruBtn];
     [self.zhichuBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).offset(12);
         make.right.equalTo(self.contentView.mas_centerX).offset(-kMargin);
-        make.width.mas_equalTo(70);
+        make.width.mas_equalTo(width);
         make.height.mas_equalTo(30);
     }];
     [self.shouruBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).offset(12);
         make.left.equalTo(self.contentView.mas_centerX).offset(kMargin);
-        make.width.mas_equalTo(70);
+        make.width.mas_equalTo(width);
         make.height.mas_equalTo(30);
     }];
 }
@@ -82,7 +85,7 @@
     if (!_zhichuBtn) {
         _zhichuBtn = [[UIButton alloc] init];
         [_zhichuBtn setBackgroundColor:kColorHex(0x6984EA)];
-        [_zhichuBtn setTitle:@"大师榜" forState:UIControlStateNormal];
+        [_zhichuBtn setTitle:ZCLocalizedString(@"大师榜", nil) forState:UIControlStateNormal];
         [_zhichuBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _zhichuBtn.titleLabel.font = kPingFangRegularFont(14);
         [_zhichuBtn addTarget:self action:@selector(consumeTypeAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -98,7 +101,7 @@
         [_shouruBtn setBackgroundColor:[UIColor clearColor]];
         _shouruBtn.borderWidth = 1;
         _shouruBtn.borderColor = kCommonWhiteColor;
-        [_shouruBtn setTitle:@"财富榜" forState:UIControlStateNormal];
+        [_shouruBtn setTitle:ZCLocalizedString(@"财富榜", nil) forState:UIControlStateNormal];
         [_shouruBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _shouruBtn.titleLabel.font = kPingFangRegularFont(14);
         [_shouruBtn addTarget:self action:@selector(consumeTypeAction:) forControlEvents:UIControlEventTouchUpInside];

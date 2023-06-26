@@ -24,12 +24,12 @@
 @implementation YCJConsumeViewController
 
 - (NSArray *)titles {
-    return @[@"金币", @"钻石", @"积分"];
+    return @[ZCLocalizedString(@"金币", nil), ZCLocalizedString(@"钻石", nil), ZCLocalizedString(@"积分", nil)];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"消费记录";
+    self.navigationItem.title = ZCLocalizedString(@"消费记录", nil);
     [self bgImageWhite];
     [self configUI];
 }
