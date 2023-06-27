@@ -37,7 +37,7 @@
     if ([YCJUserInfoManager sharedInstance].userInfoModel) {
         self.userInfo = [YCJUserInfoManager sharedInstance].userInfoModel;
     } else {
-        self.nameLB.text = @"去登录";
+        self.nameLB.text = ZCLocalizedString(@"去登录", nil);
         self.headImgView.image = [UIImage imageNamed:@"icon_user_default"];
     }
 }

@@ -8,7 +8,7 @@
 #import "YCJBaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+#define GameButtonHeight kSize(65)
 typedef void (^clickCallBack) (NSInteger index);
 @class YCJGameRoomModel;
 @interface YCJHomeContentView : YCJBaseView

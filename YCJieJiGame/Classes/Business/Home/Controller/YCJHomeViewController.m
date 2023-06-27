@@ -50,10 +50,22 @@
 }
 
 - (void)gameContent {
-    //模拟数据源
-    CGFloat h = kScreenHeight - 300;
+   
+    NSInteger maxCount = 0;
+    for (int i = 0; i < self.roomCategoryList.count; i++) {
+        YCJGameRoomModel *game = self.roomCategoryList[i];
+        if (game.roomGroupList.count > maxCount) {
+            maxCount = game.roomGroupList.count;
+        }
+    }
+    CGFloat h = kScreenHeight - 200 - kTabBarHeight - 10;
+    CGFloat target = (GameButtonHeight + 10) * maxCount + 80 + 220;
+    if (h > target) {
+        h = target;
+    }
     CGFloat w = kScreenWidth - 80 - 50;
     CGFloat pad = 10;
+   
     for (int i = 0; i < self.roomCategoryList.count; i++) {
         YCJHomeContentView *content = [[YCJHomeContentView alloc] initWithFrame:CGRectMake(i * (w + pad), 0, w, h)];
         content.index = i;
@@ -85,7 +97,7 @@
         make.left.mas_equalTo(80);
         make.top.mas_equalTo(200);
         make.width.mas_equalTo(kScreenWidth - 80);
-        make.height.mas_equalTo(kScreenHeight - 300);
+        make.height.mas_equalTo(kScreenHeight - 200 - kTabBarHeight - 10);
     }];
 }
 

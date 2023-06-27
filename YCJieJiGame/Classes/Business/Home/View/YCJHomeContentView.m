@@ -17,7 +17,7 @@
 @property (nonatomic, strong) UILabel           *titleLB;
 
 @end
-#define GameButtonHeight 70
+
 @implementation YCJHomeContentView
 
 - (NSMutableArray *)gcolors {
@@ -51,10 +51,14 @@
     
     [self.contentImgView sd_setImageWithURL:[NSURL URLWithString:gameRoomModel.thumb]];
     [self.contentView addSubview:self.contentImgView];
+    CGFloat imgHeight = self.frame.size.height - (GameButtonHeight + 10) * gameRoomModel.roomGroupList.count - 70;
+    if (imgHeight > 220) {
+        imgHeight = 220;
+    }
     [self.contentImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(5);
         make.right.mas_equalTo(-5);
-        make.height.mas_equalTo(220);
+        make.height.mas_equalTo(imgHeight);
     }];
     
     self.titleLB.text = gameRoomModel.name;
@@ -68,7 +72,7 @@
     for (int i = 0; i < gameRoomModel.roomGroupList.count; i++) {
         YCJGameRoomGroup *group = gameRoomModel.roomGroupList[i];
         UIButton *roomBtn = [[UIButton alloc] init];
-        roomBtn.frame = CGRectMake(12, 295 + (GameButtonHeight + 10) * i, self.frame.size.width - 24, GameButtonHeight);
+        roomBtn.frame = CGRectMake(12, imgHeight + 70 + (GameButtonHeight + 10) * i, self.frame.size.width - 24, GameButtonHeight);
         roomBtn.tag = i;
         [roomBtn addTarget:self action:@selector(roomAction:) forControlEvents:UIControlEventTouchUpInside];
         [roomBtn setBackgroundImage:[UIImage imageNamed:@"icon_home_game_arrow"] forState:UIControlStateNormal];
