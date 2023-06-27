@@ -95,6 +95,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 单位转换
 + (NSString *)unitsConverter:(NSString *)countStr;
+
++ (NSString *)convertImageNameWithLanguage:(NSString *)imageName;
+
 @end
 
 NS_ASSUME_NONNULL_END

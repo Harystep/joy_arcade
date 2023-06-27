@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YCJHomeLeftView : YCJBaseView
 
+- (void)showSignInAlertView;
+
 @end
 
 NS_ASSUME_NONNULL_END

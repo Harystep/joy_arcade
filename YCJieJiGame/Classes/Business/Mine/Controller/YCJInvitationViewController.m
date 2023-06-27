@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = ZCLocalizedString(@"邀请好友", nil);
-    [self bgImageName:@"icon_mine_invitation_bg"];
+    [self bgImageName:[NSString convertImageNameWithLanguage:@"icon_mine_invitation_bg"]];
     [self configUI];
     [self requestInviteData];
 }
@@ -63,7 +63,7 @@
     [self.contentBgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(kMargin);
         make.right.equalTo(self.view).offset(-kMargin);
-        make.top.mas_equalTo(kStatusBarPlusNaviBarHeight + 100);
+        make.top.mas_equalTo(kStatusBarPlusNaviBarHeight + 50);
         make.height.mas_equalTo(kSize(380));
     }];
     

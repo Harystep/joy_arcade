@@ -105,3 +105,19 @@
 
 "新手指导" = "Beginner's Guide";
 "重新加载" = "Reload";
+
+"每日赠送" = "daily gift";
+"倍" = "x";
+"次" = "time";
+"本机号码一键登录" = "Login with local phone number";
+"其他登录方式" = "Other login type";
+"苹果账号" = "Apple ID";
+"登录注册即代表您同意《用户协议和隐私条款》" = "By logging in and registering, you agree to the 《User Agreement and Privacy Terms》";
+"《用户协议和" = "《User Agreement and ";
+"隐私条款》" = "Privacy Terms》";
+
+"用户取消了授权请求" = "User canceled authorization";
+"授权请求失败" = "Authorization failed";
+"授权请求响应无效" = "Invalid authorization request response";
+"未能处理授权请求" = "Failed to process authorization";
+"无法授权" = "Unable to authorize";

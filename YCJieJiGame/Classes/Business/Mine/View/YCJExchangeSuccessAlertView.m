@@ -78,7 +78,7 @@
     if (!_contentBgView) {
         _contentBgView = [UIImageView new];
         _contentBgView.contentMode = UIViewContentModeScaleAspectFit;
-        _contentBgView.image = [UIImage imageNamed:@"icon_exchange_dhcg"];
+        _contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_exchange_dhcg"]];
     }
     return _contentBgView;
 }

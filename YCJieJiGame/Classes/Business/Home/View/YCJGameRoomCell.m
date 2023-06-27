@@ -59,15 +59,15 @@
     
     [self.contentBgView sd_setImageWithURL:[NSURL URLWithString:roomModel.roomImg]];
     [self shadowTitle:roomModel.roomName];
-    self.coinLB.text = [NSString stringWithFormat:@"%@金币/次", roomModel.cost];
+    self.coinLB.text = [NSString stringWithFormat:@"%@%@/%@", roomModel.cost, ZCLocalizedString(@"金币", nil), ZCLocalizedString(@"次", nil)];
     
     NSString *imageName = @"";
     if ([roomModel.status isEqualToString:@"0"]) { /// 空闲
-        imageName = @"icon_home_game_kxz";
+        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_kxz"];
     } else if ([roomModel.status isEqualToString:@"1"]) { /// 游戏中
-        imageName = @"icon_home_game_rwz";
+        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_rwz"];
     } else if ([roomModel.status isEqualToString:@"2"]) { /// 维护中
-        imageName = @"icon_home_game_whz";
+        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_whz"];
     }
     self.statuImgView.image = [UIImage imageNamed:imageName];
     
@@ -77,9 +77,10 @@
     shadow.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
     shadow.shadowOffset = CGSizeMake(0,1);
     
-    NSString *jinbi = [NSString stringWithFormat:@"%@倍", roomModel.multiple];
+    NSString *unit = ZCLocalizedString(@"倍", nil);
+    NSString *jinbi = [NSString stringWithFormat:@"%@%@", roomModel.multiple, unit];
     NSMutableAttributedString *minGold = [[NSMutableAttributedString alloc] initWithString:jinbi attributes: @{NSFontAttributeName: kPingFangRegularFont(14), NSForegroundColorAttributeName: kCommonWhiteColor, NSShadowAttributeName: shadow}];
-    [minGold addAttributes:@{NSFontAttributeName: kPingFangRegularFont(10), NSForegroundColorAttributeName: kCommonWhiteColor} range: NSMakeRange(roomModel.multiple.length, 1)];
+    [minGold addAttributes:@{NSFontAttributeName: kPingFangRegularFont(10), NSForegroundColorAttributeName: kCommonWhiteColor} range: NSMakeRange(roomModel.multiple.length, unit.length)];
     self.jinbiValueLB.attributedText = minGold;
     
     NSString *beishu = [NSString stringWithFormat:@"%@+", roomModel.minLevel];

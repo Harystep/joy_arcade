@@ -10,6 +10,7 @@
 #import "YCJSignInListModel.h"
 #import "YCJInvitationViewController.h"
 #import "YCJNewPlayerViewController.h"
+#import "YCJLoginViewController.h"
 
 @interface YCJHomeLeftView()
 @property (nonatomic, strong) UIView            *contentView;
@@ -35,20 +36,38 @@
  
     for (int index = 0; index < self.dataArr.count; index ++) {
         UIButton *btn = [[UIButton alloc] init];
-        [btn setBackgroundImage:[UIImage imageNamed:self.dataArr[index]] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:[NSString convertImageNameWithLanguage:self.dataArr[index]]] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         btn.tag = index;
         [self.contentView addSubview:btn];
+        btn.imageView.contentMode = UIViewContentModeCenter;
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.contentView).offset(kMargin);
-            make.height.mas_equalTo(kSize(55));
-            make.width.mas_equalTo(kSize(50));
+            make.height.mas_equalTo(47);
+            make.width.mas_equalTo(50);
             make.top.mas_equalTo(kSize(85 * index));
             if (index == self.dataArr.count - 1) {
                 make.bottom.equalTo(self.contentView);
             }
         }];
     }
+}
+
+- (void)showSignInAlertView {
+    [JKNetWorkManager getRequestWithUrlPath:JKSigninListUrlKey parameters:@{} finished:^(JKNetWorkResult * _Nonnull result) {
+        if(!result.error && [result.resultData isKindOfClass:[NSDictionary class]]) {
+            YCJSignInListModel *signModel = [YCJSignInListModel mj_objectWithKeyValues:result.resultData];
+            YCJHomeSigninAlertView *sign = [[YCJHomeSigninAlertView alloc] init];
+            [sign setListModel:signModel];
+            [sign show];
+            WeakSelf;
+            sign.jumpLoginBlock = ^{
+                YCJLoginViewController *vc = [[YCJLoginViewController alloc] init];
+                [weakSelf.parentController.navigationController pushViewController:vc animated:YES];
+                
+            };
+        }
+    }];
 }
 
 - (void)btnAction:(UIButton *)send {
@@ -95,7 +114,12 @@
 - (NSMutableArray *)dataArr {
     if (!_dataArr) {
         _dataArr = [NSMutableArray array];
-        [_dataArr addObjectsFromArray:@[@"icon_home_mrqd", @"icon_home_yqyl", @"icon_home_xszd", @"icon_home_zxkf"]];
+        [_dataArr addObjectsFromArray:@[@"icon_home_mrqd",
+                                        @"icon_home_yqyl",
+                                        @"icon_home_xszd",
+//                                        @"icon_home_zxkf"
+                                      ]
+        ];
     }
     return _dataArr;
 }

@@ -27,6 +27,7 @@
     
     [self configUI];
     [self requestRoomList];
+        
 }
 
 - (void)networkChange:(BOOL)net {
@@ -99,6 +100,12 @@
         make.width.mas_equalTo(kScreenWidth - 80);
         make.height.mas_equalTo(kScreenHeight - 200 - kTabBarHeight - 10);
     }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.leftView showSignInAlertView];
+    });
+    
+    
 }
 
 #pragma mark - scrollview的代理方法，此方法在拖动scrollview时就会调用

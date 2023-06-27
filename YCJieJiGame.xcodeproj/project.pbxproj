@@ -18,6 +18,7 @@
 		3AC81D9C2A37711800ADF1A5 /* YCJAccountLogoutAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC81D9B2A37711800ADF1A5 /* YCJAccountLogoutAlertView.m */; };
 		4C30F1BC2A480F6100F71B45 /* SJLocalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F1BB2A480F6100F71B45 /* SJLocalTool.m */; };
 		4C30F1C12A48150B00F71B45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C30F1C32A48150B00F71B45 /* Localizable.strings */; };
+		4C9CAB682A4AB2FD005F75C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CAB6A2A4AB2FD005F75C6 /* InfoPlist.strings */; };
 		521E61912A15C3EF00311CED /* JKUrlConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 521E61902A15C3EF00311CED /* JKUrlConst.m */; };
 		52336B852A14BE2100E4BA7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52336B842A14BE2100E4BA7C /* AppDelegate.m */; };
 		52336B8E2A14BE2100E4BA7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52336B8C2A14BE2100E4BA7C /* Main.storyboard */; };
@@ -187,6 +188,9 @@
 		4C30F1C82A48154A00F71B45 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4C30F1C92A48154A00F71B45 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4C55D5BD2A4974320026F725 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C9CAB692A4AB2FD005F75C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C9CAB6B2A4AB302005F75C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4C9CAB6C2A4AB303005F75C6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		521E618F2A15C3EF00311CED /* JKUrlConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKUrlConst.h; sourceTree = "<group>"; };
 		521E61902A15C3EF00311CED /* JKUrlConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKUrlConst.m; sourceTree = "<group>"; };
 		52336B802A14BE2100E4BA7C /* YCJieJiGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YCJieJiGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -537,6 +541,7 @@
 				52D343DA2A14DCE7005A8901 /* YCJGlobalMacro.h */,
 				D17F57F52A39BF7E0087A903 /* YCJieJiGame-Bridging-Header.h */,
 				4C30F1C32A48150B00F71B45 /* Localizable.strings */,
+				4C9CAB6A2A4AB2FD005F75C6 /* InfoPlist.strings */,
 			);
 			path = YCJieJiGame;
 			sourceTree = "<group>";
@@ -1236,6 +1241,7 @@
 				D1CFBEF42A415A2000FC52B1 /* home.gif in Resources */,
 				3A3B88152A3CBE4500C65100 /* tab_clicked.aac in Resources */,
 				52D344132A14DFDB005A8901 /* loadRefresh.json in Resources */,
+				4C9CAB682A4AB2FD005F75C6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1479,6 +1485,16 @@
 				4C30F1C92A48154A00F71B45 /* zh-Hant */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4C9CAB6A2A4AB2FD005F75C6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C9CAB692A4AB2FD005F75C6 /* en */,
+				4C9CAB6B2A4AB302005F75C6 /* zh-Hans */,
+				4C9CAB6C2A4AB303005F75C6 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		52336B8C2A14BE2100E4BA7C /* Main.storyboard */ = {

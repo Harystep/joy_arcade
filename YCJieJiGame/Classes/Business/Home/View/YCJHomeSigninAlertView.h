@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YCJHomeSigninAlertView : YCJBaseView
 @property (nonatomic, copy) dispatch_block_t completed;
 @property(nonatomic, copy) void (^commonAlertViewDoneClickBlock)(void);
+@property(nonatomic, copy) void (^jumpLoginBlock)(void);
 @property (nonatomic, strong) YCJSignInListModel *listModel;
 - (void)show;
 - (void)dismiss;

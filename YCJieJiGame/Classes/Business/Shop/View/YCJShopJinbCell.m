@@ -123,15 +123,15 @@
 - (void)setGoodModel:(YCJShopCellModel *)goodModel {
     
     if ([goodModel.mark containsString:@"月卡"]) {
-        self.contentBgView.image = [UIImage imageNamed:@"icon_shop_yk"];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_yk"]];
         self.ljdzLB.textColor = kColorHex(0x4B0A0A);
         self.mrzsLB.textColor = kColorHex(0x661717);
     } else if ([goodModel.mark containsString:@"周卡"]) {
-        self.contentBgView.image = [UIImage imageNamed:@"icon_shop_zk"];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_zk"]];
         self.ljdzLB.textColor = kColorHex(0x662D17);
         self.mrzsLB.textColor = kColorHex(0x662D17);
     } else if ([goodModel.mark containsString:@"首充"]) {
-        self.contentBgView.image = [UIImage imageNamed:@"icon_shop_mrsc"];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_mrsc"]];
         self.ljdzLB.textColor = kColorHex(0x4B0A0A);
         self.mrzsLB.textColor = kColorHex(0x661717);
     } else {
@@ -147,6 +147,11 @@
             make.centerX.equalTo(self.containView);
             make.centerY.equalTo(self.coinImgView);
         }];
+        if([NSString isNullString:goodModel.dayMoney]) {
+            self.mrzsLB.hidden = YES;
+        } else {
+            self.mrzsLB.text = [NSString stringWithFormat:@"%@%@", ZCLocalizedString(@"每日赠送", nil), goodModel.dayMoney];
+        }
     } else {
         self.subtitleLB.textColor = kColorHex(0xD0DDFF);
         self.coinImgView.hidden = NO;

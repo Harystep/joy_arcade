@@ -32,12 +32,13 @@
     }];
     
     [self.titleImageV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
+        make.centerX.equalTo(self.view);
+        make.top.mas_equalTo(self.avatarImageV.mas_bottom).offset(10);
     }];
     
     [self.avatarImageV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.bottom.equalTo(self.titleImageV.mas_top).offset(-20);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerY.equalTo(self.view.mas_centerY).offset(-100);
     }];
     
     [self.processV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,8 +52,7 @@
         make.centerX.equalTo(self.view);
         make.top.equalTo(self.processV.mas_bottom).offset(20);
     }];
-    NSString *content = [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"zh-Hant"ofType:@"lproj"]] localizedStringForKey:@"确认" value:@""table:nil];
-    NSLog(@"content:%@", content);
+    
     [NSTimer scheduledTimerWithTimeInterval:0.045
                                          target:self
                                        selector:@selector(progressChanged:)
@@ -92,7 +92,7 @@
     if (!_titleImageV) {
         _titleImageV = [[UIImageView alloc] init];
         _titleImageV.frame = UIScreen.mainScreen.bounds;
-        _titleImageV.image = [UIImage imageNamed:@"icon_launch_title"];
+        _titleImageV.image = [UIImage imageNamed:@"icon_launch_title_en"];
     }
     return _titleImageV;
 }

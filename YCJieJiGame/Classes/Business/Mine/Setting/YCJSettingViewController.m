@@ -29,26 +29,26 @@ UITableViewDelegate>
 }
 
 - (void)configUI {
-
-    [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(kMargin);
-        make.right.mas_equalTo(-kMargin);
-        make.top.mas_equalTo(kStatusBarPlusNaviBarHeight + 15);
-        make.height.mas_offset(40 + kSize(44) * self.dataMuArr.count);
-    }];
     
     UIView *lanView = [[UIView alloc] init];
     [self.view addSubview:lanView];
     [lanView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.mas_equalTo(self.view).inset(kMargin);
         make.height.mas_equalTo(50);
-        make.top.mas_equalTo(self.tableView.mas_bottom).offset(10);
+        make.top.mas_equalTo(kStatusBarPlusNaviBarHeight + 15);
     }];
     lanView.backgroundColor = kCommonWhiteColor;
     lanView.cornerRadius = kSize(8);
     
     [self setupLanViewSubviews:lanView];
+    
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(kMargin);
+        make.right.mas_equalTo(-kMargin);
+        make.top.mas_equalTo(lanView.mas_bottom).offset(kMargin);
+        make.height.mas_offset(40 + kSize(44) * self.dataMuArr.count);
+    }];
 }
 
 - (void)setupLanViewSubviews:(UIView *)lanView {

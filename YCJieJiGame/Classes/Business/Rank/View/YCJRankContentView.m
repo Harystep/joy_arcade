@@ -31,10 +31,10 @@
 
 - (void)setRankModel:(YCJRankListModel *)rankModel type:(NSInteger)type {
     if (type == 1) {
-        self.contentBgView.image = [UIImage imageNamed:@"icon_phb_dashi"];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_phb_dashi"]];
         self.jifenImgView.image = [UIImage imageNamed:@"icon_phb_jifen"];
     } else {
-        self.contentBgView.image = [UIImage imageNamed:@"icon_phb_caifu"];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_phb_caifu"]];
         self.jifenImgView.image = [UIImage imageNamed:@"icon_exchange_jb"];
     }
     [self.headImgView sd_setImageWithURL:[NSURL URLWithString:rankModel.avatar]];

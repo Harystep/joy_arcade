@@ -658,4 +658,17 @@
     return @"0";
 }
 
++ (NSString *)convertImageNameWithLanguage:(NSString *)imageName {
+    NSString *name = imageName;
+    if([SJLocalTool getCurrentLanguage] == 3) {
+        name = [NSString stringWithFormat:@"%@_en", imageName];
+    }
+//    else if ([SJLocalTool getCurrentLanguage] == 2) {
+//
+//    } else {
+//
+//    }
+    return name;
+}
+
 @end

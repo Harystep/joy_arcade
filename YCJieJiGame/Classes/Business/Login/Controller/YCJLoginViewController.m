@@ -29,6 +29,10 @@
 
 @implementation YCJLoginViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -123,39 +127,42 @@
         make.top.equalTo(self.phoneLabel).offset(60);
     }];
     
-    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.contentBgView);
-        make.height.mas_equalTo(50);
-        make.width.mas_equalTo(270);
-        make.top.equalTo(self.cerLabel).offset(60);
-    }];
-    
-    [self.otherLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.contentBgView);
-        make.height.mas_equalTo(30);
-        make.top.equalTo(self.loginBtn).offset(100);
-    }];
-    
-    [self.appleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.otherLabel.mas_bottom).offset(20);
-        make.height.mas_equalTo(70);
-        make.width.mas_equalTo(50);
-        make.centerX.equalTo(self.otherLabel);
-//        make.right.equalTo(self.contentBgView.mas_centerX).offset(-30);
-    }];
-    
-//    [self.smsBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.otherLabel.mas_bottom).offset(20);
-//        make.height.mas_equalTo(70);
-//        make.width.mas_equalTo(50);
-//        make.left.equalTo(self.contentBgView.mas_centerX).offset(30);
-//    }];
+    if([SJLocalTool getCurrentLanguage] == 3) {
+        self.loginBtn.hidden = YES;
+        [self.appleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.contentBgView.mas_centerY).offset(-50);
+            make.height.mas_equalTo(70);
+            make.width.mas_equalTo(50);
+            make.centerX.equalTo(self.contentBgView.mas_centerX);
+        }];
+    } else {
+        self.loginBtn.hidden = NO;
+        [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.contentBgView);
+            make.height.mas_equalTo(50);
+            make.width.mas_equalTo(270);
+            make.top.equalTo(self.cerLabel).offset(60);
+        }];
+        [self.otherLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.contentBgView);
+            make.height.mas_equalTo(30);
+            make.top.equalTo(self.loginBtn).offset(100);
+        }];
+        [self.appleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.otherLabel.mas_bottom).offset(20);
+            make.height.mas_equalTo(70);
+            make.width.mas_equalTo(50);
+            make.centerX.equalTo(self.contentBgView.mas_centerX);
+        }];
+    }
     
     [self.yonghuxieyiLB mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.contentBgView);
-        make.height.mas_equalTo(30);
-        make.bottom.equalTo(self.contentBgView).offset(-60);
+        make.height.mas_equalTo(40);
+        make.leading.trailing.mas_equalTo(self.contentBgView).inset(20);
+        make.bottom.mas_equalTo(self.contentBgView.mas_bottom).inset(50);
     }];
+   
 }
 
 - (void)centerButton:(UIButton *)button{
@@ -334,7 +341,7 @@
     if (!_topImgView) {
         _topImgView = [UIImageView new];
         _topImgView.contentMode = UIViewContentModeScaleAspectFill;
-        _topImgView.image = [UIImage imageNamed:@"icon_login_bg"];
+        _topImgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_login_bg"]];
     }
     return _topImgView;
 }
@@ -356,7 +363,7 @@
         _cerLabel.textAlignment = NSTextAlignmentCenter;
         _cerLabel.font = kPingFangMediumFont(12);
         _cerLabel.textColor = kColorHex(0x999999);
-        _cerLabel.text = @"中国移动认证服务";
+        _cerLabel.text = ZCLocalizedString(@"中国移动认证服务", nil);
         _cerLabel.hidden = YES;
     }
     return _cerLabel;
@@ -365,7 +372,7 @@
 -(UIButton *)loginBtn {
     if(!_loginBtn) {
         _loginBtn = [[UIButton alloc] init];
-        [_loginBtn setTitle:@"本机号码一键登录" forState:UIControlStateNormal];
+        [_loginBtn setTitle:ZCLocalizedString(@"本机号码一键登录", nil) forState:UIControlStateNormal];
         [_loginBtn setTitleColor:kColorHex(0xF6F6F6) forState:UIControlStateNormal];
         _loginBtn.titleLabel.font = kPingFangRegularFont(16);
         _loginBtn.backgroundColor = kColorHex(0xDD981B);
@@ -382,7 +389,7 @@
         _otherLabel.textAlignment = NSTextAlignmentCenter;
         _otherLabel.font = kPingFangMediumFont(12);
         _otherLabel.textColor = kColorHex(0x999999);
-        _otherLabel.text = @"其他登录方式";
+        _otherLabel.text = ZCLocalizedString(@"其他登录方式", nil);
     }
     return _otherLabel;
 }
@@ -390,7 +397,7 @@
 -(UIButton *)appleBtn {
     if(!_appleBtn) {
         _appleBtn = [[UIButton alloc] init];
-        [_appleBtn setTitle:@"苹果账号" forState:UIControlStateNormal];
+        [_appleBtn setTitle:ZCLocalizedString(@"苹果账号", nil) forState:UIControlStateNormal];
         [_appleBtn setTitleColor:kColorHex(0x666666) forState:UIControlStateNormal];
         [_appleBtn setImage:[UIImage imageNamed:@"icon_login_apple"] forState:UIControlStateNormal];
         _appleBtn.tag = 90;
@@ -405,7 +412,7 @@
         _smsBtn = [[UIButton alloc] init];
         /// 先隐藏验证码登录
         [_smsBtn setHidden:YES];
-        [_smsBtn setTitle:@"短信验证" forState:UIControlStateNormal];
+        [_smsBtn setTitle:ZCLocalizedString(@"短信验证", nil) forState:UIControlStateNormal];
         [_smsBtn setTitleColor:kColorHex(0x666666) forState:UIControlStateNormal];
         [_smsBtn setImage:[UIImage imageNamed:@"icon_login_phone"] forState:UIControlStateNormal];
         _smsBtn.tag = 100;
@@ -418,22 +425,23 @@
 - (YYLabel *)yonghuxieyiLB {
     if (!_yonghuxieyiLB) {
         _yonghuxieyiLB = [[YYLabel alloc] init];
-        NSString *operateStr = @"登录注册即代表您同意《用户协议和隐私条款》";
+        NSString *operateStr = ZCLocalizedString(@"登录注册即代表您同意《用户协议和隐私条款》", nil);
         NSMutableAttributedString  *attriStr = [[NSMutableAttributedString alloc] initWithString:operateStr];
         _yonghuxieyiLB.font = kPingFangMediumFont(12);
         _yonghuxieyiLB.textColor = kColorHex(0x999999);
-        NSRange range = [operateStr rangeOfString:@"《用户协议和" options:NSCaseInsensitiveSearch];
+        _yonghuxieyiLB.numberOfLines = 0;
+        NSRange range = [operateStr rangeOfString:ZCLocalizedString(@"《用户协议和", nil) options:NSCaseInsensitiveSearch];
         [attriStr yy_setTextHighlightRange:range color:kColorHex(0x3E63E4) backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
             YCJBaseWebViewController *web = [[YCJBaseWebViewController alloc] init];
             web.url = JKUserAgreementUrlKey;
-            web.navigationItem.title = @"用户协议";
+            web.navigationItem.title = ZCLocalizedString(@"用户协议", nil);
             [self.navigationController pushViewController:web animated:YES];
         }];
-        NSRange range1 = [operateStr rangeOfString:@"隐私条款》" options:NSCaseInsensitiveSearch];
+        NSRange range1 = [operateStr rangeOfString:ZCLocalizedString(@"隐私条款》", nil) options:NSCaseInsensitiveSearch];
         [attriStr yy_setTextHighlightRange:range1 color:kColorHex(0x3E63E4) backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
             YCJBaseWebViewController *web = [[YCJBaseWebViewController alloc] init];
             web.url = JKPrivacyPolicyUrlKey;
-            web.navigationItem.title = @"隐私政策";
+            web.navigationItem.title = ZCLocalizedString(@"隐私政策", nil);
             [self.navigationController pushViewController:web animated:YES];
         }];
         _yonghuxieyiLB.attributedText = attriStr;

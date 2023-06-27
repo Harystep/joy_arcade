@@ -224,7 +224,7 @@ UICollectionViewDelegateFlowLayout>
 - (UIView *)exchangeView {
     if (!_exchangeView) {
         _exchangeView = [[UIView alloc] init];
-        UIImageView *bgImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_exchange_top_bg"]];
+        UIImageView *bgImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_exchange_top_bg"]]];
         bgImg.contentMode = UIViewContentModeScaleToFill;
         [_exchangeView addSubview:bgImg];
         [bgImg mas_makeConstraints:^(MASConstraintMaker *make) {
