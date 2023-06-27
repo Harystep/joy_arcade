@@ -103,8 +103,8 @@
     [window addSubview:self];
 
     self.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    self.contentView.transform = CGAffineTransformMakeScale(0.01, 0.01);
-    [UIView animateWithDuration:0.15 animations:^{
+    self.contentView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+    [UIView animateWithDuration:0.35 animations:^{
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
         self.contentView.transform = CGAffineTransformIdentity;
     }];

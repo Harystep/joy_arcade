@@ -40,7 +40,7 @@ target 'YCJieJiGame' do
   
   #pod 'wawajiGame', :git=>'https://github.com/Harystep/toolSpec.git'
   
-  pod 'wawajiGame',  '~> 0.8.8'
+  pod 'SJARCPlayer',  '~> 0.1.5'
   
   pod 'SwiftyStoreKit', '0.16.1'
   

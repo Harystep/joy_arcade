@@ -111,7 +111,7 @@ UIGestureRecognizerDelegate
         }];
     }
     if(action) {
-        [self.emptyView setupText:text image:[UIImage imageNamed:name] actionTitle:@"重新加载" action:action];
+        [self.emptyView setupText:text image:[UIImage imageNamed:name] actionTitle:ZCLocalizedString(@"重新加载", nil) action:action];
     }else {
         [self.emptyView setupText:text image:[UIImage imageNamed:name]];
     }

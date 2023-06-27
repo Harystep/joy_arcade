@@ -103,22 +103,37 @@
 + (NSDictionary *)setHeadersWithUrlpath:(NSString *)urlPath parameters:(NSDictionary *_Nullable)parameters client:(AFHTTPSessionManager *)client {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
-  
+    
     NSString *appChannel = kAppChannel;
 #if DEBUG
     appChannel = kAppChannelDebug;
 #else
     appChannel = kAppChannel;
 #endif
-//    NSString *source = [NSString stringWithFormat:@"%@;%@;%@",@"0",kAppVersion,appChannel];
-//    [dict setValue:source forKey:@"source"];
-//    [dict setValue:[JKTools idfv] forKey:@"deviceId"];
-//    [dict setValue:[JKTools getIPAddress:YES] forKey:@"ip"];
+    //    NSString *source = [NSString stringWithFormat:@"%@;%@;%@",@"0",kAppVersion,appChannel];
+    //    [dict setValue:source forKey:@"source"];
+    //    [dict setValue:[JKTools idfv] forKey:@"deviceId"];
+    //    [dict setValue:[JKTools getIPAddress:YES] forKey:@"ip"];
     [dict setValue:kPPGameChannelKey forKey:@"channelKey"];
     YCJToken *userToken = [YCJUserInfoManager sharedInstance].userTokenModel;
     if(userToken.accessToken.length > 0) {
         [dict setValue:userToken.accessToken forKey:@"accessToken"];
     }
+    /*
+     language参数，
+     中文：zh-CN
+     繁体：zh-TW
+     英文：en
+     */
+    NSString *language = @"en";
+    if([SJLocalTool getCurrentLanguage] == 1) {
+        language = @"zh-CN";
+    } else if ([SJLocalTool getCurrentLanguage] == 2) {
+        language = @"zh-TW";
+    } else if ([SJLocalTool getCurrentLanguage] == 3) {
+        language = @"en";
+    }
+    [dict setValue:language forKey:@"language"];
     return dict;
   
 }
