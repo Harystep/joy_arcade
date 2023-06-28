@@ -54,7 +54,7 @@
     [self.contentView addSubview:self.contentBView];
     [self.contentAView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(kMargin);
-        make.top.equalTo(self.contentView).offset(50);
+        make.top.equalTo(self.contentView).offset(60);
         make.centerX.equalTo(self.contentView);
         make.height.mas_equalTo(60);
     }];

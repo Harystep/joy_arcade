@@ -36,7 +36,7 @@
         NSLog(@"result.resultData = %@",result.resultData);
         return result;
     }else {
-        if(code == 90003) {
+        if(code == 401) {
            UIWindow *window = [UIApplication sharedApplication].keyWindow;
            [window.rootViewController presentViewController:[YCJLoginViewController new] animated:YES completion:nil];
         }

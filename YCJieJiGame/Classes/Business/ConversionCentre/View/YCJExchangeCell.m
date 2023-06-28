@@ -48,7 +48,7 @@
 
 - (void)setExchangeModel:(YCJExchangeModel *)exchangeModel {
     self.coinLB.text = exchangeModel.goldCoin;
-    self.titleLB.text = [NSString stringWithFormat:@"%@%@", exchangeModel.points, ZCLocalizedString(@"积分兑换", nil)];
+    self.titleLB.text = [NSString stringWithFormat:@"%@%@", exchangeModel.points, ZCLocalizedString(@"积分", nil)];
 }
 
 - (void)configUI {

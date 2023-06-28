@@ -51,15 +51,15 @@ UITabBarControllerDelegate
 
 - (void)setupViewControllers{
 
-    [self addControllerWithClass:[YCJShopViewController class] title:@" " nomalImage:@"icon_tab_sc" selectImage:@"icon_tab_sc" index:0];
+    [self addControllerWithClass:[YCJShopViewController class] title:@" " nomalImage:@"icon_tab_sc_en" selectImage:@"icon_tab_sc_en" index:0];
     
-    [self addControllerWithClass:[YCJConversionCentreViewController class] title:@" " nomalImage:@"icon_tab_dhzx" selectImage:@"icon_tab_dhzx" index:1];
+    [self addControllerWithClass:[YCJConversionCentreViewController class] title:@" " nomalImage:@"icon_tab_dhzx_en" selectImage:@"icon_tab_dhzx_en" index:1];
    
-    [self addControllerWithClass:[YCJHomeViewController class] title:@" " nomalImage:@"icon_tab_zhuye" selectImage:@"icon_tab_zhuye" index:2];
+    [self addControllerWithClass:[YCJHomeViewController class] title:@" " nomalImage:@"icon_tab_zhuye_en" selectImage:@"icon_tab_zhuye_en" index:2];
  
-    [self addControllerWithClass:[YCJRankViewController class] title:@" " nomalImage:@"icon_tab_phb" selectImage:@"icon_tab_phb" index:3];
+    [self addControllerWithClass:[YCJRankViewController class] title:@" " nomalImage:@"icon_tab_phb_en" selectImage:@"icon_tab_phb_en" index:3];
    
-    [self addControllerWithClass:[YCJMineViewController class] title:@" " nomalImage:@"icon_tab_grzs" selectImage:@"icon_tab_grzs" index:4];
+    [self addControllerWithClass:[YCJMineViewController class] title:@" " nomalImage:@"icon_tab_grzs_en" selectImage:@"icon_tab_grzs_en" index:4];
     
 }
 

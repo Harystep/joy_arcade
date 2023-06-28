@@ -84,7 +84,7 @@
     //不管APP在后台还是进程被杀死，只要通过主屏快捷操作进来的，都会调用这个方法
     NSLog(@"name:%@\ntype:%@", shortcutItem.localizedTitle, shortcutItem.type);
     if([shortcutItem.type isEqualToString:@"SHARE"]) {//分享
-
+        
     } else if ([shortcutItem.type isEqualToString:@"GAME"]) {//
         self.window.rootViewController = [[YCJTabBarController alloc] init];
         [self.window makeKeyAndVisible];

@@ -45,6 +45,9 @@ target 'YCJieJiGame' do
   pod 'SwiftyStoreKit', '0.16.1'
   
   pod 'DZNEmptyDataSet','1.8.1'
+
+  pod 'UMCommon'
+  pod 'UMDevice'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

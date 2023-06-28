@@ -168,14 +168,14 @@ UITableViewDelegate>
         userModel.actionBlock = ^(YCJMineInfoModel *info){
             YCJBaseWebViewController *web = [[YCJBaseWebViewController alloc] init];
             web.url = JKUserAgreementUrlKey;
-            web.navigationItem.title = @"用户协议";
+            web.navigationItem.title = ZCLocalizedString(@"用户协议", nil);
             [self.navigationController pushViewController:web animated:YES];
         };
         YCJMineInfoModel *privateModel = [YCJMineInfoModel modelWithLeftIcon:@"icon_setting_yinsizhengce" leftStr:ZCLocalizedString(@"隐私政策", nil) rightStr:@""];
         privateModel.actionBlock = ^(YCJMineInfoModel *info) {
             YCJBaseWebViewController *web = [[YCJBaseWebViewController alloc] init];
             web.url = JKPrivacyPolicyUrlKey;
-            web.navigationItem.title = @"隐私政策";
+            web.navigationItem.title = ZCLocalizedString(@"隐私政策", nil);
             [self.navigationController pushViewController:web animated:YES];
         };
         
@@ -186,7 +186,7 @@ UITableViewDelegate>
             canAlert.commonAlertViewDoneClickBlock = ^{
                 [JKNetWorkManager postRequestWithUrlPath:JKAccountCancelUrlKey parameters:@{} finished:^(JKNetWorkResult * _Nonnull result) {
                     if(!result.error && [result.resultData isKindOfClass:[NSDictionary class]]) {
-                        [MBProgressHUD showSuccess:@"注销成功"];
+                        [MBProgressHUD showSuccess:ZCLocalizedString(@"注销成功", nil)];
                         self.tabBarController.selectedIndex = 2;
                         [[YCJUserInfoManager sharedInstance] deleteUserInfo];
                         [self.navigationController popToRootViewControllerAnimated:YES];

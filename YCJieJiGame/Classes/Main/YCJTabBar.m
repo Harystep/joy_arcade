@@ -54,12 +54,12 @@
         // 计算按钮的x值        
         CGFloat buttonX = buttonW * index;
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
-        UIImageView *img = [[UIImageView alloc] init];
-//        img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_txt", titles[index]]];
-        img.contentMode = UIViewContentModeScaleAspectFit;
-        img.frame = CGRectMake(0, 35, buttonW, 18);
-        [button addSubview:img];
-        img.hidden = YES;
+//        UIImageView *img = [[UIImageView alloc] init];
+////        img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_txt", titles[index]]];
+//        img.contentMode = UIViewContentModeScaleAspectFit;
+//        img.frame = CGRectMake(0, 35, buttonW, 18);
+//        [button addSubview:img];
+//        img.hidden = YES;
         if (index == self.current) {
             [button insertSubview:self.currentImgView atIndex:0];
             [self.currentImgView mas_makeConstraints:^(MASConstraintMaker *make) {

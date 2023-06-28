@@ -1,15 +1,15 @@
 
 "即将进入…" = "Coming soon...";
-"设置" = "Set";
+"设置" = "Settings";
 "语言" = "Language";
-"语言设置" = "Language Set";
+"语言设置" = "Language Settings";
 "简体中文" = "Simplified Chinese";
 "繁体中文" = "Traditional Chinese";
 "英文" = "English";
 "取消" = "Cancel";
 "用户协议" = "User Agreement";
 "隐私政策" = "Privacy Policy";
-"注销账号" = "Account cancellation";
+"注销账号" = "Cancel Account";
 "退出登录" = "Log out";
 "商场" = "Shopping";
 "个人中心" = "Personal Center";
@@ -121,3 +121,8 @@
 "授权请求响应无效" = "Invalid authorization request response";
 "未能处理授权请求" = "Failed to process authorization";
 "无法授权" = "Unable to authorize";
+
+"注销成功" = "Successfully";
+
+"游戏" = "Game";
+"分享" = "Share";

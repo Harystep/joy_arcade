@@ -43,7 +43,7 @@
             if(self.roomCategoryList.count > 0) {
                 [MBProgressHUD showError:result.error.localizedDescription];
             }
-        }else {
+        } else {
             self.roomCategoryList = [YCJGameRoomModel mj_objectArrayWithKeyValuesArray:result.resultData];
             [self gameContent];
         }
