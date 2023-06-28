@@ -78,6 +78,22 @@ UITableViewDelegate>
         make.trailing.mas_equalTo(lanView.mas_trailing).inset(kMargin);
     }];
     
+    UILabel *subL = [[UILabel alloc] init];
+    subL.font = kPingFangMediumFont(14);
+    subL.textColor = kShallowBlackColor;
+    subL.textAlignment = NSTextAlignmentLeft;
+    [lanView addSubview:subL];
+    [subL mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(lanView.mas_centerY);
+        make.trailing.mas_equalTo(arrowImageView.mas_leading).inset(kSize(8));
+    }];
+    if([SJLocalTool getCurrentLanguage] == 3) {
+        subL.text = @"English";
+    } else if ([SJLocalTool getCurrentLanguage] == 2) {
+        subL.text = @"繁体中文";
+    } else {
+        subL.text = @"简体中文";
+    }
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(setLanguageOp)];
     [lanView addGestureRecognizer:tap];
     

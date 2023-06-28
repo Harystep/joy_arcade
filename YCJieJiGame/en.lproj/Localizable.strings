@@ -20,7 +20,7 @@
 "实名认证" = "Real-name Auth";
 "未认证" = "Unauthenticated";
 "游戏记录" = "Game Log";
-"抓取记录" = "Crawl Records";
+"抓取记录" = "Crawl Record";
 "我的申诉" = "My Appeal";
 "消费记录" = "Consumption Record";
 "邀请分享" = "Invite to share";
@@ -130,3 +130,4 @@
 "请输入昵称" = "Please enter nickname";
 "请输入6位以内的用户昵称" = "Please enter nickname within six digits";
 
+"进入房间成功" = "Into room";

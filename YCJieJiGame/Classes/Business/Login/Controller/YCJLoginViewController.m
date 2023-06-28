@@ -40,6 +40,7 @@
     
     [self centerButton:self.appleBtn];
     [self centerButton:self.smsBtn];
+        
 }
 
 - (void)requestPhone:(NSString *)token {
@@ -141,7 +142,7 @@
             make.centerX.equalTo(self.contentBgView);
             make.height.mas_equalTo(50);
             make.width.mas_equalTo(270);
-            make.top.equalTo(self.cerLabel).offset(60);
+            make.top.equalTo(self.cerLabel).offset(1);
         }];
         [self.otherLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.contentBgView);
@@ -303,19 +304,19 @@
     NSString *errorMsg = @"";
     switch (error.code) {
         case ASAuthorizationErrorCanceled:
-        errorMsg = @"用户取消了授权请求";
+        errorMsg = ZCLocalizedString(@"用户取消了授权请求", nil);
         break;
         case ASAuthorizationErrorFailed:
-        errorMsg = @"授权请求失败";
+        errorMsg = ZCLocalizedString(@"授权请求失败", nil);
         break;
         case ASAuthorizationErrorInvalidResponse:
-        errorMsg = @"授权请求响应无效";
+        errorMsg = ZCLocalizedString(@"授权请求响应无效", nil);
         break;
         case ASAuthorizationErrorNotHandled:
-        errorMsg = @"未能处理授权请求";
+        errorMsg = ZCLocalizedString(@"未能处理授权请求", nil);
         break;
         case ASAuthorizationErrorUnknown:
-        errorMsg = @"无法授权";
+        errorMsg = ZCLocalizedString(@"无法授权", nil);
         break;
      }
     PNSToast(self.view,errorMsg,2);

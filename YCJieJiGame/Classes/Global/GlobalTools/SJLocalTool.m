@@ -16,7 +16,7 @@
 @implementation SJLocalTool
 
 + (NSInteger)getCurrentLanguage {
-    NSInteger type = 0;
+    NSInteger type = 3;
     NSInteger currentType = [self getUserLanguageType];
     if(currentType > 0) {
         type = currentType;
@@ -48,15 +48,15 @@
 }
 
 + (NSInteger)preSetLanguageType {
-    NSInteger type = 0;
-    NSString *local = [[NSLocale preferredLanguages] objectAtIndex:0];    
-    if([local containsString:@"zh-Hans"]) {
-        type = 1;
-    } else if ([local containsString:@"zh-Hant"]) {
-        type = 2;
-    } else if ([local containsString:@"en"]) {
-        type = 3;
-    }
+    NSInteger type = 3;
+//    NSString *local = [[NSLocale preferredLanguages] objectAtIndex:0];    
+//    if([local containsString:@"zh-Hans"]) {
+//        type = 1;
+//    } else if ([local containsString:@"zh-Hant"]) {
+//        type = 2;
+//    } else if ([local containsString:@"en"]) {
+//        type = 3;
+//    }
     return type;
 }
 

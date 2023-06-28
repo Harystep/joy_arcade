@@ -37,6 +37,7 @@
 
 #define kSafeAreaBottomHeight (kIsIphoneX ? 34.0f : 0.0f)
 
+#define kUserLoginSuckey @"kUserLoginSuckey"
 
 /// 以iphone6 为比例
 #define kSize(value)     round((1.0 * (value) * kWidthRatio))

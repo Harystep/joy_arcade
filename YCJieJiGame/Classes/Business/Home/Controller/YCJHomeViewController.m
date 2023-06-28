@@ -28,12 +28,17 @@
     [self configUI];
     [self requestRoomList];
         
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:kUserLoginSuckey object:nil];
 }
 
 - (void)networkChange:(BOOL)net {
     if (net && self.roomCategoryList.count == 0) {
         [self requestRoomList];
     }
+}
+
+- (void)refreshData {
+    [self requestRoomList];
 }
 
 #pragma mark - loadData

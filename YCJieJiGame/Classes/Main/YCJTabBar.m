@@ -59,7 +59,7 @@
 //        img.contentMode = UIViewContentModeScaleAspectFit;
 //        img.frame = CGRectMake(0, 35, buttonW, 18);
 //        [button addSubview:img];
-//        img.hidden = YES;
+//        img.hidden = YES;        
         if (index == self.current) {
             [button insertSubview:self.currentImgView atIndex:0];
             [self.currentImgView mas_makeConstraints:^(MASConstraintMaker *make) {
