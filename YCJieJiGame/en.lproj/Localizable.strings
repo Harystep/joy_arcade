@@ -16,24 +16,24 @@
 "排行榜" = "Leaderboard";
 "兑换中心" = "Exchange Center";
 
-"去登录" = "Go login";
-"实名认证" = "Real name authentication";
-"未认证" = "not certified";
-"游戏记录" = "Game Records";
-"抓取记录" = "Capture Records";
+"去登录" = "Login";
+"实名认证" = "Real-name Auth";
+"未认证" = "Unauthenticated";
+"游戏记录" = "Game Log";
+"抓取记录" = "Crawl Records";
 "我的申诉" = "My Appeal";
-"消费记录" = "Consumption Records";
+"消费记录" = "Consumption Record";
 "邀请分享" = "Invite to share";
 "邀请好友" = "Invite friends";
 
 "金币" = "Gold coin";
 "钻石" = "Diamond";
-"购买" = "BUY";
+"购买" = "Buy";
 "积分" = "Points";
 "立即到账" = "Immediate payment";
 
 "确认兑换" = "Confirm";
-"请输入" = "Please enter ···";
+"请输入" = "Please enter";
 "1钻石可兑换10金币" = "1 diamond can be exchanged for 10 gold coins";
 
 "积分兑换" = "points exchange ";
@@ -46,40 +46,39 @@
 
 "钻石兑换" = "diamond exchange";
 
-"支出" = "Expend";
-"收入" = "Income";
-"消费记录" = "Consumption records";
+"支出" = "Spend";
+"收入" = "Revenue";
+"消费记录" = "Consumption Record";
 
-"暂无数据" = "No data";
+"暂无数据" = "No Data";
 "未上榜" = "Not on list";
 "大师榜" = "Master List";
 "财富榜" = "Wealth List";
 
 
 "auth_desc_title" = "According to relevant national regulations, minors are strictly prohibited from entering. Please fill in your identity information for authentication. Users without real name authentication cannot experience any content. Please complete real name authentication as soon as possible.";
-"实名认证" = "Real name authentication";
 "姓名" = "Name";
-"身份证号码" = "ID No";
+"身份证号码" = "ID Number";
 "请填写真实姓名" = "Please fill in your real name";
 "请填写真实有效的身份证号码" = "Please fill in the true and valid ID card number";
 
-"申诉记录" = "Appeal records";
-"每天只能填写一次" = "Can only be filled out once a day";
+"申诉记录" = "Appeal Record";
+"每天只能填写一次" = "Can only be filled once a day";
 "取消" = "Cancel";
 "请输入邀请码" = "Please enter the invitation code";
-"填写邀请码" = "Fill in the invitation code";
+"填写邀请码" = "Fill in invitation code";
 "请输入钻石数量" = "Please enter the number of diamonds";
 "网络异常，请稍后重试" = "Network exception, please try again later";
 
-"确定要退出登录吗？" = "Are you sure you want to log out?";
-"确定注销账号" = "Confirm account cancellation";
+"确定要退出登录吗？" = "Are you sure to log out?";
+"确定注销账号" = "Are you sure o to cancel account";
 "确认注销" = "Confirm";
 
 "account_logout_title" = "After account cancellation, all virtual assets, prizes received, account balance, personal information, and other retained information of the account will be cleared and cannot be restored";
 
-"结算记录" = "Settlement record";
+"结算记录" = "Settlement Record";
 "结算申诉" = "Appeal";
-"选择申诉原因" = "Select the reason for appeal";
+"选择申诉原因" = "Select reason for appeal";
 "爆机奖励领取" = "Explosion reward";
 "操作按键失灵" = "Operation failure";
 "结算失败" = "Settlement failed";
@@ -96,11 +95,11 @@
 "您的专属邀请码" = "Your exclusive invitation code";
 "填写好友邀请码" = "Fill in the friend invitation code";
 "邀请微信好友" = "Invite WeChat friends";
-"邀请奖励" = "Invitation reward";
+"邀请奖励" = "Invitation Reward";
 "每邀请一位好友加入并输入您的邀请码，您和被邀请人都将获得" = "Every time you invite a friend to join and enter your invitation code, both you and the invitee will receive ";
-"每个用户最高可获得" = "Each user can receive up to ";
+"每个用户最高可获得" = "Maximum Earnable Per User ";
 "钻石奖励" = " diamond reward";
-"最高可获得" = "can receive up to ";
+"最高可获得" = "Maximum Available ";
 "确定" = "Sure";
 
 "新手指导" = "Beginner's Guide";
@@ -126,3 +125,8 @@
 
 "游戏" = "Game";
 "分享" = "Share";
+
+"修改用户昵称" = "Modify Nickname";
+"请输入昵称" = "Please enter nickname";
+"请输入6位以内的用户昵称" = "Please enter nickname within six digits";
+

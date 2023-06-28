@@ -86,7 +86,6 @@ UITabBarControllerDelegate
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     [self playSoundBackground];
-    NSLog(@"local:%@", [[NSLocale preferredLanguages] objectAtIndex:0]);
 }
 
 - (void)playSoundBackground {

@@ -137,7 +137,7 @@
 - (UILabel *)titleLB {
     if (!_titleLB) {
         _titleLB = [[UILabel alloc] init];
-        _titleLB.text = @"修改用户昵称";
+        _titleLB.text = ZCLocalizedString(@"修改用户昵称", nil);
         _titleLB.textAlignment = NSTextAlignmentCenter;
         _titleLB.font = kPingFangSemiboldFont(15);
         _titleLB.textColor = kCommonBlackColor;
@@ -148,7 +148,7 @@
 - (UILabel *)nameLB {
     if (!_nameLB) {
         _nameLB = [[UILabel alloc] init];
-        _nameLB.text = @"请输入6位以内的用户昵称";
+        _nameLB.text = ZCLocalizedString(@"请输入6位以内的用户昵称", nil);
         _nameLB.textAlignment = NSTextAlignmentLeft;
         _nameLB.font = kPingFangRegularFont(12);
         _nameLB.textColor = kLightBlackColor;
@@ -158,7 +158,7 @@
 
 - (UITextField *)nameTF {
     if (!_nameTF) {
-        _nameTF = [YCJInputItemView createTextFieldWithPlaceHolder:@"请输入昵称"];
+        _nameTF = [YCJInputItemView createTextFieldWithPlaceHolder:ZCLocalizedString(@"请输入昵称", nil)];
         _nameTF.cornerRadius = kSize(8);
         _nameTF.backgroundColor = kColorHex(0xECECEC);
         UIView *left = [[UIView alloc] init];

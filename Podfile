@@ -46,8 +46,9 @@ target 'YCJieJiGame' do
   
   pod 'DZNEmptyDataSet','1.8.1'
 
-  pod 'UMCommon'
-  pod 'UMDevice'
+  pod 'UMCommon', '~> 7.4.1'
+  pod 'UMDevice', '~> 3.1.0'
+
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

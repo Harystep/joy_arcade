@@ -9,6 +9,7 @@
 #import "YCJTabBarController.h"
 #import "YCJLaunchViewController.h"
 #import "YCJieJiGame-Swift.h"
+#import <UMCommon/UMCommon.h>
 
 @interface AppDelegate ()
 
@@ -31,10 +32,19 @@
 //        self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
 //    }
     [self.window makeKeyAndVisible];
+    
     [[IAPHelper shared] setupIAP];
     
     [self setup3DTouchItems:application];
+    
+    [self configureUmengSDK];
+    
     return YES;
+}
+
+- (void)configureUmengSDK {
+    [UMConfigure initWithAppkey:@"649ba83ea1a164591b3ccfc4" channel:nil];
+    [UMConfigure setLogEnabled:YES];
 }
 
 - (void)setupAppearance {
