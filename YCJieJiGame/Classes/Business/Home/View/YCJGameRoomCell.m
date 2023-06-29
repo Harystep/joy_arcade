@@ -59,7 +59,7 @@
     
     [self.contentBgView sd_setImageWithURL:[NSURL URLWithString:roomModel.roomImg]];
     [self shadowTitle:roomModel.roomName];
-    self.coinLB.text = [NSString stringWithFormat:@"%@%@/%@", roomModel.cost, ZCLocalizedString(@"金币", nil), ZCLocalizedString(@"次", nil)];
+    self.coinLB.text = [NSString stringWithFormat:@"%@ %@/%@", roomModel.cost, ZCLocalizedString(@"金币_game", nil), ZCLocalizedString(@"次", nil)];
     
     NSString *imageName = @"";
     if ([roomModel.status isEqualToString:@"0"]) { /// 空闲
@@ -122,7 +122,7 @@
     }];
     
     [self.coinLB mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.coinImgView.mas_right).offset(10);
+        make.left.equalTo(self.coinImgView.mas_right).offset(6);
         make.centerY.equalTo(self.coinImgView);
     }];
     

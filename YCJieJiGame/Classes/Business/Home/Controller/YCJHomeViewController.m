@@ -10,12 +10,14 @@
 #import "YCJHomeUserView.h"
 #import "YCJHomeContentView.h"
 #import "YCJGameRoomModel.h"
+#import "FLAnimatedImageView+WebCache.h"
 
 @interface YCJHomeViewController () <UIScrollViewDelegate>
 @property (nonatomic, strong) YCJHomeLeftView   *leftView;
 @property (nonatomic, strong) YCJHomeUserView   *userView;
 @property (nonatomic, strong) NSArray           *roomCategoryList;
 @property (nonatomic, strong) UIScrollView      *scrollView;
+@property (nonatomic,strong) FLAnimatedImageView *animalIv;//动画视图
 @end
 
 @implementation YCJHomeViewController
@@ -83,6 +85,12 @@
 }
 
 - (void)configUI {
+    
+//    [self.view addSubview:self.animalIv];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"home" ofType:@"gif"];
+//    NSData *imageData = [NSData dataWithContentsOfFile:path];
+//    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:imageData];
+//    self.animalIv.animatedImage = image;
     
     [self.view addSubview:self.leftView];
     [self.leftView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -152,6 +160,14 @@
         _scrollView.showsHorizontalScrollIndicator = NO;
     }
     return _scrollView;
+}
+
+- (FLAnimatedImageView *)animalIv {
+    if (!_animalIv) {
+        _animalIv = [[FLAnimatedImageView alloc] init];
+        _animalIv.frame = UIScreen.mainScreen.bounds;
+    }
+    return _animalIv;
 }
 
 @end

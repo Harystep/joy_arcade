@@ -18,6 +18,9 @@
 		3AC81D9C2A37711800ADF1A5 /* YCJAccountLogoutAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC81D9B2A37711800ADF1A5 /* YCJAccountLogoutAlertView.m */; };
 		4C30F1BC2A480F6100F71B45 /* SJLocalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F1BB2A480F6100F71B45 /* SJLocalTool.m */; };
 		4C30F1C12A48150B00F71B45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C30F1C32A48150B00F71B45 /* Localizable.strings */; };
+		4C7EBD8A2A4D6738002F29F8 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBD842A4D6738002F29F8 /* FLAnimatedImageView+WebCache.m */; };
+		4C7EBD8B2A4D6738002F29F8 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBD852A4D6738002F29F8 /* FLAnimatedImage.m */; };
+		4C7EBD8C2A4D6738002F29F8 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBD862A4D6738002F29F8 /* FLAnimatedImageView.m */; };
 		4C9CAB682A4AB2FD005F75C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CAB6A2A4AB2FD005F75C6 /* InfoPlist.strings */; };
 		521E61912A15C3EF00311CED /* JKUrlConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 521E61902A15C3EF00311CED /* JKUrlConst.m */; };
 		52336B852A14BE2100E4BA7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52336B842A14BE2100E4BA7C /* AppDelegate.m */; };
@@ -188,6 +191,12 @@
 		4C30F1C82A48154A00F71B45 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4C30F1C92A48154A00F71B45 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4C55D5BD2A4974320026F725 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C7EBD842A4D6738002F29F8 /* FLAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
+		4C7EBD852A4D6738002F29F8 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		4C7EBD862A4D6738002F29F8 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		4C7EBD872A4D6738002F29F8 /* FLAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
+		4C7EBD882A4D6738002F29F8 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		4C7EBD892A4D6738002F29F8 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		4C9CAB692A4AB2FD005F75C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C9CAB6B2A4AB302005F75C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4C9CAB6C2A4AB303005F75C6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -496,6 +505,19 @@
 				3A2103D32A2C3452000538E5 /* YCJShopModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4C7EBD832A4D6738002F29F8 /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				4C7EBD882A4D6738002F29F8 /* FLAnimatedImage.h */,
+				4C7EBD852A4D6738002F29F8 /* FLAnimatedImage.m */,
+				4C7EBD892A4D6738002F29F8 /* FLAnimatedImageView.h */,
+				4C7EBD862A4D6738002F29F8 /* FLAnimatedImageView.m */,
+				4C7EBD872A4D6738002F29F8 /* FLAnimatedImageView+WebCache.h */,
+				4C7EBD842A4D6738002F29F8 /* FLAnimatedImageView+WebCache.m */,
+			);
+			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
 		52336B772A14BE2100E4BA7C = {
@@ -961,6 +983,7 @@
 		52D343F22A14DFDB005A8901 /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				4C7EBD832A4D6738002F29F8 /* FLAnimatedImage */,
 				52D343F32A14DFDB005A8901 /* CustomGifHeader */,
 				52D343F82A14DFDB005A8901 /* MBProgessHUD+Category */,
 				52D343FC2A14DFDB005A8901 /* YCPhotoBrowerCompont */,
@@ -1339,6 +1362,7 @@
 				D1E2EA722A1E1BB200E2246A /* YCJRankContentView.m in Sources */,
 				D16248BC2A1714E6008993A9 /* YCJComplaintRecordViewController.m in Sources */,
 				D1E62EA42A29DCF300C0004C /* YCJRankListModel.m in Sources */,
+				4C7EBD8C2A4D6738002F29F8 /* FLAnimatedImageView.m in Sources */,
 				D1A63D122A2DF7BF004D8461 /* YCJGameRoomCell.m in Sources */,
 				D19C999A2A1F689F00647BEA /* YCJSigninContentView.m in Sources */,
 				D1E3FDFB2A26E96F00603E7D /* YCJShopJinbCell.m in Sources */,
@@ -1393,6 +1417,7 @@
 				D1E3FDEB2A25CEC800603E7D /* YCJExchangeCell.m in Sources */,
 				D17F57F22A38648B0087A903 /* YCJConsumeModel.m in Sources */,
 				D17F57EF2A385B0A0087A903 /* YCJConsumeTypeView.m in Sources */,
+				4C7EBD8A2A4D6738002F29F8 /* FLAnimatedImageView+WebCache.m in Sources */,
 				D17F57F92A39C08D0087A903 /* IAPHelper.swift in Sources */,
 				3A2103DD2A2C911E000538E5 /* YCJNewPlayerModel.m in Sources */,
 				D19C99942A1F5AE200647BEA /* YCJHomeSigninAlertView.m in Sources */,
@@ -1430,6 +1455,7 @@
 				D155BE7A2A1DAF5A0080FD5B /* YCJConsumeViewController.m in Sources */,
 				D1A63D0C2A2DF431004D8461 /* YCJRoomListModel.m in Sources */,
 				D1E5A41E2A1B1E6A00E96680 /* YCJGameDetailViewController.m in Sources */,
+				4C7EBD8B2A4D6738002F29F8 /* FLAnimatedImage.m in Sources */,
 				52D3440E2A14DFDB005A8901 /* UIImage+Extras.m in Sources */,
 				D1E5A40E2A1B03C400E96680 /* YCJNickNameModifyView.m in Sources */,
 				52741D9E2A161FDF008BCDFC /* JKNetWorkClient.m in Sources */,
