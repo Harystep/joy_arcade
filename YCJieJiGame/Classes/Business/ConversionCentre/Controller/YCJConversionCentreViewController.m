@@ -55,6 +55,9 @@ UICollectionViewDelegateFlowLayout>
 
 - (void)requestExchangeList {
     [JKNetWorkManager getRequestWithUrlPath:JKJifen2JBListUrlKey parameters:@{} finished:^(JKNetWorkResult * _Nonnull result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_header endRefreshing];
+        });
         if (result.error) {
             [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
         }else {
@@ -115,6 +118,12 @@ UICollectionViewDelegateFlowLayout>
         make.bottom.equalTo(self.view).offset(-kTabBarHeight);
         make.top.equalTo(self.exchangeView.mas_bottom).offset(10);
     }];
+    
+    WeakSelf;
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf requestExchangeList];
+    }];
+    
 }
 
 - (void)sureBtnAction {

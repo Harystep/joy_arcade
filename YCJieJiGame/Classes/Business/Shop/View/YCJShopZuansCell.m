@@ -105,7 +105,7 @@
 - (void)setGoodModel:(YCJShopCellModel *)goodModel {
     
     self.coinLB.text = goodModel.money;
-    self.titleLB.text = [NSString stringWithFormat:@"$%@", goodModel.price];
+    self.titleLB.text = [NSString stringWithFormat:@"$%.2f", [goodModel.price doubleValue]];
     self.subtitleLB.text = goodModel.desc;
 }
 
@@ -160,7 +160,7 @@
         _subtitleLB.textAlignment = NSTextAlignmentCenter;
         _subtitleLB.font = kPingFangRegularFont(12);
         _subtitleLB.textColor = kColorHex(0xD0DDFF);
-        _subtitleLB.hidden = YES;
+//        _subtitleLB.hidden = YES;
     }
     return _subtitleLB;
 }

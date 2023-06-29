@@ -85,10 +85,14 @@ UICollectionViewDelegateFlowLayout>
 - (void)requestJinBiList {
     /// type: int类型 1：钻石 2：金币
     [JKNetWorkManager getRequestWithUrlPath:JKChargeListUrlKey parameters:@{@"type": @2} finished:^(JKNetWorkResult * _Nonnull result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_header endRefreshing];
+        });
         if (result.error) {
             [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
         }else {
             [self removeEmptyView];
+            [self.jinBiList removeAllObjects];
             YCJShopModel *shopModel = [YCJShopModel mj_objectWithKeyValues:result.resultData];
             [self.jinBiList addObjectsFromArray:shopModel.optionList];
             [self.collectionView reloadData];
@@ -99,10 +103,14 @@ UICollectionViewDelegateFlowLayout>
 - (void)requestZuanShiList {
     /// type: int类型 1：钻石 2：金币
     [JKNetWorkManager getRequestWithUrlPath:JKChargeListUrlKey parameters:@{@"type": @1} finished:^(JKNetWorkResult * _Nonnull result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_header endRefreshing];
+        });
         if (result.error) {
             [self showError:ZCLocalizedString(@"网络异常，请稍后重试", nil)];
         }else {
             [self removeEmptyView];
+            [self.zuanShiList removeAllObjects];
             YCJShopModel *shopModel = [YCJShopModel mj_objectWithKeyValues:result.resultData];
             [self.zuanShiList addObjectsFromArray:shopModel.optionList];
             [self.collectionView reloadData];
@@ -166,6 +174,15 @@ UICollectionViewDelegateFlowLayout>
         make.bottom.equalTo(self.view).offset(-kTabBarHeight);
         make.top.equalTo(self.switchView.mas_bottom).offset(10);
     }];
+    WeakSelf;
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        if(weakSelf.jinbi) {
+            [weakSelf requestJinBiList];
+        } else {
+            [weakSelf requestZuanShiList];
+        }
+    }];
+    
 }
 
 - (void)buyWithModel:(YCJShopCellModel *)model {
