@@ -44,6 +44,11 @@ UICollectionViewDelegateFlowLayout>
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[YCJUserInfoManager sharedInstance] reloadUserInfo];
+}
+
 #pragma mark -
 #pragma mark -- initPPGameSDK
 - (void)initPPGameSDK{
