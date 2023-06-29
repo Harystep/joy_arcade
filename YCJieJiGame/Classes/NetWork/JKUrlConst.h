@@ -25,8 +25,10 @@ UIKIT_EXTERN NSString * const JKBaseUrlKey;
 
 // 用户协议
 UIKIT_EXTERN NSString * const JKUserAgreementUrlKey;
+UIKIT_EXTERN NSString * const JKUserAgreement_ENUrlKey;
 // 隐私政策
 UIKIT_EXTERN NSString * const JKPrivacyPolicyUrlKey;
+UIKIT_EXTERN NSString * const JKPrivacyPolicy_ENUrlKey;
 
 // 签到列表
 UIKIT_EXTERN NSString * const JKSigninListUrlKey;

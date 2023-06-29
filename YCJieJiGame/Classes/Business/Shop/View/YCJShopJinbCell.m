@@ -165,8 +165,10 @@
     }
     
     self.coinLB.text = goodModel.money;
-    self.titleLB.text = [NSString stringWithFormat:@"￥%@", goodModel.price];
+    self.titleLB.text = [NSString stringWithFormat:@"$%@", goodModel.price];
     self.subtitleLB.text = goodModel.desc;
+    
+    self.ljdzLB.hidden = YES;
 }
 
 - (void)bugAction {}
@@ -207,6 +209,7 @@
         _ljdzLB.textAlignment = NSTextAlignmentLeft;
         _ljdzLB.font = kPingFangMediumFont(12);
         _ljdzLB.textColor = kColorHex(0x4B0A0A);
+        _ljdzLB.hidden = YES;
     }
     return _ljdzLB;
 }
@@ -240,6 +243,7 @@
         _subtitleLB.textAlignment = NSTextAlignmentCenter;
         _subtitleLB.font = kPingFangRegularFont(12);
         _subtitleLB.textColor = kColorHex(0xD0DDFF);
+        _subtitleLB.hidden = YES;
     }
     return _subtitleLB;
 }

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString *roomGroupId;
 @property(nonatomic,copy) NSString *categoryId;
 @property(nonatomic,copy) NSString *groupName;
+@property (nonatomic,copy) NSString *remark;
 @end
 
 @interface YCJGameRoomModel : NSObject

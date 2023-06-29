@@ -13,9 +13,9 @@
 "退出登录" = "Log out";
 "商场" = "Shopping";
 "个人中心" = "Personal Center";
-"排行榜" = "Leaderboard";
+"排行榜" = "List";
 "兑换中心" = "Exchange Center";
-
+"充值" = "Recharge";
 "去登录" = "Login";
 "实名认证" = "Real-name Auth";
 "未认证" = "Unauthenticated";
@@ -87,7 +87,7 @@
 "取消购买" = "Cancel Purchase";
 "购买成功" = "Successfully";
 
-"立即签到" = "Sign in";
+"立即签到" = "Checkin";
 "已签到" = "Signed in";
 "签到成功" = "Successfully";
 
@@ -105,7 +105,7 @@
 "新手指导" = "Beginner's Guide";
 "重新加载" = "Reload";
 
-"每日赠送" = "daily gift";
+"每日赠送" = "Daily gift";
 "倍" = "x";
 "次" = "time";
 "本机号码一键登录" = "Login with local phone number";

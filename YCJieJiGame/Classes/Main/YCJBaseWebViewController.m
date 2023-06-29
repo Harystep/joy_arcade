@@ -38,7 +38,23 @@ WKNavigationDelegate
 - (void)configUI{
     [self.view addSubview:self.progressView];
     [self.view addSubview:self.wkWebView];
-    NSURL *url = [NSURL URLWithString:self.url ? self.url : @""];
+    NSString *urlStr = @"";
+    if([self.url containsString:JKPrivacyPolicyUrlKey]) {
+        if([SJLocalTool getCurrentLanguage] == 3) {
+            urlStr = JKPrivacyPolicy_ENUrlKey;
+        } else {
+            urlStr = JKPrivacyPolicyUrlKey;
+        }
+    } else if ([self.url containsString:JKUserAgreementUrlKey])  {
+        if([SJLocalTool getCurrentLanguage] == 3) {
+            urlStr = JKUserAgreement_ENUrlKey;
+        } else {
+            urlStr = JKUserAgreementUrlKey;
+        }
+    } else {
+        urlStr = (self.url != nil)?self.url:@"";
+    }
+    NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.wkWebView loadRequest:request];
 }
@@ -77,7 +93,7 @@ WKNavigationDelegate
             [self.progressView setProgress:newprogress animated:YES];
         }
     }else if([keyPath isEqualToString:@"title"]) {
-        self.navigationItem.title = [change objectForKey:NSKeyValueChangeNewKey];
+//        self.navigationItem.title = [change objectForKey:NSKeyValueChangeNewKey];
     }
 }
 

@@ -87,7 +87,7 @@
             make.height.mas_equalTo(30);
         }];
         UILabel *vipLB = [[UILabel alloc] init];
-        vipLB.text = @"V0-V4";
+        vipLB.text = group.remark;
         vipLB.textColor = kColorHex(0xC9964D);
         vipLB.font = kPingFangRegularFont(12);
         [roomBtn addSubview:vipLB];

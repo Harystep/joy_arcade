@@ -83,7 +83,7 @@ UITableViewDelegate>
         make.top.equalTo(self.topView.mas_bottom).offset(10);
         make.left.mas_equalTo(kMargin);
         make.right.mas_equalTo(-kMargin);
-        make.height.mas_equalTo(550);
+        make.bottom.equalTo(self.bottomView.mas_top).offset(20);
     }];
     self.tableView.layer.zPosition = 999;
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

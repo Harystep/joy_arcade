@@ -49,9 +49,13 @@
     lineView.indicatorWidth = JXCategoryViewAutomaticDimension;
     self.categoryView.indicators = @[lineView];
     [self.view addSubview:self.categoryView];
+    CGFloat width = kSize(235);
+    if([SJLocalTool getCurrentLanguage] == 3) {
+        width = kSize(300);
+    }
     [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
-        make.width.mas_equalTo(kSize(235));
+        make.width.mas_equalTo(width);
         make.top.mas_equalTo(kStatusBarPlusNaviBarHeight + kSize(10));
         make.height.mas_equalTo(50);
     }];

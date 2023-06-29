@@ -48,7 +48,7 @@ UICollectionViewDelegateFlowLayout>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = ZCLocalizedString(@"商场", nil);
+    self.navigationItem.title = ZCLocalizedString(@"充值", nil);
     [self bgImageName:@"icon_mine_bg"];
     self.jinbi = YES;
     [self setSubviews];
@@ -66,6 +66,8 @@ UICollectionViewDelegateFlowLayout>
         self.growupBgView.hidden = YES;
         self.growupLB.text = @"";
     }
+    
+    self.growupBgView.hidden = YES;
 }
 
 - (void)networkChange:(BOOL)net {
@@ -286,6 +288,7 @@ UICollectionViewDelegateFlowLayout>
         _growupBgView = [[UIImageView alloc] init];
         _growupBgView.contentMode = UIViewContentModeScaleAspectFit;
         _growupBgView.image = [UIImage imageNamed:@"icon_shop_grow_bg"];
+        _growupBgView.hidden = YES;
     }
     return _growupBgView;
 }
@@ -297,6 +300,7 @@ UICollectionViewDelegateFlowLayout>
         _growupLB.textAlignment = NSTextAlignmentCenter;
         _growupLB.font = kPingFangMediumFont(12);
         _growupLB.textColor = kCommonWhiteColor;
+        _growupLB.hidden = YES;
     }
     return _growupLB;
 }

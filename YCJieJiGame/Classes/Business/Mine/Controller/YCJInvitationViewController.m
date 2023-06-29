@@ -35,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = ZCLocalizedString(@"邀请好友", nil);
+//    self.navigationItem.title = ZCLocalizedString(@"邀请好友", nil);
     [self bgImageName:[NSString convertImageNameWithLanguage:@"icon_mine_invitation_bg"]];
     [self configUI];
     [self requestInviteData];
@@ -307,6 +307,7 @@
         [_invitionBtn setTitleColor:kCommonWhiteColor forState:UIControlStateNormal];
         _invitionBtn.titleLabel.font = kPingFangRegularFont(16);
         _invitionBtn.userInteractionEnabled = NO;
+        _invitionBtn.hidden = YES;
     }
     return _invitionBtn;
 }
@@ -319,6 +320,7 @@
         _arrowBgView.cornerRadius = 10;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(invitionAction)];
         [_arrowBgView addGestureRecognizer:tap];
+        _arrowBgView.hidden = YES;
     }
     return _arrowBgView;
 }
@@ -330,6 +332,7 @@
         _arrowImg.image = [UIImage imageWithImageName:@"icon_mine_arrowR" imageColor:kColorHex(0xE58D24)];
         _arrowImg.cornerRadius = 8;
         _arrowImg.backgroundColor = kCommonWhiteColor;
+        _arrowImg.hidden = YES;
     }
     return _arrowImg;
 }

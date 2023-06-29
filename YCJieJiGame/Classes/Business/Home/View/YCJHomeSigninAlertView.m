@@ -62,14 +62,16 @@
     if ([YCJUserInfoManager sharedInstance].isLogin) {
         if ([self.listModel.status isEqualToString:@"1"]) {
             [JKNetWorkManager postRequestWithUrlPath:JKSigninUrlKey parameters:@{} finished:^(JKNetWorkResult * _Nonnull result) {
-                [self dismiss];
                 if(!result.error && [result.resultData isKindOfClass:[NSDictionary class]]) {
                     [MBProgressHUD hideHUD];
                     [MBProgressHUD showSuccess:ZCLocalizedString(@"签到成功", nil)];
-                    [[YCJUserInfoManager sharedInstance] reloadUserInfo];
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{                       
+                        [[YCJUserInfoManager sharedInstance] reloadUserInfo];
+                    });
                 } else {
                     [MBProgressHUD showSuccess:result.resultObject[@"errMsg"]];
                 }
+                [self dismiss];
             }];
         }
     } else {

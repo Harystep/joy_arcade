@@ -24,8 +24,10 @@ NSString * const JKDefaultWebURL = @"";
 NSString * const JKBaseUrlKey = @"BaseUrlKey";
 // 用户协议
 NSString * const JKUserAgreementUrlKey = @"http://jjdwc-site.5iwanquan.com/user.html";
+NSString * const JKUserAgreement_ENUrlKey = @"http://jjdwc-site.5iwanquan.com/user_en.html";
 // 隐私政策
 NSString * const JKPrivacyPolicyUrlKey = @"http://jjdwc-site.5iwanquan.com/policy.html";
+NSString * const JKPrivacyPolicy_ENUrlKey = @"http://jjdwc-site.5iwanquan.com/policy_en.html";
 
 
 // 签到列表

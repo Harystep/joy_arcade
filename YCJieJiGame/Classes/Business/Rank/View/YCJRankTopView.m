@@ -44,17 +44,19 @@
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-    [self.contentView addSubview:self.topImageView];
-    [self.topImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.contentView);
-        make.height.mas_equalTo(60);
-    }];
+//    [self.contentView addSubview:self.topImageView];
+//    [self.topImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.contentView);
+//        make.height.mas_equalTo(0.01);
+//    }];
+//    self.topImageView.hidden = YES;
     
     [self.contentView addSubview:self.contentAView];
     [self.contentView addSubview:self.contentBView];
     [self.contentAView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(kMargin);
-        make.top.equalTo(self.contentView).offset(60);
+//        make.top.equalTo(self.contentView).offset(60);
+        make.top.equalTo(self.contentView);
         make.centerX.equalTo(self.contentView);
         make.height.mas_equalTo(60);
     }];
