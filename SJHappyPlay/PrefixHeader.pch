@@ -1,0 +1,45 @@
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "SJLocalTool.h"
+#import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/SDWebImage.h>
+#import <MJRefresh/MJRefresh.h>
+#import <MJExtension/MJExtension.h>
+#import <Masonry/Masonry.h>
+#import <IQKeyboardManager.h>
+
+
+#import "MBProgressHUD+UBL.h"
+
+#import "JKUrlConst.h"
+#import "JKTools.h"
+#import "YCJGlobalMacro.h"
+#import "UIView+Category.h"
+#import "UIImage+Extras.h"
+#import "NSString+Extras.h"
+#import "NSDate+Extras.h"
+
+
+#import "JKNetWorkManager.h"
+#import "JKNetWorkResult.h"
+
+#import "SKUserInfoModel.h"
+#import "SKUserInfoManager.h"
+#import "QABaseWebViewController.h"
+
+#import <ATAuthSDK/ATAuthSDK.h>
+
+#define PNSToast(view, str, duration) ({ MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:(view) animated:YES]; hud.mode = MBProgressHUDModeText; hud.detailsLabel.font = [UIFont boldSystemFontOfSize:14.f]; hud.detailsLabel.text = (str); [hud hideAnimated:YES afterDelay:(duration)]; })
+
+#define PNSATAUTHSDKINFOKEY @"ATAuthSDKInfoKey"
+#define PNSATAUTHSDKINFO @"02DNdWz8RpEuBXWsXQuqgMlEaSw/B2psWStKmfTU/yAl0IFxUIwJpTk56VlaHtKe3mOXxECtS8Yi+1cw/tBPnS+ruAKC54pCQzblEMrYKPSAfseWx8Y3FMoa5lLS9dEyN9Vuo5dlB24CvXzvGqtm0iIP2KN/wVF+yc1KJHlpcDAHsh5VUJQs5uv6nD5iTmXtrflwqVff4mg1kXdkLa2lMCp6JLrfJEVjTW+opdmYs0rrmBg1UYvTCt5PfXxOFUTY6z5ZC6YXifYvnWLMbTgzFw=="
+#endif /* PrefixHeader_pch */

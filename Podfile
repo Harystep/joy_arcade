@@ -9,7 +9,7 @@ platform :ios, '11.0'
 use_frameworks!
 inhibit_all_warnings!
 
-target 'YCJieJiGame' do
+target 'SJHappyPlay' do
 
 
   
@@ -40,7 +40,7 @@ target 'YCJieJiGame' do
   
   #pod 'wawajiGame', :git=>'https://github.com/Harystep/toolSpec.git'
   
-  pod 'SJARCPlayer',  '~> 0.1.6'
+  pod 'SJARCPlayer',  '~> 1.0.0'
   
   pod 'SwiftyStoreKit', '0.16.1'
   
