@@ -34,6 +34,7 @@
     [self.avatarImageV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
         make.centerY.equalTo(self.view.mas_centerY).offset(-100);
+        make.height.width.mas_equalTo(122);
     }];
     
     [self.processV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -78,7 +79,8 @@
     if (!_avatarImageV) {
         _avatarImageV = [[UIImageView alloc] init];
         _avatarImageV.frame = UIScreen.mainScreen.bounds;
-        _avatarImageV.image = [UIImage imageNamed:@"icon_launch_avatar"];
+        _avatarImageV.image = [UIImage imageNamed:@"icon_launch_logo_a"];
+        _avatarImageV.cornerRadius = 61;
     }
     return _avatarImageV;
 }

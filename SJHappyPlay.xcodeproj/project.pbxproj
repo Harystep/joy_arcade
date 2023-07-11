@@ -1670,8 +1670,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_TEAM = LCWG7339XY;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 6V76MV62WG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJHappyPlay/Classes/Global/Manual_Add_ThirdParty\\ ",
@@ -1682,7 +1682,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SJHappyPlay/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SJHappyPlay/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Arcade Happy";
+				INFOPLIST_KEY_CFBundleDisplayName = KnightsPlayCity;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App需要您的同意,才能访问相机";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1749,7 +1749,7 @@
 					"-framework",
 					"\"YTXOperators\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ycodehf.YCJieJiGame;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.itcn.KnightsPlayCity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1774,8 +1774,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_TEAM = LCWG7339XY;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 6V76MV62WG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJHappyPlay/Classes/Global/Manual_Add_ThirdParty\\ ",
@@ -1786,7 +1786,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SJHappyPlay/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SJHappyPlay/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Arcade Happy";
+				INFOPLIST_KEY_CFBundleDisplayName = KnightsPlayCity;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App需要您的同意,才能访问相机";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1853,7 +1853,7 @@
 					"-framework",
 					"\"YTXOperators\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ycodehf.YCJieJiGame;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.itcn.KnightsPlayCity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

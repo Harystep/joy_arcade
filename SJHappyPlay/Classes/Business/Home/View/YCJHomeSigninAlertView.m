@@ -26,6 +26,7 @@
 
 - (void)setListModel:(YCJSignInListModel *)listModel {
     _listModel = listModel;
+    if(listModel.list.count == 0) return;
     CGFloat padding = 15;
     CGFloat width = (kScreenWidth - 90 - 60) / 3;
     for (int i = 0; i < listModel.list.count - 1; i++) {

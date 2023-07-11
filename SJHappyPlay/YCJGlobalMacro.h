@@ -83,7 +83,7 @@
 
 #define kPPGameChannelKey @"jiejidianwancheng"
 
-#define kPPGameBaseRequestUrl @"https://jjdwc-api.5iwanquan.com/api/"
+#define kPPGameBaseRequestUrl @"https://qsylc.5iwanquan.com/api/"
 
 #define kPPGameBaseMyHost @"123.60.149.177"
 

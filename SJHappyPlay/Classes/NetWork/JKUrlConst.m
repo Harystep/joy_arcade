@@ -12,17 +12,17 @@ NSString * const JKBaseApiURLKey = @"BaseApiURLKey";
 NSString * const JKWebURLKey = @"WebURLKey";
 
 ///默认基础api 地址
-NSString * const JKDefaultBaseApiURL = @"https://jjdwc-api.5iwanquan.com/api";
+NSString * const JKDefaultBaseApiURL = @"https://qsylc.5iwanquan.com/api";
 ///默认Web 地址
 NSString * const JKDefaultWebURL = @"";
 // 服务端地址
 NSString * const JKBaseUrlKey = @"BaseUrlKey";
 // 用户协议
-NSString * const JKUserAgreementUrlKey = @"http://jjdwc-site.5iwanquan.com/user.html";
-NSString * const JKUserAgreement_ENUrlKey = @"http://jjdwc-site.5iwanquan.com/user_en.html";
+NSString * const JKUserAgreementUrlKey = @"http://qsylc.5iwanquan.com/user.html";
+NSString * const JKUserAgreement_ENUrlKey = @"http://qsylc.5iwanquan.com/user.html";
 // 隐私政策
-NSString * const JKPrivacyPolicyUrlKey = @"http://jjdwc-site.5iwanquan.com/policy.html";
-NSString * const JKPrivacyPolicy_ENUrlKey = @"http://jjdwc-site.5iwanquan.com/policy_en.html";
+NSString * const JKPrivacyPolicyUrlKey = @"https://www.freeprivacypolicy.com/live/a862379b-e123-41dc-b296-8a94a392321c";
+NSString * const JKPrivacyPolicy_ENUrlKey = @"https://www.freeprivacypolicy.com/live/a862379b-e123-41dc-b296-8a94a392321c";
 
 
 // 签到列表

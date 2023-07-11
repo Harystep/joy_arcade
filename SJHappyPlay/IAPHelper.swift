@@ -101,8 +101,8 @@ import StoreKit
                 self.purchase(product: product)
             } else {
                 print("订单号获取失败")
-                let msg = res.error.localizedDescription
-                self.showLoading(title: msg)
+//                let msg = res.error.localizedDescription
+//                self.showLoading(title: msg)
             }
         }
     }
