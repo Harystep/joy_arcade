@@ -1,14 +1,7 @@
-//
-//  YCPhotoBrowserAnimator.m
-//  YCToolkit
-//
-//  Created by 蔡亚超 on 2018/2/25.
-//  Copyright © 2018年 WellsCai. All rights reserved.
-//
+
 
 #import "YCPhotoBrowserAnimator.h"
 #import "YCPhotoBrowserConst.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 
 @interface YCPhotoBrowserAnimator(){

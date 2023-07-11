@@ -10,11 +10,7 @@
 
 #if SD_UIKIT
 #import "objc/runtime.h"
-#import "UIView+WebCacheOperation.h"
-#import "UIView+WebCache.h"
 #import "NSData+ImageContentType.h"
-#import "UIImageView+WebCache.h"
-#import "UIImage+MultiFormat.h"
 
 static inline FLAnimatedImage * SDWebImageCreateFLAnimatedImage(FLAnimatedImageView *imageView, NSData *imageData) {
     if ([NSData sd_imageFormatForImageData:imageData] != SDImageFormatGIF) {

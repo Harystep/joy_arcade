@@ -1,10 +1,4 @@
-//
-//  UIView+YCExtension.h
-//  XiaoCaiEDie
-//
-//  Created by 蔡亚超 on 16/9/12.
-//  Copyright © 2016年 蔡亚超. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 

@@ -1022,20 +1022,20 @@
 		52D343FC2A14DFDB005A8901 /* YCPhotoBrowerCompont */ = {
 			isa = PBXGroup;
 			children = (
-				52D343FD2A14DFDB005A8901 /* YCCycleProgressView.h */,
 				52D343FE2A14DFDB005A8901 /* UIView+YCExtension.h */,
-				52D343FF2A14DFDB005A8901 /* YCPhotoBrowserCellHelper.h */,
+				52D344042A14DFDB005A8901 /* UIView+YCExtension.m */,
+				52D343FD2A14DFDB005A8901 /* YCCycleProgressView.h */,
+				52D344052A14DFDB005A8901 /* YCCycleProgressView.m */,
+				52D3440A2A14DFDB005A8901 /* YCPhotoBrowserAnimator.h */,
 				52D344002A14DFDB005A8901 /* YCPhotoBrowserAnimator.m */,
 				52D344012A14DFDB005A8901 /* YCPhotoBrowserCell.h */,
-				52D344022A14DFDB005A8901 /* YCPhotoBrowserConst.h */,
-				52D344032A14DFDB005A8901 /* YCPhotoBrowserController.h */,
-				52D344042A14DFDB005A8901 /* UIView+YCExtension.m */,
-				52D344052A14DFDB005A8901 /* YCCycleProgressView.m */,
-				52D344062A14DFDB005A8901 /* YCPhotoBrowserCellHelper.m */,
-				52D344072A14DFDB005A8901 /* YCPhotoBrowserConst.m */,
-				52D344082A14DFDB005A8901 /* YCPhotoBrowserController.m */,
 				52D344092A14DFDB005A8901 /* YCPhotoBrowserCell.m */,
-				52D3440A2A14DFDB005A8901 /* YCPhotoBrowserAnimator.h */,
+				52D343FF2A14DFDB005A8901 /* YCPhotoBrowserCellHelper.h */,
+				52D344062A14DFDB005A8901 /* YCPhotoBrowserCellHelper.m */,
+				52D344022A14DFDB005A8901 /* YCPhotoBrowserConst.h */,
+				52D344072A14DFDB005A8901 /* YCPhotoBrowserConst.m */,
+				52D344032A14DFDB005A8901 /* YCPhotoBrowserController.h */,
+				52D344082A14DFDB005A8901 /* YCPhotoBrowserController.m */,
 			);
 			path = YCPhotoBrowerCompont;
 			sourceTree = "<group>";
