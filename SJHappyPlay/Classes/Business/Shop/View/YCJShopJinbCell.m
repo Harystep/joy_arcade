@@ -118,15 +118,15 @@
 - (void)setGoodModel:(YCJShopCellModel *)goodModel {
     
     if ([goodModel.mark containsString:@"月卡"]) {
-        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_yk"]];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_yk_en"]];
         self.ljdzLB.textColor = kColorHex(0x4B0A0A);
         self.mrzsLB.textColor = kColorHex(0x661717);
     } else if ([goodModel.mark containsString:@"周卡"]) {
-        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_zk"]];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_zk_en"]];
         self.ljdzLB.textColor = kColorHex(0x662D17);
         self.mrzsLB.textColor = kColorHex(0x662D17);
     } else if ([goodModel.mark containsString:@"首充"]) {
-        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_mrsc"]];
+        self.contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_shop_mrsc_en"]];
         self.ljdzLB.textColor = kColorHex(0x4B0A0A);
         self.mrzsLB.textColor = kColorHex(0x661717);
     } else {

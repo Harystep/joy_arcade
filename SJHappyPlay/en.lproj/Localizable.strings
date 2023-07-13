@@ -132,3 +132,50 @@
 
 "进入房间成功" = "Into room";
 "金币_game" = "Coins";
+
+
+"积分_alert" = "points";
+"积分兑换_alert" = "points";
+"购买失败" = "Purchase failed";
+"用户取消交易" = "User cancels transaction";
+"兑换成功" = "Redemption successful";
+"兑换失败" = "Redemption failed";
+"我" = "Me";
+"抓取成功" = "Successfully captured";
+"差点抓中" = "Almost caught";
+"进入房间" = "Into room";
+"离开房间" = "Leave room";
+"差点就抓中了" = "Almost caught";
+"抓中了" = "Got it";
+"支付成功" = "Payment successful";
+"支付失败" = "Payment failed";
+"报修" = "Repair report";
+"怀疑机器坏了，是否通知维护人员" = "Suspect that the machine is broken, have you notified the maintenance personnel";
+"请填写发言内容" = "Please fill in the speech content";
+"发送" = "Send";
+"充值中心" = "Recharge";
+"开始游戏" = "Start Game";
+"提示" = "Prompt";
+"游戏币不足，请充值" = "Insufficient game currency, please recharge";
+"下机" = "Deplane";
+"正在游戏中,确认下机" = "In the game, confirm to remove the device";
+"正在游戏中,确认退出房间" = "In game, confirm to exit the room";
+"退出房间" = "Exit room";
+"确定兑换" = "Confirm redemption";
+"确定使用" = "Determine usage ";
+"取消预约" = "Cancel";
+"预约游戏" = "Reserve";
+"次" = "times";
+"每日赠送" = "Daily gift ";
+
+"结算" = "Settlement";
+"结算结果" = "Settlement result";
+"退出游戏进行结算～" = "Exit game for settlement";
+"退出游戏" = "Exit game";
+"币" = "coin";
+"请填写发言内容" = "Please fill in content";
+"轮到你开始游戏了" = "You can start the game";
+"开始游戏" = "Start game";
+"赢" = "Win";
+"分" = "score";
+"下机_push" = "Off";

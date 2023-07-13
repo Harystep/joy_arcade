@@ -9,9 +9,17 @@
 #import "YCJShopModel.h"
 #import "SJHappyPlay-Swift.h"
 #import "YCJInAppPurchase.h"
+#import "PPApplePayModule.h"
+#import "SJRequestAppleCreateOrderModel.h"
+#import "SJResponseAppleCreateOrderModel.h"
+#import "PPChargeOtherPayResponseModel.h"
+#import "SJPCChargeRequestModel.h"
+#import "PPUserInfoService.h"
+#import "SDRechargeWebViewController.h"
+#import <WebKit/WebKit.h>
+#import "YCJShopModel.h"
 
-@interface YCJShopViewController ()<UICollectionViewDataSource,
-UICollectionViewDelegateFlowLayout>
+@interface YCJShopViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, WKNavigationDelegate>
 @property (nonatomic, strong) SKUserCoinView       *userCoinView;
 @property (nonatomic, strong) KMVIPProcessView     *processView;
 @property (nonatomic, strong) UIImageView           *growupBgView;
@@ -22,6 +30,9 @@ UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSMutableArray        *jinBiList;
 @property (nonatomic, strong) NSMutableArray        *zuanShiList;
 @property (nonatomic, strong) YCJInAppPurchase      *iapHelp;
+@property (nonatomic,strong) WKWebView *theWebView;
+@property (nonatomic,strong) PPApplePayModule *applePayModule;
+@property (nonatomic,strong) YCJShopModel *paySupport;
 
 @end
 
@@ -50,6 +61,9 @@ UICollectionViewDelegateFlowLayout>
     [self requestJinBiList];
     [self requestZuanShiList];
     [self reload];
+    [self initPPGameSDK];
+    self.applePayModule = [PPApplePayModule sharedInstance];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reload) name:YCJUserInfoModiyNotification object:nil];
 }
 
@@ -89,6 +103,7 @@ UICollectionViewDelegateFlowLayout>
             [self removeEmptyView];
             [self.jinBiList removeAllObjects];
             YCJShopModel *shopModel = [YCJShopModel mj_objectWithKeyValues:result.resultData];
+            self.paySupport = shopModel;
             [self.jinBiList addObjectsFromArray:shopModel.optionList];
             [self.collectionView reloadData];
         }
@@ -107,6 +122,7 @@ UICollectionViewDelegateFlowLayout>
             [self removeEmptyView];
             [self.zuanShiList removeAllObjects];
             YCJShopModel *shopModel = [YCJShopModel mj_objectWithKeyValues:result.resultData];
+            self.paySupport = shopModel;
             [self.zuanShiList addObjectsFromArray:shopModel.optionList];
             [self.collectionView reloadData];
         }
@@ -258,8 +274,27 @@ UICollectionViewDelegateFlowLayout>
         model = self.zuanShiList[indexPath.item];
     }
     if ([[SKUserInfoManager sharedInstance] isLogin:self]) {
-        [self buyWithModel:model];
+//        [self buyWithModel:model];
+        NSInteger payType = [self convertPayTypeWithData:self.paySupport];
+        if(payType == 3) {
+            [self chargeByApple:model];
+        } else {
+            [self chargeByAli:model];
+        }
     }
+}
+
+- (NSInteger)convertPayTypeWithData:(YCJShopModel *)option {
+    NSInteger type = 3;
+    for (YCJPaySupport *model in option.paySupport) {
+        if([model.payMode integerValue] == 3) {//
+            type = 3;
+            break;
+        } else {
+            type = 2;
+        }
+    }
+    return type;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -278,6 +313,148 @@ UICollectionViewDelegateFlowLayout>
         insetForSectionAtIndex:(NSInteger)section
 {
     return UIEdgeInsetsMake(0, kMargin, 0, kMargin);
+}
+
+- (void)chargeByAli:(YCJShopCellModel *)data {
+    [self showLoading];
+    SJPCChargeRequestModel *requestModel = [[SJPCChargeRequestModel alloc] init];
+//    requestModel.type = 2;
+    if([data.mark isEqualToString:@"周卡"] || [data.mark isEqualToString:@"月卡"]) {
+        requestModel.b_id = [NSString stringWithFormat:@"card:%@", data.goodsID];
+    } else {
+        requestModel.b_id = [NSString stringWithFormat:@"option:%@", data.goodsID];
+    }
+    requestModel.accessToken = [PPUserInfoService get_Instance].access_token;
+    WeakSelf;
+    [requestModel requestFinish:^(__kindof PPResponseBaseModel * _Nullable responseModel, PPError * _Nullable error) {
+        [weakSelf hideLoading];
+        if (!error) {
+            PPChargeOtherPayResponseModel * otherPayResponseModel = (PPChargeOtherPayResponseModel *)responseModel;
+            [weakSelf showChargeAliPayWebView:otherPayResponseModel.data];
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.collectionView makeToast:error.message];
+            });
+        }
+    }];
+}
+
+- (void)chargeByApple:(YCJShopCellModel *)data {
+    [self showLoading];
+    SJRequestAppleCreateOrderModel *requestModel = [[SJRequestAppleCreateOrderModel alloc] init];
+    requestModel.accessToken = [PPUserInfoService get_Instance].access_token;
+    if([data.mark isEqualToString:@"周卡"] || [data.mark isEqualToString:@"月卡"]) {
+        requestModel.productId = [NSString stringWithFormat:@"card:%@", data.goodsID];
+    } else {
+        requestModel.productId = [NSString stringWithFormat:@"option:%@", data.goodsID];
+    }
+    WeakSelf;
+    [requestModel requestFinish:^(__kindof PPResponseBaseModel * _Nullable responseModel, PPError * _Nullable error) {
+        if(!error) {
+            SJResponseAppleCreateOrderModel *model = (SJResponseAppleCreateOrderModel *)responseModel;
+            [self.applePayModule pay:data.iosOption withOrderId:data.goodsID orderSn:model.data.orderSn withBlock:^(NSString * _Nonnull receipt) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf hideLoading];
+                    [self.view makeToast:ZCLocalizedString(@"购买成功", nil)];
+                    /// 购买成功，刷新用户信息
+                    [[SKUserInfoManager sharedInstance] reloadUserInfo];
+                });
+            } withFaileBlock:^(NSString * _Nonnull errMessage) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf hideLoading];
+                    [self.view makeToast:errMessage];
+                });
+            }];
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf hideLoading];
+                [self.view makeToast:error.message];
+            });
+        }
+    }];
+}
+
+- (void)showChargeAliPayWebView:(NSString *)data {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"alipay://"]]) {
+        [self.theWebView loadHTMLString:data baseURL: nil];
+    } else {
+        SDRechargeWebViewController * webViewController = [[SDRechargeWebViewController alloc] initWithData:data];
+        UIViewController * rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        [rootViewController presentViewController:webViewController animated:true completion:nil];
+    }
+}
+
+#pragma mark - WKNavigationDelegate
+- (void)                  webView:(WKWebView *)webView
+  decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction
+                  decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSURLRequest *request = navigationAction.request;
+    NSString * url = (request.URL).absoluteString;
+    if ([url hasPrefix:@"alipay://"]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:nil completionHandler:^(BOOL success) {
+            if (!success) {
+                [self.view makeToast:ZCLocalizedString(@"支付失败", nil)];
+            } else {
+                [self.view makeToast:ZCLocalizedString(@"购买成功", nil)];
+                /// 购买成功，刷新用户信息
+                [[SKUserInfoManager sharedInstance] reloadUserInfo];
+            }
+        }];
+        [self onDissmissContentView];
+        
+    }
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)onDissmissContentView {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.theWebView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.theWebView removeFromSuperview];
+    }];
+    
+}
+
+- (WKWebView *)theWebView{
+  if (!_theWebView) {
+    WKWebView * theView = [[WKWebView alloc] init];
+    [self.view addSubview:theView];
+    [theView mas_makeConstraints:^(MASConstraintMaker *make) {
+      make.leading.trailing.trailing.equalTo(self);
+        make.edges.mas_equalTo(self);
+    }];
+      theView.hidden = true;
+    theView.navigationDelegate = self;
+    _theWebView = theView;
+  }
+  return _theWebView;
+}
+
+- (void)showLoading {
+  [MBProgressHUD showHUDAddedTo:self.view animated:true];
+}
+- (void)hideLoading {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:true];
+    });
+}
+
+- (void)initPPGameSDK {    
+    /// 需要更换请求地址
+    [PPNetworkConfig sharedInstance].base_request_url = kPPGameBaseRequestUrl;
+    /// 更换 tcp请求的地址
+    [PPNetworkConfig sharedInstance].base_my_host = kPPGameBaseMyHost;
+    /// 更换 tcp 请求的 port
+    [PPNetworkConfig sharedInstance].base_my_port = kPPGameBaseMyPort.integerValue;
+    //添加渠道参数
+    [PPNetworkConfig sharedInstance].channelKey = kPPGameChannelKey;
+    
+    
+    YCJToken *userToken = [SKUserInfoManager sharedInstance].userTokenModel;
+    if(userToken.accessToken.length > 0) {
+        [[PPUserInfoService get_Instance] setAccess_token:userToken.accessToken];
+    }
+               
 }
 
 #pragma mark -- lazy
@@ -350,5 +527,7 @@ UICollectionViewDelegateFlowLayout>
     }
     return _collectionView;
 }
+
+
 
 @end

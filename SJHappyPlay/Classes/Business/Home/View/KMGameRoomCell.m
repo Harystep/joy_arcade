@@ -58,11 +58,11 @@
     
     NSString *imageName = @"";
     if ([roomModel.status isEqualToString:@"0"]) { /// 空闲
-        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_kxz"];
+        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_kxz_en"];
     } else if ([roomModel.status isEqualToString:@"1"]) { /// 游戏中
-        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_rwz"];
+        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_rwz_en"];
     } else if ([roomModel.status isEqualToString:@"2"]) { /// 维护中
-        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_whz"];
+        imageName = [NSString convertImageNameWithLanguage:@"icon_home_game_whz_en"];
     }
     self.statuImgView.image = [UIImage imageNamed:imageName];
     

@@ -1,0 +1,3 @@
+#import "SJPCLoginGetVerificationCodeResponseModel.h"
+@implementation SJPCLoginGetVerificationCodeResponseModel
+@end

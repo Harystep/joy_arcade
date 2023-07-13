@@ -336,7 +336,7 @@
     if (!_topImgView) {
         _topImgView = [UIImageView new];
         _topImgView.contentMode = UIViewContentModeScaleAspectFill;
-        _topImgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_login_bg"]];
+        _topImgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_login_bg_en"]];
     }
     return _topImgView;
 }

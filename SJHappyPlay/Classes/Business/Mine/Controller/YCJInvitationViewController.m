@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.navigationItem.title = ZCLocalizedString(@"邀请好友", nil);
-    [self bgImageName:[NSString convertImageNameWithLanguage:@"icon_mine_invitation_bg"]];
+    [self bgImageName:[NSString convertImageNameWithLanguage:@"icon_mine_invitation_bg_en"]];
     [self configUI];
     [self requestInviteData];
 }

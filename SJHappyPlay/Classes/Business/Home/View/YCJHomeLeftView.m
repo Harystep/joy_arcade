@@ -109,9 +109,9 @@
 - (NSMutableArray *)dataArr {
     if (!_dataArr) {
         _dataArr = [NSMutableArray array];
-        [_dataArr addObjectsFromArray:@[@"icon_home_mrqd",
-                                        @"icon_home_yqyl",
-                                        @"icon_home_xszd",
+        [_dataArr addObjectsFromArray:@[@"icon_home_mrqd_en",
+                                        @"icon_home_yqyl_en",
+                                        @"icon_home_xszd_en",
 //                                        @"icon_home_zxkf"
                                       ]
         ];

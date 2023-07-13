@@ -38,9 +38,7 @@ target 'SJHappyPlay' do
   
   pod 'Reachability', '3.2'
   
-  #pod 'wawajiGame', :git=>'https://github.com/Harystep/toolSpec.git'
-  
-  pod 'SJARCPlayer',  '~> 1.0.0'
+  #pod 'SJARCPlayer',  '~> 1.0.0'
   
   pod 'SwiftyStoreKit', '0.16.1'
   
@@ -48,7 +46,17 @@ target 'SJHappyPlay' do
 
   pod 'UMCommon', '~> 7.4.1'
   pod 'UMDevice', '~> 3.1.0'
-
+  
+  pod 'pop'
+  pod 'CocoaAsyncSocket'
+  pod 'ReactiveObjC', '~>3.1.1'
+  pod 'MCUIColorUtils'
+  pod 'Toast'
+  pod 'UICountingLabel'
+  pod 'MBProgressHUD'
+  pod 'ijkplayer', '~>1.1.3'
+  pod 'WsRTC'
+  pod 'WMPageController', '~> 2.4.0'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

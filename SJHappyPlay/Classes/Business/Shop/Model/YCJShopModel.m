@@ -8,9 +8,9 @@
     return @{@"goodsID": @[@"id"]};
 }
 
-- (void)setTitle:(NSString *)title {
-    _title = title;
-    if ([title containsString:@"月卡"] || [title containsString:@"周卡"]) {
+- (void)setMark:(NSString *)mark {
+    _mark = mark;
+    if ([mark containsString:@"月卡"] || [mark containsString:@"周卡"]) {
         self.buyType = @"card";
     } else {
         self.buyType = @"option";
@@ -34,6 +34,8 @@
 
 @implementation YCJShopModel
 + (NSDictionary *)mj_objectClassInArray {
-    return @{@"optionList" : @"YCJShopCellModel"};  //前边，是属性数组的名字，后边就是类名
+    return @{@"optionList" : @"YCJShopCellModel",
+             @"paySupport" :@"YCJPaySupport"
+    };  //前边，是属性数组的名字，后边就是类名
 }
 @end

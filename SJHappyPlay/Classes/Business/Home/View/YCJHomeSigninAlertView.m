@@ -157,7 +157,7 @@
     if (!_contentBgView) {
         _contentBgView = [UIImageView new];
         _contentBgView.contentMode = UIViewContentModeScaleAspectFill;
-        _contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_home_signin_bg"]];
+        _contentBgView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_home_signin_bg_en"]];
     }
     return _contentBgView;
 }

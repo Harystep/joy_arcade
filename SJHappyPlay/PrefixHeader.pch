@@ -16,7 +16,7 @@
 #import <MJExtension/MJExtension.h>
 #import <Masonry/Masonry.h>
 #import <IQKeyboardManager.h>
-
+#import <UIView+Toast.h>
 
 #import "MBProgressHUD+UBL.h"
 

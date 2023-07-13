@@ -78,7 +78,7 @@
     if (!_topImageView) {
         _topImageView = [UIImageView new];
         _topImageView.contentMode = UIViewContentModeScaleAspectFit;
-        _topImageView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_phb_month"]];
+        _topImageView.image = [UIImage imageNamed:[NSString convertImageNameWithLanguage:@"icon_phb_month_en"]];
         _topImageView.layer.masksToBounds = YES;
     }
     return _topImageView;
