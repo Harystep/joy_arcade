@@ -414,8 +414,6 @@
 		D17F57EF2A385B0A0087A903 /* YCJConsumeTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D17F57EE2A385B0A0087A903 /* YCJConsumeTypeView.m */; };
 		D17F57F22A38648B0087A903 /* YCJConsumeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D17F57F12A38648B0087A903 /* YCJConsumeModel.m */; };
 		D17F57F42A39BBBA0087A903 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17F57F32A39BBBA0087A903 /* StoreKit.framework */; };
-		D17F57F92A39C08D0087A903 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17F57F82A39C08D0087A903 /* IAPHelper.swift */; };
-		D17F57FB2A39C1020087A903 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17F57FA2A39C1020087A903 /* ProgressHUD.swift */; };
 		D17F57FE2A39D4860087A903 /* YCJInAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = D17F57FD2A39D4860087A903 /* YCJInAppPurchase.m */; };
 		D19C99942A1F5AE200647BEA /* YCJHomeSigninAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C99922A1F5AE200647BEA /* YCJHomeSigninAlertView.m */; };
 		D19C99972A1F61F000647BEA /* YCJHomeLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C99962A1F61F000647BEA /* YCJHomeLeftView.m */; };
@@ -528,7 +526,6 @@
 		4C9CAB692A4AB2FD005F75C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C9CAB6B2A4AB302005F75C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4C9CAB6C2A4AB303005F75C6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		4CDCE62D2A525DAF00300CC4 /* SJHappyPlay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SJHappyPlay-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CDCE62E2A52D3F300300CC4 /* SJHappyPlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SJHappyPlay.entitlements; sourceTree = "<group>"; };
 		4CEB70662A5E4E1800FC7583 /* AppDefineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDefineHeader.h; sourceTree = "<group>"; };
 		4CEB70672A5E4E1800FC7583 /* PPImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPImageUtil.h; sourceTree = "<group>"; };
@@ -1197,8 +1194,6 @@
 		D17F57F02A38648B0087A903 /* YCJConsumeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJConsumeModel.h; sourceTree = "<group>"; };
 		D17F57F12A38648B0087A903 /* YCJConsumeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJConsumeModel.m; sourceTree = "<group>"; };
 		D17F57F32A39BBBA0087A903 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		D17F57F82A39C08D0087A903 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
-		D17F57FA2A39C1020087A903 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		D17F57FC2A39D4860087A903 /* YCJInAppPurchase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJInAppPurchase.h; sourceTree = "<group>"; };
 		D17F57FD2A39D4860087A903 /* YCJInAppPurchase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJInAppPurchase.m; sourceTree = "<group>"; };
 		D19C99922A1F5AE200647BEA /* YCJHomeSigninAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJHomeSigninAlertView.m; sourceTree = "<group>"; };
@@ -1211,9 +1206,6 @@
 		D19C999C2A20428000647BEA /* YCJHomeUserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJHomeUserView.m; sourceTree = "<group>"; };
 		D19C999E2A2043B900647BEA /* KMVIPProcessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMVIPProcessView.h; sourceTree = "<group>"; };
 		D19C999F2A2043B900647BEA /* KMVIPProcessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMVIPProcessView.m; sourceTree = "<group>"; };
-		D1A63CF62A2DB3A1004D8461 /* ATAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ATAuthSDK.framework; path = ../../../Desktop/numberAuthSDK_APP_iOS_v2.12.13.1_operator_ui_log_static/SDK/ATAuthSDK.framework; sourceTree = "<group>"; };
-		D1A63CF72A2DB3A1004D8461 /* YTXMonitor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YTXMonitor.framework; path = ../../../Desktop/numberAuthSDK_APP_iOS_v2.12.13.1_operator_ui_log_static/SDK/YTXMonitor.framework; sourceTree = "<group>"; };
-		D1A63CF82A2DB3A1004D8461 /* YTXOperators.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YTXOperators.framework; path = ../../../Desktop/numberAuthSDK_APP_iOS_v2.12.13.1_operator_ui_log_static/SDK/YTXOperators.framework; sourceTree = "<group>"; };
 		D1A63CFC2A2DB3A8004D8461 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		D1A63CFE2A2DB48B004D8461 /* YTXOperators.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YTXOperators.framework; path = "SJHappyPlay/Classes/Global/Manual_Add_ThirdParty /YTXOperators.framework"; sourceTree = "<group>"; };
 		D1A63CFF2A2DB48B004D8461 /* YTXMonitor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YTXMonitor.framework; path = "SJHappyPlay/Classes/Global/Manual_Add_ThirdParty /YTXMonitor.framework"; sourceTree = "<group>"; };
@@ -1352,9 +1344,6 @@
 				D1A63CFF2A2DB48B004D8461 /* YTXMonitor.framework */,
 				D1A63CFE2A2DB48B004D8461 /* YTXOperators.framework */,
 				D1A63CFC2A2DB3A8004D8461 /* Network.framework */,
-				D1A63CF62A2DB3A1004D8461 /* ATAuthSDK.framework */,
-				D1A63CF72A2DB3A1004D8461 /* YTXMonitor.framework */,
-				D1A63CF82A2DB3A1004D8461 /* YTXOperators.framework */,
 				EB841D73C2111ACDB2DC21C6 /* Pods_SJHappyPlay.framework */,
 			);
 			name = Frameworks;
@@ -2203,10 +2192,7 @@
 				52336B942A14BE2400E4BA7C /* Info.plist */,
 				52336B952A14BE2400E4BA7C /* main.m */,
 				52D343D92A14DC71005A8901 /* PrefixHeader.pch */,
-				D17F57F82A39C08D0087A903 /* IAPHelper.swift */,
-				D17F57FA2A39C1020087A903 /* ProgressHUD.swift */,
 				52D343DA2A14DCE7005A8901 /* YCJGlobalMacro.h */,
-				4CDCE62D2A525DAF00300CC4 /* SJHappyPlay-Bridging-Header.h */,
 				4C30F1C32A48150B00F71B45 /* Localizable.strings */,
 				4C9CAB6A2A4AB2FD005F75C6 /* InfoPlist.strings */,
 			);
@@ -3291,13 +3277,11 @@
 				4CEB72CB2A5E4E1900FC7583 /* SJPCSignActionRequestModel.m in Sources */,
 				4CEB72D42A5E4E1900FC7583 /* SJPCMessageRequestModel.m in Sources */,
 				4CEB72F02A5E4E1900FC7583 /* SJResponseAppleCreateOrderModel.m in Sources */,
-				D17F57F92A39C08D0087A903 /* IAPHelper.swift in Sources */,
 				4CEB73502A5E4E1900FC7583 /* PPSaintPlayerWaitView.m in Sources */,
 				3A2103DD2A2C911E000538E5 /* KMNewPlayerModel.m in Sources */,
 				4CEB72BF2A5E4E1900FC7583 /* SJPCHomeBannerRequestModel.m in Sources */,
 				D19C99942A1F5AE200647BEA /* YCJHomeSigninAlertView.m in Sources */,
 				D1E3FE242A297D1F00603E7D /* YCJSignInListModel.m in Sources */,
-				D17F57FB2A39C1020087A903 /* ProgressHUD.swift in Sources */,
 				4CEB73652A5E4E1900FC7583 /* PPTcpSendSaintData.m in Sources */,
 				D1E3FE102A275B8800603E7D /* YCJJiFenViewController.m in Sources */,
 				D1E3FE272A29A26700603E7D /* YCJInviteCodeModel.m in Sources */,
@@ -3715,7 +3699,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SJHappyPlay/SJHappyPlay-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3819,7 +3803,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SJHappyPlay/SJHappyPlay-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -3828,7 +3812,6 @@
 		52336BB32A14BE2400E4BA7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3847,7 +3830,6 @@
 		52336BB42A14BE2400E4BA7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3866,7 +3848,6 @@
 		52336BB62A14BE2400E4BA7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z83G9T93VL;
@@ -3883,7 +3864,6 @@
 		52336BB72A14BE2400E4BA7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z83G9T93VL;

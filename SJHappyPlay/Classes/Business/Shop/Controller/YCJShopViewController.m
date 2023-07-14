@@ -7,7 +7,6 @@
 #import "YCJShopZuansCell.h"
 #import "YCJShopJinbCell.h"
 #import "YCJShopModel.h"
-#import "SJHappyPlay-Swift.h"
 #import "YCJInAppPurchase.h"
 #import "PPApplePayModule.h"
 #import "SJRequestAppleCreateOrderModel.h"
@@ -194,34 +193,6 @@
         }
     }];
     
-}
-
-- (void)buyWithModel:(YCJShopCellModel *)model {
-    
-    if ([[JKTools handelString:model.iosOption] isEqualToString:@""]){
-        [MBProgressHUD showError:@"产品id无效"];
-        return;
-    }
-    
-    [[IAPHelper shared] startApplePayWithProduct:model.iosOption goodId:model.goodsID type:model.buyType];
-    [IAPHelper shared].paymentCancelledCallBack = ^(NSString *errMsg){
-        NSLog(@"errMsg:%@", errMsg);
-        kRunAfter(0.3, ^{
-            if (errMsg.length <= 0) {
-                [MBProgressHUD showError:ZCLocalizedString(@"取消购买", nil)];
-            } else {
-                [MBProgressHUD showError:errMsg];
-            }
-        });
-    };
-    [IAPHelper shared].paymentSuccessfulCallBack = ^{
-        NSLog(@"产品购买成功咯");
-        kRunAfter(0.3, ^{
-            [MBProgressHUD showError:ZCLocalizedString(@"购买成功", nil)];
-        });
-        /// 购买成功，刷新用户信息
-        [[SKUserInfoManager sharedInstance] reloadUserInfo];
-    };
 }
 
 #pragma mark - UICollectionViewDataSource

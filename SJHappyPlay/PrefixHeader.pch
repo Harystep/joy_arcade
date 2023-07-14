@@ -41,5 +41,5 @@
 #define PNSToast(view, str, duration) ({ MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:(view) animated:YES]; hud.mode = MBProgressHUDModeText; hud.detailsLabel.font = [UIFont boldSystemFontOfSize:14.f]; hud.detailsLabel.text = (str); [hud hideAnimated:YES afterDelay:(duration)]; })
 
 #define PNSATAUTHSDKINFOKEY @"ATAuthSDKInfoKey"
-#define PNSATAUTHSDKINFO @"02DNdWz8RpEuBXWsXQuqgMlEaSw/B2psWStKmfTU/yAl0IFxUIwJpTk56VlaHtKe3mOXxECtS8Yi+1cw/tBPnS+ruAKC54pCQzblEMrYKPSAfseWx8Y3FMoa5lLS9dEyN9Vuo5dlB24CvXzvGqtm0iIP2KN/wVF+yc1KJHlpcDAHsh5VUJQs5uv6nD5iTmXtrflwqVff4mg1kXdkLa2lMCp6JLrfJEVjTW+opdmYs0rrmBg1UYvTCt5PfXxOFUTY6z5ZC6YXifYvnWLMbTgzFw=="
+#define PNSATAUTHSDKINFO @"l03sUX8wvKPh7gJDCPHi3eZZ1sRZHmoE91HTm4Wo7v6t6F5lRBDvqS3LWjd1JaFgFx09xXy8CLz5PKoINIvcY6GCxqkt/baoH4dSrF0Fd6UfoSS3JPARi8Cewf8ycXFeFO/AemQwng7aW95bCo7Q2C4L3xj18RCCUPn1O1pG3ditwStrdK09ca0ejlkM7dS4U6YXpU2LGRvUBWBPm78WdxyijzZoqLE/1j/OrLVvSqtdu/MyTlrgQnzdlXMExp4vNprOU03nBtk="
 #endif /* PrefixHeader_pch */

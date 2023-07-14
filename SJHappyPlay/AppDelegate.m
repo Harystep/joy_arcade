@@ -2,7 +2,6 @@
 #import "AppDelegate.h"
 #import "QATabBarController.h"
 #import "SJLaunchViewController.h"
-#import "SJHappyPlay-Swift.h"
 #import <UMCommon/UMCommon.h>
 
 @interface AppDelegate ()
@@ -26,8 +25,6 @@
 //        self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
 //    }
     [self.window makeKeyAndVisible];
-    
-    [[IAPHelper shared] setupIAP];
     
     [self setup3DTouchItems:application];
     
