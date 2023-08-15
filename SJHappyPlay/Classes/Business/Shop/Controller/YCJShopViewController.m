@@ -53,7 +53,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = ZCLocalizedString(@"充值", nil);
+    self.navigationItem.title = ZCLocalizedString(@"商城", nil);
     [self bgImageName:@"icon_mine_bg"];
     self.jinbi = YES;
     [self setSubviews];

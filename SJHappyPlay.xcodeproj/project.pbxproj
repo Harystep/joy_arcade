@@ -16,6 +16,26 @@
 		3A3B88152A3CBE4500C65100 /* tab_clicked.aac in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B88142A3CBE4500C65100 /* tab_clicked.aac */; };
 		3A3B88162A3F544C00C65100 /* YCJComplaintDetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D1E5A4192A1B1E3600E96680 /* YCJComplaintDetailViewController.h */; };
 		3AC81D9C2A37711800ADF1A5 /* YCJAccountLogoutAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC81D9B2A37711800ADF1A5 /* YCJAccountLogoutAlertView.m */; };
+		4C17E96D2A89B86B002EF5AC /* KMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E96C2A89B86B002EF5AC /* KMHomeViewController.m */; };
+		4C17E9702A89BA3D002EF5AC /* YCJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E96F2A89BA3D002EF5AC /* YCJHomeViewController.m */; };
+		4C17E9792A89CE6A002EF5AC /* YCJTabHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9782A89CE6A002EF5AC /* YCJTabHotViewController.m */; };
+		4C17E98A2A8A043D002EF5AC /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E97E2A8A043D002EF5AC /* SDCycleScrollView.m */; };
+		4C17E98B2A8A043D002EF5AC /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E97F2A8A043D002EF5AC /* UIView+SDExtension.m */; };
+		4C17E98C2A8A043D002EF5AC /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9802A8A043D002EF5AC /* SDCollectionViewCell.m */; };
+		4C17E98D2A8A043D002EF5AC /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9832A8A043D002EF5AC /* TADotView.m */; };
+		4C17E98E2A8A043D002EF5AC /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9842A8A043D002EF5AC /* TAPageControl.m */; };
+		4C17E98F2A8A043D002EF5AC /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9852A8A043D002EF5AC /* TAAnimatedDotView.m */; };
+		4C17E9902A8A043D002EF5AC /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9862A8A043D002EF5AC /* TAAbstractDotView.m */; };
+		4C17E9932A8A0700002EF5AC /* YCJHomeBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9922A8A0700002EF5AC /* YCJHomeBannerCell.m */; };
+		4C17E9962A8A0D88002EF5AC /* YCJPlayLasterItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9952A8A0D88002EF5AC /* YCJPlayLasterItemCell.m */; };
+		4C17E9992A8A0F64002EF5AC /* YCJPlayLasterSimpleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9982A8A0F64002EF5AC /* YCJPlayLasterSimpleCell.m */; };
+		4C17E99C2A8A1D26002EF5AC /* YCJHomePlayPostItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E99B2A8A1D26002EF5AC /* YCJHomePlayPostItemCell.m */; };
+		4C17E99F2A8A245B002EF5AC /* YCJPlayerHotItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E99E2A8A245B002EF5AC /* YCJPlayerHotItemCell.m */; };
+		4C17E9A22A8A2AD4002EF5AC /* YCJPosterDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9A12A8A2AD4002EF5AC /* YCJPosterDetailController.m */; };
+		4C17E9AB2A8B1F69002EF5AC /* HBRouter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C17E9A62A8B1F69002EF5AC /* HBRouter.plist */; };
+		4C17E9AC2A8B1F69002EF5AC /* UIResponder+HBRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9A82A8B1F69002EF5AC /* UIResponder+HBRouter.m */; };
+		4C17E9AD2A8B1F69002EF5AC /* HBRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9A92A8B1F69002EF5AC /* HBRouter.m */; };
+		4C17E9AE2A8B1F69002EF5AC /* HCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17E9AA2A8B1F69002EF5AC /* HCRouter.m */; };
 		4C30F1BC2A480F6100F71B45 /* SJLocalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F1BB2A480F6100F71B45 /* SJLocalTool.m */; };
 		4C30F1C12A48150B00F71B45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C30F1C32A48150B00F71B45 /* Localizable.strings */; };
 		4C7EBD8A2A4D6738002F29F8 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBD842A4D6738002F29F8 /* FLAnimatedImageView+WebCache.m */; };
@@ -370,7 +390,6 @@
 		52D343AF2A14CDBC005A8901 /* QABaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D343AE2A14CDBC005A8901 /* QABaseNavigationController.m */; };
 		52D343B22A14CDDB005A8901 /* QATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D343B12A14CDDB005A8901 /* QATabBarController.m */; };
 		52D343B52A14CDFA005A8901 /* QABaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D343B42A14CDFA005A8901 /* QABaseWebViewController.m */; };
-		52D343CC2A14CF36005A8901 /* KMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D343CB2A14CF36005A8901 /* KMHomeViewController.m */; };
 		52D343CF2A14CF4A005A8901 /* QAConversionCentreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D343CE2A14CF4A005A8901 /* QAConversionCentreViewController.m */; };
 		52D343D22A14CF5E005A8901 /* YCJMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D343D12A14CF5E005A8901 /* YCJMineViewController.m */; };
 		52D343D52A14CF6C005A8901 /* YCJRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D343D42A14CF6C005A8901 /* YCJRankViewController.m */; };
@@ -507,6 +526,45 @@
 		3A3B88142A3CBE4500C65100 /* tab_clicked.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = tab_clicked.aac; sourceTree = "<group>"; };
 		3AC81D9A2A37711800ADF1A5 /* YCJAccountLogoutAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJAccountLogoutAlertView.h; sourceTree = "<group>"; };
 		3AC81D9B2A37711800ADF1A5 /* YCJAccountLogoutAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJAccountLogoutAlertView.m; sourceTree = "<group>"; };
+		4C17E96B2A89B86B002EF5AC /* KMHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMHomeViewController.h; sourceTree = "<group>"; };
+		4C17E96C2A89B86B002EF5AC /* KMHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMHomeViewController.m; sourceTree = "<group>"; };
+		4C17E96E2A89BA3D002EF5AC /* YCJHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJHomeViewController.h; sourceTree = "<group>"; };
+		4C17E96F2A89BA3D002EF5AC /* YCJHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJHomeViewController.m; sourceTree = "<group>"; };
+		4C17E9772A89CE6A002EF5AC /* YCJTabHotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJTabHotViewController.h; sourceTree = "<group>"; };
+		4C17E9782A89CE6A002EF5AC /* YCJTabHotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJTabHotViewController.m; sourceTree = "<group>"; };
+		4C17E97B2A8A043D002EF5AC /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		4C17E97C2A8A043D002EF5AC /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		4C17E97D2A8A043D002EF5AC /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		4C17E97E2A8A043D002EF5AC /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		4C17E97F2A8A043D002EF5AC /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		4C17E9802A8A043D002EF5AC /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		4C17E9822A8A043D002EF5AC /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		4C17E9832A8A043D002EF5AC /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		4C17E9842A8A043D002EF5AC /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		4C17E9852A8A043D002EF5AC /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		4C17E9862A8A043D002EF5AC /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		4C17E9872A8A043D002EF5AC /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		4C17E9882A8A043D002EF5AC /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		4C17E9892A8A043D002EF5AC /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		4C17E9912A8A0700002EF5AC /* YCJHomeBannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJHomeBannerCell.h; sourceTree = "<group>"; };
+		4C17E9922A8A0700002EF5AC /* YCJHomeBannerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJHomeBannerCell.m; sourceTree = "<group>"; };
+		4C17E9942A8A0D88002EF5AC /* YCJPlayLasterItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJPlayLasterItemCell.h; sourceTree = "<group>"; };
+		4C17E9952A8A0D88002EF5AC /* YCJPlayLasterItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJPlayLasterItemCell.m; sourceTree = "<group>"; };
+		4C17E9972A8A0F64002EF5AC /* YCJPlayLasterSimpleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJPlayLasterSimpleCell.h; sourceTree = "<group>"; };
+		4C17E9982A8A0F64002EF5AC /* YCJPlayLasterSimpleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJPlayLasterSimpleCell.m; sourceTree = "<group>"; };
+		4C17E99A2A8A1D26002EF5AC /* YCJHomePlayPostItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJHomePlayPostItemCell.h; sourceTree = "<group>"; };
+		4C17E99B2A8A1D26002EF5AC /* YCJHomePlayPostItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJHomePlayPostItemCell.m; sourceTree = "<group>"; };
+		4C17E99D2A8A245B002EF5AC /* YCJPlayerHotItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJPlayerHotItemCell.h; sourceTree = "<group>"; };
+		4C17E99E2A8A245B002EF5AC /* YCJPlayerHotItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJPlayerHotItemCell.m; sourceTree = "<group>"; };
+		4C17E9A02A8A2AD4002EF5AC /* YCJPosterDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJPosterDetailController.h; sourceTree = "<group>"; };
+		4C17E9A12A8A2AD4002EF5AC /* YCJPosterDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJPosterDetailController.m; sourceTree = "<group>"; };
+		4C17E9A42A8B1F69002EF5AC /* HBRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBRouter.h; sourceTree = "<group>"; };
+		4C17E9A52A8B1F69002EF5AC /* UIResponder+HBRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+HBRouter.h"; sourceTree = "<group>"; };
+		4C17E9A62A8B1F69002EF5AC /* HBRouter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HBRouter.plist; sourceTree = "<group>"; };
+		4C17E9A72A8B1F69002EF5AC /* HCRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRouter.h; sourceTree = "<group>"; };
+		4C17E9A82A8B1F69002EF5AC /* UIResponder+HBRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+HBRouter.m"; sourceTree = "<group>"; };
+		4C17E9A92A8B1F69002EF5AC /* HBRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBRouter.m; sourceTree = "<group>"; };
+		4C17E9AA2A8B1F69002EF5AC /* HCRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRouter.m; sourceTree = "<group>"; };
 		4C30F1BA2A480F6100F71B45 /* SJLocalTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJLocalTool.h; sourceTree = "<group>"; };
 		4C30F1BB2A480F6100F71B45 /* SJLocalTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJLocalTool.m; sourceTree = "<group>"; };
 		4C30F1C22A48150B00F71B45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1107,8 +1165,6 @@
 		52D343B12A14CDDB005A8901 /* QATabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QATabBarController.m; sourceTree = "<group>"; };
 		52D343B32A14CDFA005A8901 /* QABaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QABaseWebViewController.h; sourceTree = "<group>"; };
 		52D343B42A14CDFA005A8901 /* QABaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QABaseWebViewController.m; sourceTree = "<group>"; };
-		52D343CA2A14CF36005A8901 /* KMHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMHomeViewController.h; sourceTree = "<group>"; };
-		52D343CB2A14CF36005A8901 /* KMHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMHomeViewController.m; sourceTree = "<group>"; };
 		52D343CD2A14CF4A005A8901 /* QAConversionCentreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QAConversionCentreViewController.h; sourceTree = "<group>"; };
 		52D343CE2A14CF4A005A8901 /* QAConversionCentreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QAConversionCentreViewController.m; sourceTree = "<group>"; };
 		52D343D02A14CF5E005A8901 /* YCJMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJMineViewController.h; sourceTree = "<group>"; };
@@ -1365,6 +1421,49 @@
 				3A2103D32A2C3452000538E5 /* YCJShopModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4C17E97A2A8A043D002EF5AC /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				4C17E97B2A8A043D002EF5AC /* UIView+SDExtension.h */,
+				4C17E97C2A8A043D002EF5AC /* SDCycleScrollView.h */,
+				4C17E97D2A8A043D002EF5AC /* SDCollectionViewCell.h */,
+				4C17E97E2A8A043D002EF5AC /* SDCycleScrollView.m */,
+				4C17E97F2A8A043D002EF5AC /* UIView+SDExtension.m */,
+				4C17E9802A8A043D002EF5AC /* SDCollectionViewCell.m */,
+				4C17E9812A8A043D002EF5AC /* PageControl */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		4C17E9812A8A043D002EF5AC /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				4C17E9822A8A043D002EF5AC /* TAAbstractDotView.h */,
+				4C17E9832A8A043D002EF5AC /* TADotView.m */,
+				4C17E9842A8A043D002EF5AC /* TAPageControl.m */,
+				4C17E9852A8A043D002EF5AC /* TAAnimatedDotView.m */,
+				4C17E9862A8A043D002EF5AC /* TAAbstractDotView.m */,
+				4C17E9872A8A043D002EF5AC /* TADotView.h */,
+				4C17E9882A8A043D002EF5AC /* TAAnimatedDotView.h */,
+				4C17E9892A8A043D002EF5AC /* TAPageControl.h */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		4C17E9A32A8B1F69002EF5AC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4C17E9A42A8B1F69002EF5AC /* HBRouter.h */,
+				4C17E9A92A8B1F69002EF5AC /* HBRouter.m */,
+				4C17E9A62A8B1F69002EF5AC /* HBRouter.plist */,
+				4C17E9A72A8B1F69002EF5AC /* HCRouter.h */,
+				4C17E9AA2A8B1F69002EF5AC /* HCRouter.m */,
+				4C17E9A52A8B1F69002EF5AC /* UIResponder+HBRouter.h */,
+				4C17E9A82A8B1F69002EF5AC /* UIResponder+HBRouter.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		4C7EBD832A4D6738002F29F8 /* FLAnimatedImage */ = {
@@ -1685,11 +1784,11 @@
 			isa = PBXGroup;
 			children = (
 				4CEB71532A5E4E1800FC7583 /* PPApplePayModule.h */,
-				4CEB71542A5E4E1800FC7583 /* SDGameModule.m */,
-				4CEB71552A5E4E1800FC7583 /* SDAppleLoginModule.h */,
 				4CEB71562A5E4E1800FC7583 /* PPApplePayModule.m */,
+				4CEB71552A5E4E1800FC7583 /* SDAppleLoginModule.h */,
 				4CEB71572A5E4E1800FC7583 /* SDAppleLoginModule.m */,
 				4CEB71582A5E4E1800FC7583 /* SDGameModule.h */,
+				4CEB71542A5E4E1800FC7583 /* SDGameModule.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -2299,6 +2398,7 @@
 		52D343A52A14CB89005A8901 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				4C17E9A32A8B1F69002EF5AC /* Router */,
 				52D343E42A14DFDB005A8901 /* Category */,
 				52D343DB2A14DFDB005A8901 /* Extension */,
 				52D343F02A14DFDB005A8901 /* GlobalTools */,
@@ -2424,12 +2524,18 @@
 		52D343BB2A14CF1D005A8901 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				52D343CA2A14CF36005A8901 /* KMHomeViewController.h */,
-				52D343CB2A14CF36005A8901 /* KMHomeViewController.m */,
 				D1A63D0D2A2DF77B004D8461 /* KMGameRoomViewController.h */,
 				D1A63D0E2A2DF77B004D8461 /* KMGameRoomViewController.m */,
 				3A2103D52A2C5489000538E5 /* KMNewPlayerViewController.h */,
 				3A2103D62A2C5489000538E5 /* KMNewPlayerViewController.m */,
+				4C17E96B2A89B86B002EF5AC /* KMHomeViewController.h */,
+				4C17E96C2A89B86B002EF5AC /* KMHomeViewController.m */,
+				4C17E96E2A89BA3D002EF5AC /* YCJHomeViewController.h */,
+				4C17E96F2A89BA3D002EF5AC /* YCJHomeViewController.m */,
+				4C17E9772A89CE6A002EF5AC /* YCJTabHotViewController.h */,
+				4C17E9782A89CE6A002EF5AC /* YCJTabHotViewController.m */,
+				4C17E9A02A8A2AD4002EF5AC /* YCJPosterDetailController.h */,
+				4C17E9A12A8A2AD4002EF5AC /* YCJPosterDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2455,6 +2561,16 @@
 				D1E3FE1B2A28308800603E7D /* YCJSigninBigContentView.m */,
 				D19C99952A1F61F000647BEA /* YCJHomeLeftView.h */,
 				D19C99962A1F61F000647BEA /* YCJHomeLeftView.m */,
+				4C17E9912A8A0700002EF5AC /* YCJHomeBannerCell.h */,
+				4C17E9922A8A0700002EF5AC /* YCJHomeBannerCell.m */,
+				4C17E9942A8A0D88002EF5AC /* YCJPlayLasterItemCell.h */,
+				4C17E9952A8A0D88002EF5AC /* YCJPlayLasterItemCell.m */,
+				4C17E9972A8A0F64002EF5AC /* YCJPlayLasterSimpleCell.h */,
+				4C17E9982A8A0F64002EF5AC /* YCJPlayLasterSimpleCell.m */,
+				4C17E99A2A8A1D26002EF5AC /* YCJHomePlayPostItemCell.h */,
+				4C17E99B2A8A1D26002EF5AC /* YCJHomePlayPostItemCell.m */,
+				4C17E99D2A8A245B002EF5AC /* YCJPlayerHotItemCell.h */,
+				4C17E99E2A8A245B002EF5AC /* YCJPlayerHotItemCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2614,6 +2730,7 @@
 		52D343F22A14DFDB005A8901 /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				4C17E97A2A8A043D002EF5AC /* SDCycleScrollView */,
 				4CEB70632A5E4E1800FC7583 /* SJARCPlayer */,
 				4C7EBD832A4D6738002F29F8 /* FLAnimatedImage */,
 				52D343F32A14DFDB005A8901 /* CustomGifHeader */,
@@ -2894,6 +3011,7 @@
 				4CEB73D12A5E4E1900FC7583 /* ico_f_7.png in Resources */,
 				D1A63D052A2DB4AD004D8461 /* ATAuthSDK.bundle in Resources */,
 				4CEB73A42A5E4E1900FC7583 /* img_dbj_repair_a.png in Resources */,
+				4C17E9AB2A8B1F69002EF5AC /* HBRouter.plist in Resources */,
 				4CEB73BE2A5E4E1900FC7583 /* ico_customer_service.png in Resources */,
 				4CEB73B62A5E4E1900FC7583 /* ico_play_left.png in Resources */,
 				4CEB73D82A5E4E1900FC7583 /* ico_game_price_line.png in Resources */,
@@ -3085,6 +3203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEB73582A5E4E1900FC7583 /* PPGameGoodDetailView.m in Sources */,
+				4C17E9992A8A0F64002EF5AC /* YCJPlayLasterSimpleCell.m in Sources */,
 				4CEB72E22A5E4E1900FC7583 /* SJPCDefineAdressRequestModel.m in Sources */,
 				3A3B88162A3F544C00C65100 /* YCJComplaintDetailViewController.h in Sources */,
 				4CEB733F2A5E4E1900FC7583 /* SJUserRechargeCoinDataView.m in Sources */,
@@ -3092,6 +3211,7 @@
 				D1E3FE0A2A275B7000603E7D /* YCJJinBiViewController.m in Sources */,
 				4CEB732A2A5E4E1900FC7583 /* PPChatMessageDataModel.m in Sources */,
 				D1E5A4182A1B09C100E96680 /* YCJSettingCell.m in Sources */,
+				4C17E98F2A8A043D002EF5AC /* TAAnimatedDotView.m in Sources */,
 				4CEB73272A5E4E1900FC7583 /* PPGrabLogDataModel.m in Sources */,
 				52D343CF2A14CF4A005A8901 /* QAConversionCentreViewController.m in Sources */,
 				4CEB73102A5E4E1900FC7583 /* PPUploadImageResponseModel.m in Sources */,
@@ -3105,7 +3225,6 @@
 				D1E5A4652A1C642900E96680 /* QAExchangeCoinsAlertView.m in Sources */,
 				D1E5A4682A1C643B00E96680 /* QAExchangeSuccessAlertView.m in Sources */,
 				4CEB734E2A5E4E1900FC7583 /* PPGameMyMoneyView.m in Sources */,
-				52D343CC2A14CF36005A8901 /* KMHomeViewController.m in Sources */,
 				D1E2EA722A1E1BB200E2246A /* YCJRankContentView.m in Sources */,
 				4CEB72DC2A5E4E1900FC7583 /* SJRequestAppleCreateOrderModel.m in Sources */,
 				D16248BC2A1714E6008993A9 /* YCJComplaintRecordViewController.m in Sources */,
@@ -3154,8 +3273,10 @@
 				4CEB732E2A5E4E1900FC7583 /* PPChatMessageView.m in Sources */,
 				4CEB732D2A5E4E1900FC7583 /* PPDetailImageDataModel.m in Sources */,
 				4CEB72EE2A5E4E1900FC7583 /* SJResponseAppleOrderDataModel.m in Sources */,
+				4C17E99F2A8A245B002EF5AC /* YCJPlayerHotItemCell.m in Sources */,
 				D16248AE2A170FBC008993A9 /* YCJMineInfoModel.m in Sources */,
 				4CEB72D12A5E4E1900FC7583 /* SJPCMessagesCountRequestModel.m in Sources */,
+				4C17E98E2A8A043D002EF5AC /* TAPageControl.m in Sources */,
 				4CEB72BD2A5E4E1900FC7583 /* SJPCPMPointRequestModel.m in Sources */,
 				4CEB72E82A5E4E1900FC7583 /* SJPCHomeRequestModel.m in Sources */,
 				4CEB72DB2A5E4E1900FC7583 /* SJPCUserInfoRequestModel.m in Sources */,
@@ -3180,6 +3301,7 @@
 				52D344112A14DFDB005A8901 /* NSString+Extras.m in Sources */,
 				4CEB72AE2A5E4E1900FC7583 /* PPDefineAlertContentView.m in Sources */,
 				D19C999D2A20428000647BEA /* YCJHomeUserView.m in Sources */,
+				4C17E98A2A8A043D002EF5AC /* SDCycleScrollView.m in Sources */,
 				4CEB730E2A5E4E1900FC7583 /* SJPCMessageResponseModel.m in Sources */,
 				4CEB73682A5E4E1900FC7583 /* PPTcpSaintMoveDirctionData.m in Sources */,
 				D1E3FE162A2760D300603E7D /* YCJZuanShiCell.m in Sources */,
@@ -3196,10 +3318,13 @@
 				4CEB732B2A5E4E1900FC7583 /* PPGamePlayerUserData.m in Sources */,
 				4CEB73122A5E4E1900FC7583 /* SJPCWeiXinLoginResponseModel.m in Sources */,
 				4CEB73112A5E4E1900FC7583 /* SJPCLoginWeiXinResponseModel.m in Sources */,
+				4C17E9932A8A0700002EF5AC /* YCJHomeBannerCell.m in Sources */,
+				4C17E96D2A89B86B002EF5AC /* KMHomeViewController.m in Sources */,
 				4CEB735B2A5E4E1900FC7583 /* PPWaitPlayerView.m in Sources */,
 				4CEB73042A5E4E1900FC7583 /* SJResponseGameRoomListModel.m in Sources */,
 				D155BE802A1DC8FB0080FD5B /* QATabBar.m in Sources */,
 				D1E3FE192A2760DB00603E7D /* YCJJiFenCell.m in Sources */,
+				4C17E9792A89CE6A002EF5AC /* YCJTabHotViewController.m in Sources */,
 				52741D9B2A161E2E008BCDFC /* SKLoginViewController.m in Sources */,
 				52D344102A14DFDB005A8901 /* UIView+Category.m in Sources */,
 				4CEB72BA2A5E4E1900FC7583 /* SJPCDollLogRoomRequestBaseModel.m in Sources */,
@@ -3215,6 +3340,7 @@
 				4CEB73372A5E4E1900FC7583 /* SJPlayAlertViewController.m in Sources */,
 				52741DA42A162006008BCDFC /* JKNetWorkResult.m in Sources */,
 				D16248B62A1713AA008993A9 /* YCJGameRecordViewController.m in Sources */,
+				4C17E9702A89BA3D002EF5AC /* YCJHomeViewController.m in Sources */,
 				4CEB72CD2A5E4E1900FC7583 /* SJPCChargeOtherPayRequestModel.m in Sources */,
 				4CEB72F82A5E4E1900FC7583 /* PPChargeUnitModel.m in Sources */,
 				4CEB73402A5E4E1900FC7583 /* PPChargeInGameView.m in Sources */,
@@ -3223,6 +3349,7 @@
 				4CEB72C62A5E4E1900FC7583 /* SJPCHomeTagRequestModel.m in Sources */,
 				4CEB72DF2A5E4E1900FC7583 /* SJPCExitRoomRequestModel.m in Sources */,
 				4CEB72DA2A5E4E1900FC7583 /* PPThirdSyncRequestModel.m in Sources */,
+				4C17E99C2A8A1D26002EF5AC /* YCJHomePlayPostItemCell.m in Sources */,
 				4CEB72E72A5E4E1900FC7583 /* SJPCAddNewAddressRequestModel.m in Sources */,
 				4CEB736B2A5E4E1900FC7583 /* SDTabRechargeViewController.m in Sources */,
 				3A2103D02A2B49E0000538E5 /* QAExchangeModel.m in Sources */,
@@ -3259,8 +3386,11 @@
 				4CEB73492A5E4E1900FC7583 /* SJChangeRoomListAlertView.m in Sources */,
 				4CEB72F52A5E4E1900FC7583 /* UniResponseModel.m in Sources */,
 				4CEB72F22A5E4E1900FC7583 /* SJPCSayQuickResponseModal.m in Sources */,
+				4C17E98B2A8A043D002EF5AC /* UIView+SDExtension.m in Sources */,
+				4C17E9AE2A8B1F69002EF5AC /* HCRouter.m in Sources */,
 				4CEB72C92A5E4E1900FC7583 /* SJPCTRTCUserSig.m in Sources */,
 				4CEB731C2A5E4E1900FC7583 /* PPError.m in Sources */,
+				4C17E9AD2A8B1F69002EF5AC /* HBRouter.m in Sources */,
 				D1A63D092A2DF38A004D8461 /* YCJGameRoomModel.m in Sources */,
 				4CEB72D72A5E4E1900FC7583 /* SJPCSayQuickRequestModal.m in Sources */,
 				4CEB730C2A5E4E1900FC7583 /* SJPCOrderListResponseModel.m in Sources */,
@@ -3280,6 +3410,7 @@
 				4CEB73502A5E4E1900FC7583 /* PPSaintPlayerWaitView.m in Sources */,
 				3A2103DD2A2C911E000538E5 /* KMNewPlayerModel.m in Sources */,
 				4CEB72BF2A5E4E1900FC7583 /* SJPCHomeBannerRequestModel.m in Sources */,
+				4C17E9A22A8A2AD4002EF5AC /* YCJPosterDetailController.m in Sources */,
 				D19C99942A1F5AE200647BEA /* YCJHomeSigninAlertView.m in Sources */,
 				D1E3FE242A297D1F00603E7D /* YCJSignInListModel.m in Sources */,
 				4CEB73652A5E4E1900FC7583 /* PPTcpSendSaintData.m in Sources */,
@@ -3301,7 +3432,9 @@
 				52741D942A161C44008BCDFC /* JKDefaultButton.m in Sources */,
 				D1E5A4112A1B053300E96680 /* YCJInvitationCodeAlertView.m in Sources */,
 				4CEB72AC2A5E4E1900FC7583 /* SJAlertInGameViewController.m in Sources */,
+				4C17E9962A8A0D88002EF5AC /* YCJPlayLasterItemCell.m in Sources */,
 				4CEB72D92A5E4E1900FC7583 /* SJRequestUserEnterRoomModel.m in Sources */,
+				4C17E98D2A8A043D002EF5AC /* TADotView.m in Sources */,
 				4CEB72E62A5E4E1900FC7583 /* SJPCOrderListRequestModel.m in Sources */,
 				4CEB733C2A5E4E1900FC7583 /* PPChargetCoinCollectionViewCell.m in Sources */,
 				4CEB734F2A5E4E1900FC7583 /* PPGoldLegendControlView.m in Sources */,
@@ -3311,6 +3444,7 @@
 				4CEB73342A5E4E1900FC7583 /* PPSaintPushCoinView.m in Sources */,
 				4CEB72E92A5E4E1900FC7583 /* SJPCExchagneCointByPointRequestModel.m in Sources */,
 				4CEB732C2A5E4E1900FC7583 /* PPChargetCoinData.m in Sources */,
+				4C17E98C2A8A043D002EF5AC /* SDCollectionViewCell.m in Sources */,
 				4CEB73352A5E4E1900FC7583 /* PPCloseButton.m in Sources */,
 				D16248BF2A17181D008993A9 /* YCJGameRecordCell.m in Sources */,
 				52D343B22A14CDDB005A8901 /* QATabBarController.m in Sources */,
@@ -3322,6 +3456,7 @@
 				4CEB73412A5E4E1900FC7583 /* SJPlayerAvatarView.m in Sources */,
 				4C30F1BC2A480F6100F71B45 /* SJLocalTool.m in Sources */,
 				52D343D22A14CF5E005A8901 /* YCJMineViewController.m in Sources */,
+				4C17E9902A8A043D002EF5AC /* TAAbstractDotView.m in Sources */,
 				4CEB735A2A5E4E1900FC7583 /* PPWawajiDetailViewController.m in Sources */,
 				4CEB72AB2A5E4E1900FC7583 /* SJPlayActionButton.m in Sources */,
 				52D344232A14E071005A8901 /* JKKeyChain.m in Sources */,
@@ -3340,6 +3475,7 @@
 				4CEB73302A5E4E1900FC7583 /* PPSaintPostionPlayingView.m in Sources */,
 				4CEB73022A5E4E1900FC7583 /* SJPCMessagesCountResponseModel.m in Sources */,
 				4CEB72F12A5E4E1900FC7583 /* SJPCHomeLiveRomeResponseModel.m in Sources */,
+				4C17E9AC2A8B1F69002EF5AC /* UIResponder+HBRouter.m in Sources */,
 				52D344192A14DFDB005A8901 /* YCCycleProgressView.m in Sources */,
 				4CEB73332A5E4E1900FC7583 /* SJPullVideoView.m in Sources */,
 				D17F57FE2A39D4860087A903 /* YCJInAppPurchase.m in Sources */,

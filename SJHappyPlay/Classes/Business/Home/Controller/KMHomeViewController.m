@@ -1,5 +1,4 @@
 
-
 #import "KMHomeViewController.h"
 #import "YCJHomeLeftView.h"
 #import "YCJHomeUserView.h"
@@ -21,7 +20,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"";
     [self bgimageGif:@"home.gif"];
-    
+    self.setupNavigationBarHidden = YES;
     [self configUI];
     [self requestRoomList];
         

@@ -98,6 +98,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)convertImageNameWithLanguage:(NSString *)imageName;
 
++ (NSString *)stringConvertSafeContent:(id)content;
+
++ (NSMutableAttributedString *)setAttributeStringContent:(NSString *)text space:(CGFloat)space font:(UIFont *)font alignment:(NSTextAlignment)alignment;
+
 @end
 
 NS_ASSUME_NONNULL_END

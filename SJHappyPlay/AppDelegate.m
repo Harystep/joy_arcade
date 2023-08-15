@@ -14,6 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    [HBRouter loadConfigPlist:nil];
     [self setupAppearance];
     SJLaunchViewController *vc = [[SJLaunchViewController alloc] init];
     vc.completed = ^{

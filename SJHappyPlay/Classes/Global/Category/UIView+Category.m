@@ -217,4 +217,56 @@
     return img;
 }
 
+- (UILabel *)createSimpleLabelWithTitle:(NSString *)title font:(CGFloat)font bold:(BOOL)bold  color:(UIColor *)color {
+    UILabel *lb = [[UILabel alloc] init];
+    if (title != nil) {
+        lb.text = title;
+    }
+    lb.textColor = color;
+    if (bold) {
+        lb.font = kPingFangSemiboldFont(font);
+    } else {
+        lb.font = kPingFangRegularFont(font);
+    }
+    return lb;
+}
+
+- (void)setViewColorAlpha:(CGFloat)alpha color:(UIColor *)color {
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.backgroundColor = color;
+    bgView.alpha = alpha;
+    [self addSubview:bgView];
+    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self);
+    }];
+}
+
+- (UIButton *)createSimpleButtonWithTitle:(NSString *)title font:(CGFloat)font color:(UIColor *)color {
+    UIButton *bt = [[UIButton alloc] init];
+    if (title != nil) {
+        [bt setTitle:title forState:UIControlStateNormal];
+    }
+    [bt setTitleColor:color forState:UIControlStateNormal];
+    bt.titleLabel.font = kPingFangRegularFont(font);
+    return bt;
+}
+
+- (UITextField *)createTextFieldOnTargetView:(UIView *)targetView withFrame:(CGRect)rect withPlaceholder:(NSString *)placeholder {
+    UITextField *textF = [[UITextField alloc] init];
+    textF.frame = rect;
+    [targetView addSubview:textF];
+    textF.placeholder = placeholder;
+    return textF;
+}
+
+- (void)setViewCornerRadiu:(CGFloat)radius {
+    self.layer.cornerRadius = radius;
+    self.layer.masksToBounds = YES;
+}
+
+- (void)setViewBorderWithColor:(CGFloat)bordWidth color:(UIColor *)color {
+    self.layer.borderColor = [color CGColor];
+    self.layer.borderWidth = bordWidth;
+}
+
 @end

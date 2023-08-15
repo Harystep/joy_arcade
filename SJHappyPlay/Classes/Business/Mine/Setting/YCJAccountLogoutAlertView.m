@@ -6,7 +6,6 @@
     CGFloat topOffset;
 }
 @property (nonatomic, strong) UIView        *contentView;
-@property (nonatomic, strong) UILabel       *titleLB;
 @property (nonatomic, strong) UILabel       *contentLB;
 @property (nonatomic, strong) UIButton      *cancelBtn;
 @property (nonatomic, strong) UIButton      *sureBtn;

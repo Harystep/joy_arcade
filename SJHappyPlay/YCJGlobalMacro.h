@@ -58,6 +58,7 @@
 
 #define kColorHex(rgbValue) kColorHexA(rgbValue, 1.0)
 
+#define rgba(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 
 ///主题颜色
 #define kThemeColor kColorHex(0xFDAC00)
@@ -93,7 +94,7 @@
 #define kCustomerServiceBaseUrl @"http://kefu.51sssd.com/chat/mobile?"
 
 
-
+#define kSafeContentString(content) [NSString stringConvertSafeContent:content]
 
 
 

@@ -104,4 +104,12 @@ UIKIT_EXTERN NSString * const JKGameRoomListUrlKey;
 UIKIT_EXTERN NSString * const JKGameRoomEnterUrlKey;
 // 房间分类
 UIKIT_EXTERN NSString * const JKGameRoomCategoryDetailUrlKey;
-
+//最近访问
+UIKIT_EXTERN NSString * const JKLastestGameRoomListUrlKey;
+UIKIT_EXTERN NSString * const JKGameProfileListUrlKey;
+UIKIT_EXTERN NSString * const JKHomeBannerListUrlKey;
+UIKIT_EXTERN NSString * const JKGameProfileDetailUrlKey;
+UIKIT_EXTERN NSString * const JKGameProfileForceUrlKey;
+UIKIT_EXTERN NSString * const JKGameProfileUnForceUrlKey;
+UIKIT_EXTERN NSString * const JKGameProfilePraiseUrlKey;
+UIKIT_EXTERN NSString * const JKGameProfileReportUrlKey;

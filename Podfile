@@ -2,7 +2,7 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-source 'https://github.com/Harystep/toolSpec.git'
+#source 'https://github.com/Harystep/toolSpec.git'
 
 
 platform :ios, '11.0'
@@ -21,6 +21,7 @@ target 'SJHappyPlay' do
   pod 'MJRefresh', '3.7.5'
   pod 'MJExtension', '3.4.1'
   
+  #pod 'SDCycleScrollView'
   
   pod 'IQKeyboardManager', '6.5.11'
   
@@ -57,6 +58,8 @@ target 'SJHappyPlay' do
   pod 'ijkplayer', '~>1.1.3'
   pod 'WsRTC'
   pod 'WMPageController', '~> 2.4.0'
+  
+  pod 'GTSDK'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

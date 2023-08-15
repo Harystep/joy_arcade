@@ -37,7 +37,7 @@
     
     // 设置其他UITabBarButton的frame
     CGFloat buttonY = 0;
-    CGFloat buttonW = width / 5;
+    CGFloat buttonW = width / 4;
     CGFloat buttonH = height;
     NSInteger index = 0;
 //    NSArray *titles = @[@"icon_tab_sc", @"icon_tab_dhzx", @"icon_tab_zhuye", @"icon_tab_phb", @"icon_tab_grzs"];

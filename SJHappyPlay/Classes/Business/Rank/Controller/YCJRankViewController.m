@@ -72,7 +72,7 @@ UITableViewDelegate>
     [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(70);
-        make.bottom.mas_equalTo(-kTabBarHeight);
+        make.bottom.mas_equalTo(self.view.mas_bottom);
     }];
     [self.rankSelectedView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.topView.mas_bottom).offset(10);

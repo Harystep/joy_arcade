@@ -8,6 +8,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString *categoryId;
 @property(nonatomic,copy) NSString *groupName;
 @property (nonatomic,copy) NSString *remark;
+@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *thumb;
 @end
 
 @interface YCJGameRoomModel : NSObject

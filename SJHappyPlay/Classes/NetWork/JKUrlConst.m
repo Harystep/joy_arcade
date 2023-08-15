@@ -106,3 +106,15 @@ NSString * const JKGameRoomListUrlKey = @"room/list";
 NSString * const JKGameRoomEnterUrlKey = @"room/enter/v2";
 // 房间分类
 NSString * const JKGameRoomCategoryDetailUrlKey = @"room/category/info";
+//最近访问
+NSString * const JKLastestGameRoomListUrlKey = @"room/recently/visited";
+//game 介绍
+NSString * const JKGameProfileListUrlKey = @"gameInfo/list";
+
+NSString * const JKHomeBannerListUrlKey = @"banner/v1";
+NSString * const JKGameProfileDetailUrlKey = @"gameInfo/info";
+
+NSString * const JKGameProfileForceUrlKey = @"group/focus/user";
+NSString * const JKGameProfileUnForceUrlKey = @"group/unfocus/user";
+NSString * const JKGameProfilePraiseUrlKey = @"group/dynamic/like";
+NSString * const JKGameProfileReportUrlKey = @"group/accusation/dynamic";//

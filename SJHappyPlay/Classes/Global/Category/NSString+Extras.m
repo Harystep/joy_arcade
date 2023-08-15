@@ -671,4 +671,36 @@
     return name;
 }
 
++ (NSString *)stringConvertSafeContent:(id)content {
+    NSString *str = @"";
+    if ([content isKindOfClass:[NSNull class]]) {
+    } else {
+        if (str == nil) {
+        } else {
+            if ([content isKindOfClass:[NSString class]]) {
+                str = content;
+            } else if ([content isKindOfClass:[NSNumber class]]) {
+                str = [NSString stringWithFormat:@"%@", content];
+            }
+            else {
+                str = @"";
+            }
+        }
+    }
+    return str;
+}
+
+
++ (NSMutableAttributedString *)setAttributeStringContent:(NSString *)text space:(CGFloat)space font:(UIFont *)font alignment:(NSTextAlignment)alignment {
+    
+    NSMutableAttributedString *attriString = [[NSMutableAttributedString alloc] initWithString:text];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    //关键代码
+    paragraphStyle.alignment = alignment;
+    [paragraphStyle setLineSpacing:space];//设置距离
+    [attriString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [text length])];
+    [attriString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, [text length])];
+    return attriString;
+}
+
 @end

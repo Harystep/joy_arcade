@@ -110,7 +110,7 @@ UICollectionViewDelegateFlowLayout>
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-kTabBarHeight);
+        make.bottom.equalTo(self.view);
         make.top.equalTo(self.exchangeView.mas_bottom).offset(10);
     }];
     
