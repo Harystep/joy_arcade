@@ -155,7 +155,7 @@
     [self.forceBtn setTitle:[NSString stringWithFormat:@"  %@  ", ZCLocalizedString(@"取消关注", nil)] forState:UIControlStateSelected];
     self.forceBtn.hidden = YES;
     
-    UIButton *reportBtn = [self.view createSimpleButtonWithTitle:@"···" font:20 color:kCommonWhiteColor];
+    UIButton *reportBtn = [[UIButton alloc] init];
     [self.contentView addSubview:reportBtn];
     reportBtn.titleLabel.font = kPingFangSemiboldFont(15);
     [reportBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -163,6 +163,7 @@
         make.width.height.mas_equalTo(40);
         make.centerY.mas_equalTo(self.praiseL.mas_centerY);
     }];
+    [reportBtn setImage:[UIImage imageNamed:@"game_detail_report"] forState:UIControlStateNormal];
     [reportBtn addTarget:self action:@selector(reportBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *praiseBtn = [[UIButton alloc] init];
@@ -230,10 +231,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.forceBtn.selected = !self.forceBtn.selected;
             });
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.forceBtn layoutIfNeeded];
-                [self addGradientLayerWithCorner:self.forceBtn withCornerRadius:6 withLineWidth:4 withColors:@[(id)rgba(166, 181, 255, 1).CGColor,(id)rgba(82, 121, 206, 1).CGColor] start:CGPointMake(0.5, 0) end:CGPointMake(0.5, 1)];
-            });
+            [self refreshForceBtn];
         }
     }];
 }
@@ -279,6 +277,15 @@
     self.praiseBtn.selected = [kSafeContentString(dataDic[@"hasLike"]) integerValue];
     self.contentL.attributedText = [NSString setAttributeStringContent:kSafeContentString(dataDic[@"content"]) space:5 font:kPingFangLightFont(14) alignment:NSTextAlignmentLeft];
     self.praiseL.text = [NSString stringWithFormat:@"%@%@", kSafeContentString(dataDic[@"likeNum"]), ZCLocalizedString(@"点赞", nil)];
+    
+    [self refreshForceBtn];
+}
+
+- (void)refreshForceBtn {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.forceBtn layoutIfNeeded];
+        [self addGradientLayerWithCorner:self.forceBtn withCornerRadius:6 withLineWidth:4 withColors:@[(id)rgba(166, 181, 255, 1).CGColor,(id)rgba(82, 121, 206, 1).CGColor] start:CGPointMake(0.5, 0) end:CGPointMake(0.5, 1)];
+    });
 }
 
 // 获取视频第一帧

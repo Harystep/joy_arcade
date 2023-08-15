@@ -58,7 +58,7 @@
     }];
     CGFloat width = kSize(50);
     CGFloat marginX = (kScreenWidth - 12*2 - width*5)/4.0;
-    NSArray *imageArr = @[@"icon_home_mrqd_en", @"icon_phb_1", @"icon_home_xszd_en", @"icon_home_yqyl_en", @"icon_home_zxkf_en"];
+    NSArray *imageArr = @[@"icon_home_mrqd_en", @"home_func_rank", @"icon_home_xszd_en", @"icon_home_yqyl_en", @"icon_home_zxkf_en"];
     for (int i = 0; i < 5; i ++) {
         UIButton *btn = [[UIButton alloc] init];
         [funView addSubview:btn];

@@ -65,9 +65,6 @@
     self.headView = headView;
     
     CGFloat width = kSize(120);
-//    if([SJLocalTool getCurrentLanguage] == 3) {
-//        width = kSize(200);
-//    }
     UIView *itemView = [[UIView alloc] init];
     [headView addSubview:itemView];
     [itemView mas_makeConstraints:^(MASConstraintMaker *make) {
